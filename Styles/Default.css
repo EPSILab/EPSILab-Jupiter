@@ -1,0 +1,276 @@
+﻿#temporaryNews {
+    font-family: "Segoe WP", "Segoe UI", Verdana, Arial;
+}
+
+.news {
+    position: relative;
+}
+
+    .news img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .news h2 {
+        width: 100%;
+        text-align: center;
+        font-weight: normal;
+        background-color: rgba(153, 153, 153, 0.7);
+        color: white;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        word-wrap: break-word;
+        overflow: hidden;
+        -webkit-transition: min-height 500ms ease-in-out 200ms;
+        -moz-transition: min-height 500ms ease-in-out 200ms;
+        -o-transition: min-height 500ms ease-in-out 200ms;
+        transition: min-height 500ms ease-in-out 200ms;
+    }
+
+    .news:hover img ~ h2 {
+        -webkit-transition: min-height 500ms ease-in-out 200ms;
+        -moz-transition: min-height 500ms ease-in-out 200ms;
+        -o-transition: min-height 500ms ease-in-out 200ms;
+        transition: min-height 500ms ease-in-out 200ms;
+    }
+
+
+#presentation {
+    margin-top: 50px;
+    padding: 3px;
+}
+
+
+/* Carousel News */
+#NewsInternCarousel a {
+    display: block;
+    width: auto;
+    float: left;
+}
+
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+.paginationNews {
+    margin-top: 10px;
+    text-align: center;
+}
+
+    .paginationNews a {
+        margin: 0 5px;
+        text-decoration: none;
+        display: inline-block;
+        background: #aaa;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -khtml-border-radius: 50%;
+        -moz-border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        border: 3px solid white;
+    }
+
+        .paginationNews a.selected {
+            background: #0664a9;
+        }
+
+
+        .paginationNews a span {
+            display: none;
+        }
+
+        .paginationNews a.selected {
+            cursor: default;
+        }
+
+.lienNews {
+    height: 184px;
+}
+
+
+
+
+/* Changement des éléments de l'écran si on dépasse les 1100px */
+@media screen and (min-width: 1100px) {
+    #sectionTemporaryNews {
+        visibility: visible;
+    }
+
+    .lienNews {
+        margin-right: 8px;
+        margin-left: 8px;
+    }
+
+    .lienNews, .news, .news img {
+        height: 184px;
+        width: 184px;
+    }
+
+
+        .news h2 {
+            font-size: 16px;
+            max-height: 45px;
+            min-height: 45px;
+        }
+
+        .news:hover img ~ h2 {
+            min-height: 150px;
+        }
+
+    #imgMicrosoft {
+        width: 300px;
+        height: 73px;
+    }
+
+    #imgEPSI {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Changement des éléments de l'écran si on est entre 600px et 1100px */
+@media screen and (min-width: 600px) and (max-width: 1100px) {
+    #NewsCarousel, #NewsInternCarousel {
+        width: 100%;
+        margin: auto;
+    }
+
+    #sectionTemporaryNews {
+        display: none;
+    }
+
+    .lienNews {
+        margin-right: 6px;
+        margin-left: 6px;
+    }
+
+    .lienNews, .news, .news img {
+        height: 156px;
+        width: 156px;
+    }
+
+
+        .news h2 {
+            font-size: 15px;
+            max-height: 40px;
+            min-height: 40px;
+        }
+
+        .news:hover img ~ h2 {
+            min-height: 130px;
+        }
+
+    #imgMicrosoft {
+        width: 300px;
+        height: 73px;
+    }
+
+    #imgEPSI {
+        width: 150px;
+        height: 150px;
+    }
+}
+/* Changement de la taille des éléments du carousel si on est entre 600px et 700px (pour éviter que les éléments dépassent de l'écran) */
+@media screen and (min-width: 600px) and (max-width: 700px) {
+    .lienNews, .news, .news img {
+        height: 120px;
+        width: 120px;
+    }
+
+        .news h2 {
+            font-size: 13px;
+            max-height: 35px;
+            min-height: 35px;
+        }
+
+        .news:hover img ~ h2 {
+            min-height: 100px;
+        }
+}
+
+/* Changement des éléments de l'écran si on est entre 400 et 600px */
+@media screen and (min-width: 400px) and (max-width: 600px) {
+    #sectionTemporaryNews {
+        display: none;
+    }
+
+    .lienNews {
+        margin-right: 4px;
+        margin-left: 4px;
+    }
+
+    .lienNews, .news, .news img {
+        height: 134px;
+        width: 134px;
+    }
+
+
+        .news h2 {
+            font-size: 13px;
+            max-height: 35px;
+            min-height: 35px;
+        }
+
+        .news:hover img ~ h2 {
+            min-height: 100px;
+        }
+
+    #imgMicrosoft {
+        width: 300px;
+        height: 73px;
+    }
+
+    #imgEPSI {
+        width: 150px;
+        height: 150px;
+    }
+
+    #presentation {
+        font-size: 12px;
+    }
+}
+
+/* Changement des éléments de l'écran si on est en dessous de 400px */
+@media screen and (max-width: 400px) {
+    #sectionTemporaryNews {
+        display: none;
+    }
+
+    .lienNews {
+        margin-right: 18px;
+        margin-left: 18px;
+    }
+
+    .lienNews, .news, .news img {
+        height: 134px;
+        width: 134px;
+    }
+
+
+        .news h2 {
+            font-size: 13px;
+            max-height: 35px;
+            min-height: 35px;
+        }
+
+        .news:hover img ~ h2 {
+            min-height: 100px;
+        }
+
+    #imgMicrosoft {
+        width: 150px;
+        height: 37px;
+    }
+
+    #imgEPSI {
+        width: 90px;
+        height: 90px;
+    }
+
+    #presentation {
+        font-size: 12px;
+    }
+}

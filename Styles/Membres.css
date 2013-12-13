@@ -1,0 +1,170 @@
+﻿.ville {
+    margin-bottom: 20px;
+}
+
+.listeBureau, .listeMembres {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.titreListe {
+    border-bottom: 2px solid lightgrey;
+}
+
+.titreVille {
+    color: #0664a9;
+}
+
+.blocMembre {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 5px;
+    background: rgba(160, 160, 160, 0.1);
+    color: black;
+}
+
+    .blocMembre:hover {
+        background: lightgrey;
+        text-decoration: none;
+    }
+
+.photoMembre {
+    width: 75px;
+    height: 75px;
+}
+
+.photoMembre, .descMembre {
+    vertical-align: top;
+    display: inline-block;
+    margin: 2px 0 0 2px;
+}
+
+.nomMembre {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.membre {
+    margin: 0;
+    padding: 0;
+}
+
+#image {
+    float: left;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+#nom_prenom {
+    margin-left: 35px;
+}
+
+.image_social {
+    float: left;
+    margin-right: 10px;
+}
+
+#reseauxSociaux {
+    margin-bottom: 80px;
+}
+
+.templateTitle {
+    margin: 0;
+    padding: 0;
+    display: block;
+    height: auto;
+    min-height: 150px;
+}
+
+    .templateTitle h1 {
+        height: auto;
+    }
+
+
+
+
+
+/* Changement des éléments de l'écran si on dépasse les 1100px */
+@media screen and (min-width: 1100px) {
+    .blocMembre {
+        width: 328px;
+    }
+
+    .listeBureau {
+        width: 326px;
+        margin-right: 5px;
+    }
+
+    .listeMembres {
+        width: 661px;
+    }
+}
+
+/* Changement des éléments de l'écran si on est entre 600 et 1100px */
+@media screen and (min-width: 600px) and (max-width: 1100px) {
+    .blocMembre {
+        width: 248px;
+    }
+
+    .listeBureau {
+        width: 248px;
+        margin-right: 5px;
+    }
+
+    .listeMembres {
+        width: 500px;
+    }
+}
+
+/* Changement des éléments de l'écran si on est entre 400 et 600px */
+@media screen and (min-width: 400px) and (max-width: 600px) {
+    .blocMembre, .listeBureau, .listeMembres {
+        width: 100%;
+    }
+}
+
+/* Changement des éléments de l'écran si on est en dessous de 400px */
+@media screen and (max-width: 400px) {
+    #nom_prenom {
+        margin: 0;
+    }
+
+    .templateTitle {
+        min-height: 230px;
+        text-align: center;
+    }
+
+        .templateTitle h1 {
+            text-align: center;
+            font-size: 22px;
+        }
+
+        .templateTitle #image {
+            margin: 0 75px;
+        }
+
+    .blocMembre, .listeBureau, .listeMembres {
+        width: 100%;
+    }
+
+    .photoMembre {
+        display: block;
+        margin: auto;
+    }
+
+    .blocMembre {
+        text-align: center;
+    }
+
+    .presentation {
+        font-size: 12px;
+    }
+
+    .image_social {
+        margin: 5px;
+    }
+
+    #reseauxSociaux {
+        min-width: 400px;
+    }
+}

@@ -1,0 +1,84 @@
+﻿.formulaire {
+    margin-left: 25%;
+}
+
+.erreur {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#boutonEnvoyer {
+    margin-top: 10px;
+    margin-left: 150px;
+}
+
+#message, #captcha {
+    margin-top: 15px;
+}
+
+
+/* Changement des éléments de l'écran si on dépasse les 1100px */
+@media screen and (min-width: 1100px) {
+    #message {
+        width: 400px;
+    }
+
+    #captcha * {
+        max-width: 300px;
+    }
+
+    #captcha {
+        margin-left: 283px;
+    }
+}
+
+/* Changement des éléments de l'écran si on est entre 600 et 1100px */
+@media screen and (min-width: 600px) and (max-width: 1100px) {
+    #message textarea {
+        width: 100%;
+    }
+
+    #captcha * {
+        max-width: 300px;
+    }
+
+    #captcha {
+        margin-left: 35px;
+    }
+}
+
+/* Changement des éléments de l'écran si on est entre 400 et 600px */
+@media screen and (min-width: 400px) and (max-width: 600px) {
+    #message textarea {
+        width: 100%;
+    }
+
+    #captcha * {
+        max-width: 160px;
+    }
+}
+
+/* Changement des éléments de l'écran si on est en dessous de 400px */
+@media screen and (max-width: 400px) {
+    .formulaire {
+        margin-left: 0;
+    }
+
+    #message textarea {
+        width: 20%;
+    }
+
+    #captcha * {
+        max-width: 200px;
+    }
+
+        #captcha * img {
+            display: inline-block;
+            max-width: 200px;
+        }
+
+    #recaptcha_logo {
+        display: block;
+        width: 15px;
+    }
+}

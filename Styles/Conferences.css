@@ -1,0 +1,167 @@
+﻿.image, .imageConference {
+    float: left;
+    margin-right: 10px;
+}
+
+.social {
+    text-align: right;
+}
+
+.conference {
+    display: inline-block;
+    background: rgba(160, 160, 160, 0.1);
+    color: black;
+    margin-top: 12px;
+    width: 100%;
+}
+
+    .conference:hover {
+        background: lightgrey;
+        text-decoration: none;
+    }
+
+.lienConference {
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+    .lienConference:hover {
+        text-decoration: none;
+    }
+
+.nomConference {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Carousel Conférences */
+
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+.paginationConferences {
+    margin-top: 10px;
+    margin-right: auto;
+    text-align: center;
+}
+
+    .paginationConferences a {
+        margin: 0 5px;
+        text-decoration: none;
+        display: inline-block;
+        background: #aaa;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -khtml-border-radius: 50%;
+        -moz-border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        border: 3px solid white;
+    }
+
+        .paginationConferences a.selected {
+            background: #0664a9;
+        }
+
+        .paginationConferences a span {
+            display: none;
+        }
+
+        .paginationConferences a.selected {
+            cursor: default;
+        }
+
+/* Changement des éléments de l'écran si on est entre 600 et 1100px */
+@media screen and (min-width: 600px) and (max-width: 1100px) {
+
+    h1 {
+        font-size: 21px;
+    }
+}
+
+/* Changement des éléments de l'écran si on est entre 400 et 600px */
+@media screen and (min-width: 400px) and (max-width: 600px) {
+
+    .nomConference {
+        font-size: 14px;
+    }
+
+    .paginationConferences a {
+        margin: 0 4px;
+        width: 19px;
+        height: 19px;
+    }
+
+    .templateTitle h1 {
+        font-size: 16px;
+        margin: 0 0 5px 0;
+    }
+
+    .templateTitle .date {
+        font-size: 12px;
+    }
+
+    .social {
+        display: none;
+    }
+}
+
+/* Changement des éléments de l'écran si on est en dessous de 400px */
+@media screen and (max-width: 400px) {
+
+    .description, .imageConference {
+        display: none;
+    }
+
+    .nomConference {
+        font-size: 14px;
+    }
+
+    .date {
+        font-size: 12px;
+    }
+
+    .paginationConferences a {
+        margin: 0 3px;
+        width: 18px;
+        height: 18px;
+    }
+
+    .templateTitle {
+        min-height: 180px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+        .templateTitle h1 {
+            font-size: 18px;
+            text-align: center;
+            padding-top: 110px;
+        }
+
+        .templateTitle .date {
+            text-align: center;
+        }
+
+        .templateTitle .image {
+            margin-left: 70px;
+        }
+
+    .social {
+        display: none;
+    }
+
+    .conference {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0 15px 0 5px;
+        min-height: 70px;
+    }
+
+    .texte {
+        font-size: 11px;
+    }
+}

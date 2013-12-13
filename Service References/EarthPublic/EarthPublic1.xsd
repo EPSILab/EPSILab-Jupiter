@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://www.epsilab.net/webservices/EarthPublic.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Earth.DTO" />
+  <xs:element name="GetConference">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="code" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConferenceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Earth.DTO" minOccurs="0" name="GetConferenceResult" nillable="true" type="q1:Conference" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConferences">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Earth.DTO" minOccurs="0" name="ville" nillable="true" type="q2:Ville" />
+        <xs:element minOccurs="0" name="premier" type="xs:int" />
+        <xs:element minOccurs="0" name="nombre" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConferencesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Earth.DTO" minOccurs="0" name="GetConferencesResult" nillable="true" type="q3:ArrayOfConference" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastsConferences">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Earth.DTO" minOccurs="0" name="ville" nillable="true" type="q4:Ville" />
+        <xs:element minOccurs="0" name="nombre" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastsConferencesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Earth.DTO" minOccurs="0" name="GetLastsConferencesResult" nillable="true" type="q5:ArrayOfConference" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RechercherConferences">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mots" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RechercherConferencesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Earth.DTO" minOccurs="0" name="RechercherConferencesResult" nillable="true" type="q6:ArrayOfConference" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLien">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="code" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLienResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Earth.DTO" minOccurs="0" name="GetLienResult" nillable="true" type="q7:Lien" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLiens">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLiensResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Earth.DTO" minOccurs="0" name="GetLiensResult" nillable="true" type="q8:ArrayOfLien" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMembre">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="code" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMembreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Earth.DTO" minOccurs="0" name="GetMembreResult" nillable="true" type="q9:Membre" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMembres">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Earth.DTO" minOccurs="0" name="ville" nillable="true" type="q10:Ville" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Earth.DTO" minOccurs="0" name="role" nillable="true" type="q11:Role" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMembresResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Earth.DTO" minOccurs="0" name="GetMembresResult" nillable="true" type="q12:ArrayOfMembre" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RechercherMembres">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mots" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RechercherMembresResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Earth.DTO" minOccurs="0" name="RechercherMembresResult" nillable="true" type="q13:ArrayOfMembre" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNews">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="code" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Earth.DTO" minOccurs="0" name="GetNewsResult" nillable="true" type="q14:News" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewsListe">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="premier" type="xs:int" />
+        <xs:element minOccurs="0" name="nombre" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewsListeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Earth.DTO" minOccurs="0" name="GetNewsListeResult" nillable="true" type="q15:ArrayOfNews" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastsNewsListe">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nombre" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastsNewsListeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Earth.DTO" minOccurs="0" name="GetLastsNewsListeResult" nillable="true" type="q16:ArrayOfNews" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RechercherNews">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mots" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RechercherNewsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Earth.DTO" minOccurs="0" name="RechercherNewsResult" nillable="true" type="q17:ArrayOfNews" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProjet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="code" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProjetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Earth.DTO" minOccurs="0" name="GetProjetResult" nillable="true" type="q18:Projet" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProjets">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Earth.DTO" minOccurs="0" name="ville" nillable="true" type="q19:Ville" />
+        <xs:element minOccurs="0" name="premier" type="xs:int" />
+        <xs:element minOccurs="0" name="nombre" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProjetsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Earth.DTO" minOccurs="0" name="GetProjetsResult" nillable="true" type="q20:ArrayOfProjet" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastProjets">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Earth.DTO" minOccurs="0" name="ville" nillable="true" type="q21:Ville" />
+        <xs:element minOccurs="0" name="nombre" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastProjetsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Earth.DTO" minOccurs="0" name="GetLastProjetsResult" nillable="true" type="q22:ArrayOfProjet" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPublicite">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="code" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPubliciteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Earth.DTO" minOccurs="0" name="GetPubliciteResult" nillable="true" type="q23:Publicite" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPublicites">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPublicitesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Earth.DTO" minOccurs="0" name="GetPublicitesResult" nillable="true" type="q24:ArrayOfPublicite" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSalon">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="code" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSalonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Earth.DTO" minOccurs="0" name="GetSalonResult" nillable="true" type="q25:Salon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSalons">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="premier" type="xs:int" />
+        <xs:element minOccurs="0" name="nombre" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSalonsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Earth.DTO" minOccurs="0" name="GetSalonsResult" nillable="true" type="q26:ArrayOfSalon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastsSalons">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nombre" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastsSalonsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Earth.DTO" minOccurs="0" name="GetLastsSalonsResult" nillable="true" type="q27:ArrayOfSalon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RechercherSalons">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mots" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RechercherSalonsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Earth.DTO" minOccurs="0" name="RechercherSalonsResult" nillable="true" type="q28:ArrayOfSalon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRole">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="code" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRoleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Earth.DTO" minOccurs="0" name="GetRoleResult" nillable="true" type="q29:Role" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVille">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="code" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVilleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Earth.DTO" minOccurs="0" name="GetVilleResult" nillable="true" type="q30:Ville" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVilles">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVillesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Earth.DTO" minOccurs="0" name="GetVillesResult" nillable="true" type="q31:ArrayOfVille" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,49 @@
+﻿.image {
+    float: left;
+    padding: 10px;
+}
+
+.clear {
+    clear: both;
+}
+
+.nom {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.lien {
+    display: block;
+    height: auto;
+    background: rgba(160, 160, 160, 0.1);
+    color: black;
+    min-height: 90px;
+    margin-bottom: 10px;
+}
+
+    .lien:hover {
+        background: lightgrey;
+        text-decoration: none;
+    }
+
+.description {
+    padding: 10px;
+}
+
+
+/* Changement des éléments de l'écran si on est entre 400 et 600px */
+@media screen and (max-width: 600px) {
+    .image {
+        float: none;
+        clear: both;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
+        text-align: center;
+    }
+
+    .nom {
+        display: none;
+    }
+}
