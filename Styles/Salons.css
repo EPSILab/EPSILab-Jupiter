@@ -1,0 +1,171 @@
+﻿.item {
+    margin-bottom: 30px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.image, .imageSalon {
+    float: left;
+    margin-right: 10px;
+}
+
+.social {
+    text-align: right;
+}
+
+.salon {
+    display: inline-block;
+    background: rgba(160, 160, 160, 0.1);
+    color: black;
+    margin-top: 12px;
+    width: 100%;
+}
+
+    .salon:hover {
+        background: lightgrey;
+        text-decoration: none;
+    }
+
+.lienSalon {
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+    .lienSalon:hover {
+        text-decoration: none;
+    }
+
+.nomSalon {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Carousel Salons */
+
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+.paginationSalons {
+    margin-top: 10px;
+    margin-right: auto;
+    text-align: center;
+}
+
+    .paginationSalons a {
+        margin: 0 5px;
+        text-decoration: none;
+        display: inline-block;
+        background: #aaa;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -khtml-border-radius: 50%;
+        -moz-border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        border: 3px solid white;
+    }
+
+        .paginationSalons a.selected {
+            background: #0664a9;
+        }
+
+        .paginationSalons a span {
+            display: none;
+        }
+
+        .paginationSalons a.selected {
+            cursor: default;
+        }
+
+/* Changement des éléments de l'écran si on est entre 600 et 1100px */
+@media screen and (min-width: 600px) and (max-width: 1100px) {
+
+    h1 {
+        font-size: 21px;
+    }
+}
+
+/* Changement des éléments de l'écran si on est entre 400 et 600px */
+@media screen and (min-width: 400px) and (max-width: 600px) {
+
+    .nomSalon {
+        font-size: 14px;
+    }
+
+    .paginationSalons a {
+        margin: 0 4px;
+        width: 19px;
+        height: 19px;
+    }
+
+    .templateTitle h1 {
+        font-size: 16px;
+        margin: 0 0 5px 0;
+    }
+
+    .templateTitle .date {
+        font-size: 12px;
+    }
+
+    .social {
+        display: none;
+    }
+}
+
+/* Changement des éléments de l'écran si on est en dessous de 400px */
+@media screen and (max-width: 400px) {
+
+    .description, .imageSalon {
+        display: none;
+    }
+
+    .nomSalon {
+        font-size: 14px;
+    }
+
+    .date {
+        font-size: 12px;
+    }
+
+    .paginationSalons a {
+        margin: 0 3px;
+        width: 18px;
+        height: 18px;
+    }
+
+    .templateTitle {
+        min-height: 180px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+        .templateTitle h1 {
+            font-size: 18px;
+            text-align: center;
+            padding-top: 110px;
+        }
+
+        .templateTitle .date {
+            text-align: center;
+        }
+
+        .templateTitle .image {
+            margin-left: 70px;
+        }
+
+    .social {
+        display: none;
+    }
+
+    .salon {
+        padding: 0 15px 0 5px;
+        min-height: 70px;
+    }
+
+    .texte {
+        font-size: 11px;
+    }
+}

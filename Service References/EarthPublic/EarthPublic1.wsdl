@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="EarthPublic" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://www.epsilab.net/webservices/EarthPublic.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://www.epsilab.net/webservices/EarthPublic.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://www.epsilab.net/webservices/EarthPublic.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Earth.DTO" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IEarthPublic_GetConference_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConference" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetConference_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConferenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetConferences_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConferences" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetConferences_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConferencesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetLastsConferences_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastsConferences" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetLastsConferences_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastsConferencesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_RechercherConferences_InputMessage">
+    <wsdl:part name="parameters" element="tns:RechercherConferences" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_RechercherConferences_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RechercherConferencesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetLien_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLien" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetLien_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLienResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetLiens_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLiens" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetLiens_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLiensResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetMembre_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMembre" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetMembre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMembreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetMembres_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMembres" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetMembres_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMembresResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_RechercherMembres_InputMessage">
+    <wsdl:part name="parameters" element="tns:RechercherMembres" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_RechercherMembres_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RechercherMembresResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetNews_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNews" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetNews_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetNewsListe_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewsListe" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetNewsListe_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewsListeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetLastsNewsListe_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastsNewsListe" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetLastsNewsListe_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastsNewsListeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_RechercherNews_InputMessage">
+    <wsdl:part name="parameters" element="tns:RechercherNews" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_RechercherNews_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RechercherNewsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetProjet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProjet" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetProjet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProjetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetProjets_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProjets" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetProjets_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProjetsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetLastProjets_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastProjets" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetLastProjets_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastProjetsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetPublicite_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPublicite" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetPublicite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPubliciteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetPublicites_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPublicites" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetPublicites_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPublicitesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetSalon_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalon" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetSalon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetSalons_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalons" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetSalons_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalonsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetLastsSalons_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastsSalons" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetLastsSalons_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastsSalonsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_RechercherSalons_InputMessage">
+    <wsdl:part name="parameters" element="tns:RechercherSalons" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_RechercherSalons_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RechercherSalonsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRole" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetVille_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVille" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetVille_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVilleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetVilles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVilles" />
+  </wsdl:message>
+  <wsdl:message name="IEarthPublic_GetVilles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVillesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IEarthPublic">
+    <wsdl:operation name="GetConference">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEarthPublic/GetConference" message="tns:IEarthPublic_GetConference_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEarthPublic/GetConferenceResponse" message="tns:IEarthPublic_GetConference_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConferences">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEarthPublic/GetConferences" message="tns:IEarthPublic_GetConferences_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEarthPublic/GetConferencesResponse" message="tns:IEarthPublic_GetConferences_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastsConferences">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEarthPublic/GetLastsConferences" message="tns:IEarthPublic_GetLastsConferences_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEarthPublic/GetLastsConferencesResponse" message="tns:IEarthPublic_GetLastsConferences_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RechercherConferences">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEarthPublic/RechercherConferences" message="tns:IEarthPublic_RechercherConferences_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEarthPublic/RechercherConferencesResponse" message="tns:IEarthPublic_RechercherConferences_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLien">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEarthPublic/GetLien" message="tns:IEarthPublic_GetLien_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEarthPublic/GetLienResponse" message="tns:IEarthPublic_GetLien_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLiens">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEarthPublic/GetLiens" message="tns:IEarthPublic_GetLiens_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEarthPublic/GetLiensResponse" message="tns:IEarthPublic_GetLiens_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMembre">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEarthPublic/GetMembre" message="tns:IEarthPublic_GetMembre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEarthPublic/GetMembreResponse" message="tns:IEarthPublic_GetMembre_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMembres">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEarthPublic/GetMembres" message="tns:IEarthPublic_GetMembres_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEarthPublic/GetMembresResponse" message="tns:IEarthPublic_GetMembres_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RechercherMembres">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEarthPublic/RechercherMembres" message="tns:IEarthPublic_RechercherMembres_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEarthPublic/RechercherMembresResponse" message="tns:IEarthPublic_RechercherMembres_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNews">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEarthPublic/GetNews" message="tns:IEarthPublic_GetNews_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEarthPublic/GetNewsResponse" message="tns:IEarthPublic_GetNews_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewsListe">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEarthPublic/GetNewsListe" message="tns:IEarthPublic_GetNewsListe_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEarthPublic/GetNewsListeResponse" message="tns:IEarthPublic_GetNewsListe_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastsNewsListe">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEarthPublic/GetLastsNewsListe" message="tns:IEarthPublic_GetLastsNewsListe_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEarthPublic/GetLastsNewsListeResponse" message="tns:IEarthPublic_GetLastsNewsListe_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RechercherNews">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEarthPublic/RechercherNews" message="tns:IEarthPublic_RechercherNews_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEarthPublic/RechercherNewsResponse" message="tns:IEarthPublic_RechercherNews_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProjet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEarthPublic/GetProjet" message="tns:IEarthPublic_GetProjet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEarthPublic/GetProjetResponse" message="tns:IEarthPublic_GetProjet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProjets">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEarthPublic/GetProjets" message="tns:IEarthPublic_GetProjets_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEarthPublic/GetProjetsResponse" message="tns:IEarthPublic_GetProjets_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastProjets">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEarthPublic/GetLastProjets" message="tns:IEarthPublic_GetLastProjets_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEarthPublic/GetLastProjetsResponse" message="tns:IEarthPublic_GetLastProjets_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPublicite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEarthPublic/GetPublicite" message="tns:IEarthPublic_GetPublicite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEarthPublic/GetPubliciteResponse" message="tns:IEarthPublic_GetPublicite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPublicites">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEarthPublic/GetPublicites" message="tns:IEarthPublic_GetPublicites_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEarthPublic/GetPublicitesResponse" message="tns:IEarthPublic_GetPublicites_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSalon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEarthPublic/GetSalon" message="tns:IEarthPublic_GetSalon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEarthPublic/GetSalonResponse" message="tns:IEarthPublic_GetSalon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSalons">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEarthPublic/GetSalons" message="tns:IEarthPublic_GetSalons_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEarthPublic/GetSalonsResponse" message="tns:IEarthPublic_GetSalons_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastsSalons">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEarthPublic/GetLastsSalons" message="tns:IEarthPublic_GetLastsSalons_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEarthPublic/GetLastsSalonsResponse" message="tns:IEarthPublic_GetLastsSalons_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RechercherSalons">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEarthPublic/RechercherSalons" message="tns:IEarthPublic_RechercherSalons_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEarthPublic/RechercherSalonsResponse" message="tns:IEarthPublic_RechercherSalons_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEarthPublic/GetRole" message="tns:IEarthPublic_GetRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEarthPublic/GetRoleResponse" message="tns:IEarthPublic_GetRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVille">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEarthPublic/GetVille" message="tns:IEarthPublic_GetVille_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEarthPublic/GetVilleResponse" message="tns:IEarthPublic_GetVille_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVilles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEarthPublic/GetVilles" message="tns:IEarthPublic_GetVilles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEarthPublic/GetVillesResponse" message="tns:IEarthPublic_GetVilles_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IEarthPublic" type="tns:IEarthPublic">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetConference">
+      <soap:operation soapAction="http://tempuri.org/IEarthPublic/GetConference" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConferences">
+      <soap:operation soapAction="http://tempuri.org/IEarthPublic/GetConferences" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastsConferences">
+      <soap:operation soapAction="http://tempuri.org/IEarthPublic/GetLastsConferences" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RechercherConferences">
+      <soap:operation soapAction="http://tempuri.org/IEarthPublic/RechercherConferences" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLien">
+      <soap:operation soapAction="http://tempuri.org/IEarthPublic/GetLien" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLiens">
+      <soap:operation soapAction="http://tempuri.org/IEarthPublic/GetLiens" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMembre">
+      <soap:operation soapAction="http://tempuri.org/IEarthPublic/GetMembre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMembres">
+      <soap:operation soapAction="http://tempuri.org/IEarthPublic/GetMembres" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RechercherMembres">
+      <soap:operation soapAction="http://tempuri.org/IEarthPublic/RechercherMembres" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNews">
+      <soap:operation soapAction="http://tempuri.org/IEarthPublic/GetNews" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewsListe">
+      <soap:operation soapAction="http://tempuri.org/IEarthPublic/GetNewsListe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastsNewsListe">
+      <soap:operation soapAction="http://tempuri.org/IEarthPublic/GetLastsNewsListe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RechercherNews">
+      <soap:operation soapAction="http://tempuri.org/IEarthPublic/RechercherNews" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjet">
+      <soap:operation soapAction="http://tempuri.org/IEarthPublic/GetProjet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjets">
+      <soap:operation soapAction="http://tempuri.org/IEarthPublic/GetProjets" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastProjets">
+      <soap:operation soapAction="http://tempuri.org/IEarthPublic/GetLastProjets" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPublicite">
+      <soap:operation soapAction="http://tempuri.org/IEarthPublic/GetPublicite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPublicites">
+      <soap:operation soapAction="http://tempuri.org/IEarthPublic/GetPublicites" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalon">
+      <soap:operation soapAction="http://tempuri.org/IEarthPublic/GetSalon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalons">
+      <soap:operation soapAction="http://tempuri.org/IEarthPublic/GetSalons" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastsSalons">
+      <soap:operation soapAction="http://tempuri.org/IEarthPublic/GetLastsSalons" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RechercherSalons">
+      <soap:operation soapAction="http://tempuri.org/IEarthPublic/RechercherSalons" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRole">
+      <soap:operation soapAction="http://tempuri.org/IEarthPublic/GetRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVille">
+      <soap:operation soapAction="http://tempuri.org/IEarthPublic/GetVille" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVilles">
+      <soap:operation soapAction="http://tempuri.org/IEarthPublic/GetVilles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EarthPublic">
+    <wsdl:port name="BasicHttpBinding_IEarthPublic" binding="tns:BasicHttpBinding_IEarthPublic">
+      <soap:address location="http://www.epsilab.net/webservices/EarthPublic.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

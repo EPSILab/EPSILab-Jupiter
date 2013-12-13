@@ -1,0 +1,405 @@
+﻿html {
+    background: url(../Images/Background.jpg) no-repeat center fixed;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+    color: #000;
+    font-family: Segoe UI, Trebuchet MS, Arial;
+    font-size: 14px;
+    margin: 10px auto 0 auto;
+}
+
+img {
+    border: none;
+    text-decoration: none;
+}
+
+a {
+    color: #0664A9;
+    text-decoration: none;
+}
+
+    a:active {
+        background-color: transparent;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+input {
+    border: 1px solid #000;
+    background-color: #F9F9F9;
+    font-family: Segoe UI;
+    font-size: 13px;
+}
+
+select {
+    border: 1px solid #000;
+    background-color: #F9F9F9;
+    font-family: Segoe UI;
+    font-size: 13px;
+}
+
+textarea {
+    border: 1px solid #000;
+    background-color: #F9F9F9;
+    font-family: Segoe UI;
+    font-size: 13px;
+}
+
+
+h1 {
+    margin: 0;
+    font-weight: normal;
+    font-size: 1.8em;
+    color: #000;
+    height: 30px;
+    width: 100%;
+    padding: 10px 0 0 0;
+}
+
+    h1:after {
+        padding-left: 10px;
+    }
+
+h2 {
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+}
+
+    h2 a {
+        color: #000;
+    }
+
+
+#search {
+    margin-top: 3px;
+    margin-right: 3px;
+    background: lightgrey;
+    border: 2px lightgrey solid;
+    float: right;
+    height: 22px;
+}
+
+#txtRechercher {
+    border: none;
+    background: none;
+    height: 20px;
+    display: inline;
+    float: left;
+}
+
+#imgRechercher {
+    background: none;
+    border: none;
+    height: 22px;
+    width: 22px;
+    display: inline;
+}
+
+    #imgRechercher:hover {
+        background: white;
+    }
+
+#nav-menu {
+    padding-top: 20px;
+}
+
+    #nav-menu ul li {
+        height: 30px;
+    }
+
+        #nav-menu ul li a {
+            padding-top: 5px;
+        }
+
+#main, header {
+    margin: 0 auto;
+}
+
+footer {
+    background-color: #0664a9;
+    font-size: 11px;
+    margin: 50px 0 0 0;
+    padding: 0;
+    text-align: center;
+    position: relative;
+}
+
+    footer * {
+        margin: 0;
+        padding: 0;
+        list-style-position: outside;
+        color: white;
+    }
+
+
+#footer-nav li {
+    display: inline-block;
+    vertical-align: top;
+}
+
+    #footer-nav li ul h2 {
+        margin: 10px 0;
+    }
+
+#applis, #social, #sitemap {
+    width: 370px;
+}
+
+
+    #sitemap li {
+        display: block;
+        font-size: 13px;
+        margin-left: 75px;
+        margin-right: 0;
+        text-align: left;
+        float: left;
+        font-weight: 600;
+    }
+
+        #sitemap li:nth-child(odd) {
+            float: right;
+            margin-left: 0;
+            margin-right: 75px;
+        }
+
+
+
+    #applis li, #social li {
+        margin-top: 5px;
+    }
+
+        #applis li a {
+            display: block;
+        }
+
+#ico-facebook, #ico-twitter {
+    margin-left: 5px;
+}
+
+
+#copyright {
+    margin-top: 20px;
+    padding-bottom: 5px;
+}
+
+    #copyright a {
+        font-weight: 700;
+    }
+
+
+
+.titre {
+    color: #0664A9;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.date {
+    font-size: 14px;
+}
+
+.description {
+    font-size: 13px;
+}
+
+.aucun_resultat {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.gras {
+    font-weight: bold;
+}
+
+
+
+
+/* Changement des éléments de l'écran si on dépasse les 1100px */
+@media screen and (min-width: 1100px) {
+    #main, header {
+        width: 1000px;
+    }
+
+    #AppliWin8 {
+        background: url(../Images/AppliWindowsStore.png) no-repeat center;
+        width: 159px;
+        height: 50px;
+    }
+
+    #AppliPhone8 {
+        background: url(../Images/AppliWindowsPhone.png) no-repeat center;
+        width: 159px;
+        height: 50px;
+    }
+
+    #logo {
+        width: 289px;
+        height: 90px;
+        margin-top: 0;
+    }
+}
+
+/* Changement des éléments de l'écran si on est entre 600 et 1100px */
+@media screen and (min-width: 600px) and (max-width: 1100px) {
+    #main, header {
+        margin-left: 110px;
+        margin-right: 110px;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    #AppliWin8 {
+        background: url(../Images/AppliWindowsStore.png) no-repeat center;
+        width: 159px;
+        height: 50px;
+    }
+
+    #AppliPhone8 {
+        background: url(../Images/AppliWindowsPhone.png) no-repeat center;
+        width: 159px;
+        height: 50px;
+    }
+
+    #logo {
+        width: 289px;
+        height: 90px;
+        margin-top: 0;
+    }
+
+    img {
+        max-width: 500px;
+        height: auto;
+    }
+}
+
+/* Changement des éléments de l'écran si on est entre 400 et 600px */
+@media screen and (min-width: 400px) and (max-width: 600px) {
+    #search {
+        display: none;
+    }
+
+    #main, header {
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    #AppliWin8 {
+        background: url(../Images/AppliWindowsStore.png) no-repeat center;
+        width: 159px;
+        height: 50px;
+    }
+
+    #AppliPhone8 {
+        background: url(../Images/AppliWindowsPhone.png) no-repeat center;
+        width: 159px;
+        height: 50px;
+    }
+
+    #logo {
+        width: 289px;
+        height: 90px;
+        margin-top: 10px;
+    }
+
+    #search {
+        margin-right: 70px;
+    }
+
+    #nav-menu {
+        padding-top: 0;
+    }
+
+    img {
+        max-width: 300px;
+        height: auto;
+    }
+}
+
+/* Changement des éléments de l'écran si on est en dessous de 400px */
+@media screen and (max-width: 400px) {
+    #search {
+        display: none;
+    }
+
+    #main, header {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    #AppliWin8 {
+        background: url(../Images/VignetteWindowsStore.png) no-repeat center;
+        width: 50px;
+        height: 50px;
+    }
+
+    #AppliPhone8 {
+        background: url(../Images/VignetteWindowsPhone.png) no-repeat center;
+        width: 50px;
+        height: 50px;
+    }
+
+    #logo {
+        width: 217px;
+        height: 68px;
+        margin-top: 15px;
+    }
+
+    #search {
+        margin-right: 12px;
+    }
+
+    #applis, #social, #sitemap {
+        width: 300px;
+    }
+
+    #nav-menu {
+        padding-top: 0;
+    }
+
+    #sitemap li {
+        display: block;
+        float: none;
+        clear: left;
+        margin: 0;
+        text-align: center;
+    }
+
+        #sitemap li:nth-child(odd) {
+            display: block;
+            float: none;
+            clear: right;
+            margin: 0;
+            text-align: center;
+        }
+
+    h1 {
+        font-size: 23px;
+    }
+
+    img {
+        max-width: 200px;
+        height: auto;
+    }
+}

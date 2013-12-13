@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EDC462E4-9054-413E-A52A-65A2E9183184}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EPSILab.Jupiter</RootNamespace>
+    <AssemblyName>EPSILab.Jupiter</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">.\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Recaptcha, Version=1.0.5.0, Culture=neutral, PublicKeyToken=9afc4d65b28c38c2, processorArchitecture=MSIL">
+      <HintPath>packages\recaptcha.1.0.5.0\lib\.NetFramework 4.0\Recaptcha.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Actualites.aspx" />
+    <Content Include="APropos.aspx" />
+    <Content Include="BingSiteAuth.xml" />
+    <Content Include="Conferences.aspx" />
+    <Content Include="Evenements.aspx" />
+    <Content Include="googlea5e2124347c9c941.html" />
+    <Content Include="Images\backButton.png" />
+    <Content Include="Images\Menu_Accueil.png" />
+    <Content Include="Images\Menu_Actualites.png" />
+    <Content Include="Images\Menu_Conferences.png" />
+    <Content Include="Images\Menu_Contact.png" />
+    <Content Include="Images\EPSI.png" />
+    <Content Include="Images\Menu_Evenements.png" />
+    <Content Include="Images\favicon.ico" />
+    <Content Include="Images\Menu_Liens.png" />
+    <Content Include="Images\Menu_Membres.png" />
+    <Content Include="Images\SocialLinkedIn.png" />
+    <Content Include="Images\Microsoft.png" />
+    <Content Include="Images\Menu_Projets.png" />
+    <Content Include="Images\RSS.png" />
+    <Content Include="Images\Rechercher.png" />
+    <Content Include="Images\Logo.png" />
+    <Content Include="Images\Facebook.png" />
+    <Content Include="Images\SocialFacebook.png" />
+    <Content Include="Images\SocialTwitter.png" />
+    <Content Include="Images\SocialViadeo.png" />
+    <Content Include="Images\Twitter.png" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Images\Background.jpg" />
+    <Content Include="Images\AppliWindowsPhone.png" />
+    <Content Include="Images\AppliWindowsStore.png" />
+    <Content Include="Images\up-arrow.png" />
+    <Content Include="Images\VignetteWindowsStore.png" />
+    <Content Include="Images\VignetteWindowsPhone.png" />
+    <Content Include="Images\Website.png" />
+    <Content Include="Membres.aspx" />
+    <Content Include="Projets.aspx" />
+    <Content Include="Recherche.aspx" />
+    <Content Include="References\Recaptcha.dll" />
+    <Content Include="References\Recaptcha.pdb" />
+    <Content Include="Salons.aspx" />
+    <Content Include="Scripts\Actualites.js" />
+    <Content Include="Scripts\Conferences.js" />
+    <Content Include="Scripts\Contact.js" />
+    <Content Include="Scripts\APropos.js" />
+    <Content Include="Scripts\Evenements.js" />
+    <Content Include="Scripts\jquery-1.4.2.min.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <Content Include="Scripts\jquery.carouFredSel-6.2.1-packed.js" />
+    <Content Include="Scripts\jquery.touchSwipe.min.js" />
+    <Content Include="Scripts\Membres.js" />
+    <Content Include="Scripts\Presentation.js" />
+    <Content Include="Scripts\Projets.js" />
+    <Content Include="Scripts\Recherche.js" />
+    <Content Include="Scripts\Salons.js" />
+    <Content Include="Scripts\ShareThis.js" />
+    <Content Include="Scripts\SiteMaster.js" />
+    <Content Include="Service References\Webservice\EPSILab.Jupiter.Webservice.Classe.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Webservice\EPSILab.Jupiter.Webservice.Conference.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Webservice\EPSILab.Jupiter.Webservice.Lien.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Webservice\EPSILab.Jupiter.Webservice.Membre.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Webservice\EPSILab.Jupiter.Webservice.News.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Webservice\EPSILab.Jupiter.Webservice.Projet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Webservice\EPSILab.Jupiter.Webservice.Publicite.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Webservice\EPSILab.Jupiter.Webservice.Role.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Webservice\EPSILab.Jupiter.Webservice.Salon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Webservice\EPSILab.Jupiter.Webservice.Ville.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="packages.config" />
+    <None Include="Service References\Webservice\ReadersService.disco" />
+    <None Include="Service References\Webservice\configuration91.svcinfo" />
+    <None Include="Service References\Webservice\configuration.svcinfo" />
+    <None Include="Service References\Webservice\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="sitemap.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Styles\Actualites.css" />
+    <Content Include="Styles\Conferences.css" />
+    <Content Include="Styles\Contact.css" />
+    <Content Include="Styles\APropos.css" />
+    <Content Include="Styles\Evenements.css" />
+    <Content Include="Styles\Membres.css" />
+    <Content Include="RSS.ashx" />
+    <None Include="Properties\PublishProfiles\EPSILab.pubxml" />
+    <None Include="Properties\PublishProfiles\local.pubxml" />
+    <Content Include="Liens.aspx" />
+    <Content Include="Scripts\coin-slider.min.js" />
+    <Content Include="Scripts\Default.js" />
+    <Content Include="Scripts\jquery.easing.min.js" />
+    <Content Include="Scripts\Liens.js" />
+    <Content Include="Styles\coin-slider-styles.css" />
+    <Content Include="Styles\Default.css" />
+    <Content Include="Styles\Liens.css" />
+    <Content Include="Styles\Menu.css" />
+    <Content Include="Styles\Projets.css" />
+    <Content Include="Styles\Recherche.css" />
+    <Content Include="Styles\Salons.css" />
+    <Content Include="Styles\Styles.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <None Include="Service References\Webservice\ReadersService.wsdl" />
+    <None Include="Service References\Webservice\ReadersService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Webservice\ReadersService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Webservice\ReadersService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Webservice\ReadersService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actualites.aspx.cs">
+      <DependentUpon>Actualites.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Actualites.aspx.designer.cs">
+      <DependentUpon>Actualites.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="APropos.aspx.cs">
+      <DependentUpon>APropos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="APropos.aspx.designer.cs">
+      <DependentUpon>APropos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\ConferencesVille.cs" />
+    <Compile Include="Classes\MembresVille.cs" />
+    <Compile Include="Classes\ProjetsVille.cs" />
+    <Compile Include="Conferences.aspx.cs">
+      <DependentUpon>Conferences.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Conferences.aspx.designer.cs">
+      <DependentUpon>Conferences.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Evenements.aspx.cs">
+      <DependentUpon>Evenements.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Evenements.aspx.designer.cs">
+      <DependentUpon>Evenements.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Liens.aspx.cs">
+      <DependentUpon>Liens.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Liens.aspx.designer.cs">
+      <DependentUpon>Liens.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Membres.aspx.cs">
+      <DependentUpon>Membres.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Membres.aspx.designer.cs">
+      <DependentUpon>Membres.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Projets.aspx.cs">
+      <DependentUpon>Projets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projets.aspx.designer.cs">
+      <DependentUpon>Projets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recherche.aspx.cs">
+      <DependentUpon>Recherche.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Recherche.aspx.designer.cs">
+      <DependentUpon>Recherche.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RSS.ashx.cs">
+      <DependentUpon>RSS.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Salons.aspx.cs">
+      <DependentUpon>Salons.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Salons.aspx.designer.cs">
+      <DependentUpon>Salons.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Webservice\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\Liens\" />
+    <Folder Include="Images\Membres\" />
+    <Folder Include="Images\News\" />
+    <Folder Include="Images\TemporaryNews\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\Webservice\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3800</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

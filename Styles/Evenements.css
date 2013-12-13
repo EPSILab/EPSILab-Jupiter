@@ -1,0 +1,96 @@
+﻿h2 {
+    font-weight: normal;
+    text-align: center;
+}
+
+.lien {
+    margin-left: 10px;
+}
+
+.ul {
+    width: 395px;
+}
+
+
+
+.blocConferences, .blocSalons {
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px 5px 5px 0;
+    background: rgba(160, 160, 160, 0.1);
+    color: black;
+    min-width: 490px;
+    height: 78px;
+}
+
+    .blocConferences:hover, .blocSalons:hover {
+        background: lightgrey;
+        text-decoration: none;
+    }
+
+.photoElement, .descElement {
+    vertical-align: top;
+    display: inline-block;
+    margin: 2px 0 0 2px;
+}
+
+.photoElement {
+    float: left;
+}
+
+.nom {
+    padding-top: 50px;
+    font-weight: bold;
+}
+
+
+/* Changement des éléments de l'écran si on est entre 600 et 1100px */
+@media screen and (min-width: 600px) and (max-width: 1100px) {
+    .blocConferences, .blocSalons {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .nom {
+        font-size: 14px;
+    }
+
+    .lien {
+        text-align: center;
+    }
+}
+
+/* Changement des éléments de l'écran si on est en dessous de 600px et au-dessus de 400px */
+@media screen and (min-width: 400px) and (max-width: 600px) {
+    .blocConferences, .blocSalons {
+        min-width: 340px;
+    }
+
+    .nom {
+        font-size: 14px;
+    }
+
+    .lien {
+        text-align: center;
+    }
+}
+
+/* Changement des éléments de l'écran si on est en dessous de 400px */
+@media screen and (max-width: 400px) {
+    .blocConferences, .blocSalons {
+        min-width: 290px;
+        font-size: 12px;
+    }
+
+    .nom {
+        font-size: 14px;
+    }
+
+    .photoElement {
+        display: none;
+    }
+
+    .lien {
+        text-align: center;
+    }
+}

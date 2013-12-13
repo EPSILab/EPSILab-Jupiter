@@ -1,0 +1,191 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="EPSILab.Jupiter.SiteMaster" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>EPSILab, le laboratoire Microsoft de l'EPSI</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="all">
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="Styles/Styles.css" />
+    <link rel="stylesheet" type="text/css" href="Styles/Menu.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="Images/favicon.ico" />
+    <script type="text/javascript" src="Scripts/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="Scripts/SiteMaster.js"></script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+
+        <!-- Header -->
+        <header>
+
+            <!-- Champs de recherche -->
+            <div id="search">
+                <asp:TextBox runat="server" ID="txtRechercher" Width="150" />
+                <asp:ImageButton ID="imgRechercher" runat="server" AlternateText="Rechercher"
+                    ImageUrl="Images/Rechercher.png" OnClick="imgRechercher_Click" />
+            </div>
+
+            <!-- Logo EPSILab -->
+            <a href="Default.aspx">
+                <img id="logo" src="Images/Logo.png" alt="Logo EPSILab" />
+            </a>
+
+            <!-- Menu de navigation -->
+            <nav id="nav-menu">
+                <ul id="menu">
+                    <li id="menu_default">
+                        <a href="Default.aspx">
+                            <img src="Images/Menu_Accueil.png" alt="Accueil" width="35" height="25" />
+                            <span>Accueil</span>
+                        </a>
+                    </li>
+                    <li id="menu_news">
+                        <a href="Actualites.aspx">
+                            <img src="Images/Menu_Actualites.png" alt="Actualités" width="35" height="25" />
+                            <span>Actualités</span>
+                        </a>
+                    </li>
+                    <li id="menu_membres">
+                        <a href="Membres.aspx">
+                            <img src="Images/Menu_Membres.png" alt="Membres" width="35" height="25" />
+                            <span>Membres</span>
+                        </a>
+                    </li>
+                    <li id="menu_projets">
+                        <a href="Projets.aspx">
+                            <img src="Images/Menu_Projets.png" alt="Projets" width="35" height="25" />
+                            <span>Projets</span>
+                        </a>
+                    </li>
+                    <li id="menu_liens">
+                        <a href="Liens.aspx">
+                            <img src="Images/Menu_Liens.png" alt="Liens" width="35" height="25" />
+                            <span>Liens</span>
+                        </a>
+                    </li>
+                    <li id="menu_evenements">
+                        <a href="Evenements.aspx">
+                            <img src="Images/Menu_Evenements.png" alt="Evénements" width="35" height="25" />
+                            <span>Evénements</span>
+                        </a>
+                    </li>
+                    <li id="menu_contact">
+                        <a href="Contact.aspx">
+                            <img src="Images/Menu_Contact.png" alt="Contact" width="35" height="25" />
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Contenu principal -->
+        <div id="main">
+            <a href="Default.aspx">EPSILab</a> &gt; 
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <ul id="footer-nav">
+                <li>
+                    <ul id="social">
+                        <h2>Retrouvez-nous sur</h2>
+                        <li id="ico-rss">
+                            <a href="RSS.ashx" target="_blank">
+                                <img src="Images/RSS.png"
+                                    width="50" height="50"
+                                    alt="Suivez notre flux d'actualités RSS"
+                                    title="Suivez notre flux d'actualités RSS" />
+                            </a>
+                        </li>
+                        <li id="ico-facebook">
+                            <a href="http://www.facebook.com/epsilab" target="_blank">
+                                <img src="Images/Facebook.png"
+                                    width="50" height="50"
+                                    alt="Retrouvez-nous sur Facebook"
+                                    title="Retrouvez-nous sur Facebook" />
+                            </a>
+                        </li>
+                        <li id="ico-twitter">
+                            <a href="http://www.twitter.com/epsilab" target="_blank">
+                                <img src="Images/Twitter.png"
+                                    width="50" height="50"
+                                    alt="Suivez-nous sur Twitter"
+                                    title="Suivez-nous sur Twitter" />
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <ul id="applis">
+                        <h2>Nos applications</h2>
+                        <li>
+                            <a id="AppliWin8" href="http://apps.microsoft.com/windows/fr-FR/app/epsilab/d238d3c6-fc4c-4190-961b-0dff8e6438e4" target="_blank"></a>
+                        </li>
+                        <li>
+                            <a id="AppliPhone8" href="http://www.windowsphone.com/fr-fr/store/app/epsilab/d5f38513-160d-49cb-99be-8d15bf9bb217" target="_blank"></a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <nav>
+                        <ul id="sitemap">
+                            <h2>Sitemap</h2>
+                            <li>
+                                <a href="Default.aspx">Page d'accueil</a>
+                            </li>
+                            <li>
+                                <a href="Actualites.aspx">Nos actualités</a>
+                            </li>
+                            <li>
+                                <a href="Membres.aspx">Les membres</a>
+                            </li>
+                            <li>
+                                <a href="Evenements.aspx">Nos événements</a>
+                            </li>
+                            <li>
+                                <a href="Projets.aspx">Nos projets</a>
+                            </li>
+                            <li>
+                                <a href="Liens.aspx">Liens utiles</a>
+                            </li>
+                            <li>
+                                <a href="Contact.aspx">Nous contacter</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </li>
+
+            </ul>
+            <br />
+
+            <div style="font-size: 11px; font-family: Arial, Helvetica, sans-serif; text-align: center"><a href="http://express.ikoula.com/serveur-dedie" title="Choisissez Ikoula pour tous vos projets d’hébergement web" target="_blank">
+                <img alt="Choisissez Ikoula pour tous vos projets d’hébergement web" src="http://www.ikoula.com/img/heberge_par_ik_white.gif" border="0" /></a><br>
+                <a href=" http://www.ex10.biz/messagerie_exchange" title="Choisissez Ikoula pour tous vos projets d’hébergement web" target="_blank">Messagerie Exchange</a> | <a href="http://express.ikoula.com/serveur-dedie" title="Choisissez Ikoula pour tous vos projets d’hébergement web" target="_blank">serveur dédié</a></div>
+
+            <div id="copyright">
+                © EPSILab 2004-<% Response.Write(DateTime.Now.Year); %> - Tous droits réservés |
+                        <a href="APropos.aspx">A propos de</a><br />
+                Ce site a été créé avec les technologies HTML5, CSS3, ASP.NET 4.0 et jQuery
+            </div>
+        </footer>
+    </form>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-16001815-1']);
+        _gaq.push(['_setDomainName', 'epsilab.net']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</body>
+</html>
