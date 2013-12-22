@@ -1,4 +1,4 @@
-EPSILab-Jupiter
+SolarSystem-Jupiter
 ==============
 
 Contains all sources of the EPSILab website. Made with ASP.NET 4.0.
