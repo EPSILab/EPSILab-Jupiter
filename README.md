@@ -9,7 +9,7 @@ Website is visitable on http://www.epsilab.net.
 Clone this repository and open the solution file named "**Jupiter.sln**".
 
 #License
-This project has an **Apache2** license.
+This project has an **LGPL** license.
 
 #Required
 - .NET 4.0
