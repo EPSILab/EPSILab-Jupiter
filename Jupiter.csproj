@@ -120,6 +120,7 @@
     <Content Include="Scripts\ShareThis.js" />
     <Content Include="Scripts\SiteMaster.js" />
     <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\FTP.pubxml" />
     <None Include="Service References\ReadersService\ReadersService.disco" />
     <None Include="Service References\ReadersService\configuration91.svcinfo" />
     <None Include="Service References\ReadersService\configuration.svcinfo" />
