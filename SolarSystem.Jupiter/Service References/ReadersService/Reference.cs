@@ -1703,14 +1703,17 @@ namespace SolarSystem.Jupiter.ReadersService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMembreReader/GetMembre", ReplyAction="http://tempuri.org/IMembreReader/GetMembreResponse")]
         SolarSystem.Jupiter.ReadersService.Membre GetMembre(int code);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMembreReader/GetMembresNotInBureauByVille", ReplyAction="http://tempuri.org/IMembreReader/GetMembresNotInBureauByVilleResponse")]
-        SolarSystem.Jupiter.ReadersService.Membre[] GetMembresNotInBureauByVille(SolarSystem.Jupiter.ReadersService.Ville ville);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMembreReader/GetMembres", ReplyAction="http://tempuri.org/IMembreReader/GetMembresResponse")]
+        SolarSystem.Jupiter.ReadersService.Membre[] GetMembres();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMembreReader/GetMembresInBureau", ReplyAction="http://tempuri.org/IMembreReader/GetMembresInBureauResponse")]
-        SolarSystem.Jupiter.ReadersService.Membre[] GetMembresInBureau();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMembreReader/GetMembresByVille", ReplyAction="http://tempuri.org/IMembreReader/GetMembresByVilleResponse")]
+        SolarSystem.Jupiter.ReadersService.Membre[] GetMembresByVille(SolarSystem.Jupiter.ReadersService.Ville ville);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMembreReader/GetMembresInBureauByVille", ReplyAction="http://tempuri.org/IMembreReader/GetMembresInBureauByVilleResponse")]
-        SolarSystem.Jupiter.ReadersService.Membre[] GetMembresInBureauByVille(SolarSystem.Jupiter.ReadersService.Ville ville);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMembreReader/GetMembresBureau", ReplyAction="http://tempuri.org/IMembreReader/GetMembresBureauResponse")]
+        SolarSystem.Jupiter.ReadersService.Membre[] GetMembresBureau();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMembreReader/GetMembresBureauByVille", ReplyAction="http://tempuri.org/IMembreReader/GetMembresBureauByVilleResponse")]
+        SolarSystem.Jupiter.ReadersService.Membre[] GetMembresBureauByVille(SolarSystem.Jupiter.ReadersService.Ville ville);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMembreReader/GetMembresAlumnis", ReplyAction="http://tempuri.org/IMembreReader/GetMembresAlumnisResponse")]
         SolarSystem.Jupiter.ReadersService.Membre[] GetMembresAlumnis(SolarSystem.Jupiter.ReadersService.Ville ville);
@@ -1753,16 +1756,20 @@ namespace SolarSystem.Jupiter.ReadersService {
             return base.Channel.GetMembre(code);
         }
         
-        public SolarSystem.Jupiter.ReadersService.Membre[] GetMembresNotInBureauByVille(SolarSystem.Jupiter.ReadersService.Ville ville) {
-            return base.Channel.GetMembresNotInBureauByVille(ville);
+        public SolarSystem.Jupiter.ReadersService.Membre[] GetMembres() {
+            return base.Channel.GetMembres();
         }
         
-        public SolarSystem.Jupiter.ReadersService.Membre[] GetMembresInBureau() {
-            return base.Channel.GetMembresInBureau();
+        public SolarSystem.Jupiter.ReadersService.Membre[] GetMembresByVille(SolarSystem.Jupiter.ReadersService.Ville ville) {
+            return base.Channel.GetMembresByVille(ville);
         }
         
-        public SolarSystem.Jupiter.ReadersService.Membre[] GetMembresInBureauByVille(SolarSystem.Jupiter.ReadersService.Ville ville) {
-            return base.Channel.GetMembresInBureauByVille(ville);
+        public SolarSystem.Jupiter.ReadersService.Membre[] GetMembresBureau() {
+            return base.Channel.GetMembresBureau();
+        }
+        
+        public SolarSystem.Jupiter.ReadersService.Membre[] GetMembresBureauByVille(SolarSystem.Jupiter.ReadersService.Ville ville) {
+            return base.Channel.GetMembresBureauByVille(ville);
         }
         
         public SolarSystem.Jupiter.ReadersService.Membre[] GetMembresAlumnis(SolarSystem.Jupiter.ReadersService.Ville ville) {

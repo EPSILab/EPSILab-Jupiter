@@ -67,23 +67,29 @@
   <wsdl:message name="IMembreReader_GetMembre_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetMembreResponse" />
   </wsdl:message>
-  <wsdl:message name="IMembreReader_GetMembresNotInBureauByVille_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetMembresNotInBureauByVille" />
+  <wsdl:message name="IMembreReader_GetMembres_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMembres" />
   </wsdl:message>
-  <wsdl:message name="IMembreReader_GetMembresNotInBureauByVille_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetMembresNotInBureauByVilleResponse" />
+  <wsdl:message name="IMembreReader_GetMembres_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMembresResponse" />
   </wsdl:message>
-  <wsdl:message name="IMembreReader_GetMembresInBureau_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetMembresInBureau" />
+  <wsdl:message name="IMembreReader_GetMembresByVille_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMembresByVille" />
   </wsdl:message>
-  <wsdl:message name="IMembreReader_GetMembresInBureau_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetMembresInBureauResponse" />
+  <wsdl:message name="IMembreReader_GetMembresByVille_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMembresByVilleResponse" />
   </wsdl:message>
-  <wsdl:message name="IMembreReader_GetMembresInBureauByVille_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetMembresInBureauByVille" />
+  <wsdl:message name="IMembreReader_GetMembresBureau_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMembresBureau" />
   </wsdl:message>
-  <wsdl:message name="IMembreReader_GetMembresInBureauByVille_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetMembresInBureauByVilleResponse" />
+  <wsdl:message name="IMembreReader_GetMembresBureau_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMembresBureauResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMembreReader_GetMembresBureauByVille_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMembresBureauByVille" />
+  </wsdl:message>
+  <wsdl:message name="IMembreReader_GetMembresBureauByVille_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMembresBureauByVilleResponse" />
   </wsdl:message>
   <wsdl:message name="IMembreReader_GetMembresAlumnis_InputMessage">
     <wsdl:part name="parameters" element="tns:GetMembresAlumnis" />
@@ -268,17 +274,21 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IMembreReader/GetMembre" message="tns:IMembreReader_GetMembre_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IMembreReader/GetMembreResponse" message="tns:IMembreReader_GetMembre_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetMembresNotInBureauByVille">
-      <wsdl:input wsaw:Action="http://tempuri.org/IMembreReader/GetMembresNotInBureauByVille" message="tns:IMembreReader_GetMembresNotInBureauByVille_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IMembreReader/GetMembresNotInBureauByVilleResponse" message="tns:IMembreReader_GetMembresNotInBureauByVille_OutputMessage" />
+    <wsdl:operation name="GetMembres">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMembreReader/GetMembres" message="tns:IMembreReader_GetMembres_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMembreReader/GetMembresResponse" message="tns:IMembreReader_GetMembres_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetMembresInBureau">
-      <wsdl:input wsaw:Action="http://tempuri.org/IMembreReader/GetMembresInBureau" message="tns:IMembreReader_GetMembresInBureau_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IMembreReader/GetMembresInBureauResponse" message="tns:IMembreReader_GetMembresInBureau_OutputMessage" />
+    <wsdl:operation name="GetMembresByVille">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMembreReader/GetMembresByVille" message="tns:IMembreReader_GetMembresByVille_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMembreReader/GetMembresByVilleResponse" message="tns:IMembreReader_GetMembresByVille_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetMembresInBureauByVille">
-      <wsdl:input wsaw:Action="http://tempuri.org/IMembreReader/GetMembresInBureauByVille" message="tns:IMembreReader_GetMembresInBureauByVille_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IMembreReader/GetMembresInBureauByVilleResponse" message="tns:IMembreReader_GetMembresInBureauByVille_OutputMessage" />
+    <wsdl:operation name="GetMembresBureau">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMembreReader/GetMembresBureau" message="tns:IMembreReader_GetMembresBureau_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMembreReader/GetMembresBureauResponse" message="tns:IMembreReader_GetMembresBureau_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMembresBureauByVille">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMembreReader/GetMembresBureauByVille" message="tns:IMembreReader_GetMembresBureauByVille_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMembreReader/GetMembresBureauByVilleResponse" message="tns:IMembreReader_GetMembresBureauByVille_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetMembresAlumnis">
       <wsdl:input wsaw:Action="http://tempuri.org/IMembreReader/GetMembresAlumnis" message="tns:IMembreReader_GetMembresAlumnis_InputMessage" />
@@ -481,8 +491,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetMembresNotInBureauByVille">
-      <soap:operation soapAction="http://tempuri.org/IMembreReader/GetMembresNotInBureauByVille" style="document" />
+    <wsdl:operation name="GetMembres">
+      <soap:operation soapAction="http://tempuri.org/IMembreReader/GetMembres" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -490,8 +500,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetMembresInBureau">
-      <soap:operation soapAction="http://tempuri.org/IMembreReader/GetMembresInBureau" style="document" />
+    <wsdl:operation name="GetMembresByVille">
+      <soap:operation soapAction="http://tempuri.org/IMembreReader/GetMembresByVille" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -499,8 +509,17 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetMembresInBureauByVille">
-      <soap:operation soapAction="http://tempuri.org/IMembreReader/GetMembresInBureauByVille" style="document" />
+    <wsdl:operation name="GetMembresBureau">
+      <soap:operation soapAction="http://tempuri.org/IMembreReader/GetMembresBureau" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMembresBureauByVille">
+      <soap:operation soapAction="http://tempuri.org/IMembreReader/GetMembresBureauByVille" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

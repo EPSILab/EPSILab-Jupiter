@@ -14,14 +14,12 @@ namespace SolarSystem.Jupiter.Classes
         /// Constructor
         /// </summary>
         /// <param name="campus">Campus</param>
-        /// <param name="bureau">Members in the campus bureau</param>
-        /// <param name="others">Members who are not in the campus bureau</param>
+        /// <param name="membres">Members in the campus</param>
         /// <param name="alumnis">Alumnis</param>
-        public MembresVille(Ville campus, IEnumerable<Membre> bureau, IEnumerable<Membre> others, IEnumerable<Membre> alumnis)
+        public MembresVille(Ville campus, IEnumerable<Membre> membres, IEnumerable<Membre> alumnis)
         {
             Campus = campus;
-            Bureau = bureau;
-            Others = others;
+            Membres = membres;
             Alumnis = alumnis;
         }
 
@@ -37,12 +35,7 @@ namespace SolarSystem.Jupiter.Classes
         /// <summary>
         /// Members of the bureau
         /// </summary>
-        public IEnumerable<Membre> Bureau { get; private set; }
-
-        /// <summary>
-        /// Members who are not in the bureau
-        /// </summary>
-        public IEnumerable<Membre> Others { get; private set; }
+        public IEnumerable<Membre> Membres { get; private set; }
 
         /// <summary>
         /// Alumnis
