@@ -110,7 +110,8 @@ namespace SolarSystem.Jupiter
                                                                         _webserviceMembres.GetMembresInBureauByVille(ville),
                                                                         _webserviceMembres.GetMembresNotInBureauByVille(ville),
                                                                         _webserviceMembres.GetMembresAlumnis(ville))).ToList();
-                _membresByVilles.RemoveAll(m => !m.Bureau.Any() && !m.Others.Any());
+                
+                _membresByVilles.RemoveAll(m => !m.Bureau.Any() && !m.Others.Any() && !m.Alumnis.Any());
 
                 repeaterVilles.DataSource = _membresByVilles.Select(m => m.Campus);
                 repeaterVilles.DataBind();
