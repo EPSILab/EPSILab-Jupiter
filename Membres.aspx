@@ -123,7 +123,7 @@
                         </HeaderTemplate>
                         <ItemTemplate>
                             <a class="blocMembre" href="Membres-<%# Eval("Code_Membre") %>-<%# Eval("Url") %>.aspx">
-                                <img class="photoMembre" src="<%# Eval("Image") %>" alt="<%# Eval("Prenom") %> <%# Eval("Nom") %>" width="75" height="75" />
+                                <img src="<%# Eval("Image") %>" alt="<%# Eval("Prenom") %> <%# Eval("Nom") %>" width="50" height="50" />
                                 <span class="descMembre">
                                     <span class="nomMembre">
                                         <%# Eval("Prenom") %> <%# Eval("Nom") %>
