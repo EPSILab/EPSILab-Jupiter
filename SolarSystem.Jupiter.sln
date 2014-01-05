@@ -3,14 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jupiter", "Jupiter.csproj", "{EDC462E4-9054-413E-A52A-65A2E9183184}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{4838E8B6-4C06-4C62-94AD-800AD6E3694C}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\NuGet.Config = .nuget\NuGet.Config
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolarSystem.Jupiter", "SolarSystem.Jupiter\SolarSystem.Jupiter.csproj", "{EDC462E4-9054-413E-A52A-65A2E9183184}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
