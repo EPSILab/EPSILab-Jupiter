@@ -138,57 +138,69 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetMembresNotInBureauByVille">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="ville" nillable="true" type="q12:Ville" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetMembresNotInBureauByVilleResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetMembresNotInBureauByVilleResult" nillable="true" type="q13:ArrayOfMembre" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetMembresInBureau">
+  <xs:element name="GetMembres">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetMembresInBureauResponse">
+  <xs:element name="GetMembresResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetMembresInBureauResult" nillable="true" type="q14:ArrayOfMembre" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetMembresResult" nillable="true" type="q12:ArrayOfMembre" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetMembresInBureauByVille">
+  <xs:element name="GetMembresByVille">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="ville" nillable="true" type="q15:Ville" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="ville" nillable="true" type="q13:Ville" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetMembresInBureauByVilleResponse">
+  <xs:element name="GetMembresByVilleResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetMembresInBureauByVilleResult" nillable="true" type="q16:ArrayOfMembre" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetMembresByVilleResult" nillable="true" type="q14:ArrayOfMembre" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMembresBureau">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMembresBureauResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetMembresBureauResult" nillable="true" type="q15:ArrayOfMembre" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMembresBureauByVille">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="ville" nillable="true" type="q16:Ville" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMembresBureauByVilleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetMembresBureauByVilleResult" nillable="true" type="q17:ArrayOfMembre" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetMembresAlumnis">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="ville" nillable="true" type="q17:Ville" />
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="ville" nillable="true" type="q18:Ville" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetMembresAlumnisResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetMembresAlumnisResult" nillable="true" type="q18:ArrayOfMembre" />
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetMembresAlumnisResult" nillable="true" type="q19:ArrayOfMembre" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -214,7 +226,7 @@
   <xs:element name="SearchMembresResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="SearchMembresResult" nillable="true" type="q19:ArrayOfMembre" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="SearchMembresResult" nillable="true" type="q20:ArrayOfMembre" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -228,7 +240,7 @@
   <xs:element name="GetNewsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetNewsResult" nillable="true" type="q20:News" />
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetNewsResult" nillable="true" type="q21:News" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -240,7 +252,7 @@
   <xs:element name="GetListNewsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetListNewsResult" nillable="true" type="q21:ArrayOfNews" />
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetListNewsResult" nillable="true" type="q22:ArrayOfNews" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -255,7 +267,7 @@
   <xs:element name="GetListNewsLimitedResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetListNewsLimitedResult" nillable="true" type="q22:ArrayOfNews" />
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetListNewsLimitedResult" nillable="true" type="q23:ArrayOfNews" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -281,7 +293,7 @@
   <xs:element name="SearchNewsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="SearchNewsResult" nillable="true" type="q23:ArrayOfNews" />
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="SearchNewsResult" nillable="true" type="q24:ArrayOfNews" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -295,7 +307,7 @@
   <xs:element name="GetProjetResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetProjetResult" nillable="true" type="q24:Projet" />
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetProjetResult" nillable="true" type="q25:Projet" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -307,7 +319,7 @@
   <xs:element name="GetProjetsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetProjetsResult" nillable="true" type="q25:ArrayOfProjet" />
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetProjetsResult" nillable="true" type="q26:ArrayOfProjet" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -322,28 +334,28 @@
   <xs:element name="GetProjetsLimitedResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetProjetsLimitedResult" nillable="true" type="q26:ArrayOfProjet" />
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetProjetsLimitedResult" nillable="true" type="q27:ArrayOfProjet" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetProjetsByVille">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="ville" nillable="true" type="q27:Ville" />
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="ville" nillable="true" type="q28:Ville" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetProjetsByVilleResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetProjetsByVilleResult" nillable="true" type="q28:ArrayOfProjet" />
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetProjetsByVilleResult" nillable="true" type="q29:ArrayOfProjet" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetProjetsByVilleLimited">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="ville" nillable="true" type="q29:Ville" />
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="ville" nillable="true" type="q30:Ville" />
         <xs:element minOccurs="0" name="indexFirstElement" type="xs:int" />
         <xs:element minOccurs="0" name="numberOfResults" type="xs:int" />
       </xs:sequence>
@@ -352,7 +364,7 @@
   <xs:element name="GetProjetsByVilleLimitedResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetProjetsByVilleLimitedResult" nillable="true" type="q30:ArrayOfProjet" />
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetProjetsByVilleLimitedResult" nillable="true" type="q31:ArrayOfProjet" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -378,7 +390,7 @@
   <xs:element name="GetPubliciteResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetPubliciteResult" nillable="true" type="q31:Publicite" />
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetPubliciteResult" nillable="true" type="q32:Publicite" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -390,7 +402,7 @@
   <xs:element name="GetPublicitesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetPublicitesResult" nillable="true" type="q32:ArrayOfPublicite" />
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetPublicitesResult" nillable="true" type="q33:ArrayOfPublicite" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -404,7 +416,7 @@
   <xs:element name="GetSalonResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetSalonResult" nillable="true" type="q33:Salon" />
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetSalonResult" nillable="true" type="q34:Salon" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -416,7 +428,7 @@
   <xs:element name="GetSalonsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetSalonsResult" nillable="true" type="q34:ArrayOfSalon" />
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetSalonsResult" nillable="true" type="q35:ArrayOfSalon" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -431,7 +443,7 @@
   <xs:element name="GetSalonsLimitedResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetSalonsLimitedResult" nillable="true" type="q35:ArrayOfSalon" />
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetSalonsLimitedResult" nillable="true" type="q36:ArrayOfSalon" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -457,7 +469,7 @@
   <xs:element name="SearchSalonsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="SearchSalonsResult" nillable="true" type="q36:ArrayOfSalon" />
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="SearchSalonsResult" nillable="true" type="q37:ArrayOfSalon" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -471,7 +483,7 @@
   <xs:element name="GetVilleResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetVilleResult" nillable="true" type="q37:Ville" />
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetVilleResult" nillable="true" type="q38:Ville" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -483,7 +495,7 @@
   <xs:element name="GetVillesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetVillesResult" nillable="true" type="q38:ArrayOfVille" />
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common" minOccurs="0" name="GetVillesResult" nillable="true" type="q39:ArrayOfVille" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

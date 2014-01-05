@@ -6,7 +6,7 @@ Contains all sources of the EPSILab website. Made with ASP.NET 4.0.
 Website is visitable on http://www.epsilab.net.
 
 #HowTo
-Clone this repository and open the solution file named "**Jupiter.sln**".
+Clone this repository and open the solution file named "**SolarSystem.Jupiter.sln**".
 
 #License
 This project has an **LGPL** license.

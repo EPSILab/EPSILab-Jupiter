@@ -107,11 +107,10 @@ namespace SolarSystem.Jupiter
                 IList<Ville> villes = _webserviceVilles.GetVilles();
 
                 _membresByVilles = villes.Select(ville => new MembresVille(ville,
-                                                                        _webserviceMembres.GetMembresInBureauByVille(ville),
-                                                                        _webserviceMembres.GetMembresNotInBureauByVille(ville),
+                                                                        _webserviceMembres.GetMembresByVille(ville),
                                                                         _webserviceMembres.GetMembresAlumnis(ville))).ToList();
                 
-                _membresByVilles.RemoveAll(m => !m.Bureau.Any() && !m.Others.Any() && !m.Alumnis.Any());
+                _membresByVilles.RemoveAll(m => !m.Membres.Any() && !m.Alumnis.Any());
 
                 repeaterVilles.DataSource = _membresByVilles.Select(m => m.Campus);
                 repeaterVilles.DataBind();
@@ -138,9 +137,9 @@ namespace SolarSystem.Jupiter
                 {
                     Repeater subrepeaterBu = (Repeater)repeaterItemEventArgs.Item.FindControl("repeaterBureau");
 
-                    if (membresVilles.Bureau.Any())
+                    if (membresVilles.Membres.Any(m => m.Role.Code_Role == 2))
                     {
-                        subrepeaterBu.DataSource = membresVilles.Bureau;
+                        subrepeaterBu.DataSource = membresVilles.Membres.Where(m => m.Role.Code_Role == 2);
                         subrepeaterBu.DataBind();
                     }
                     else
@@ -150,9 +149,9 @@ namespace SolarSystem.Jupiter
 
                     Repeater subrepeaterOthers = (Repeater)repeaterItemEventArgs.Item.FindControl("repeaterOthers");
 
-                    if (membresVilles.Others.Any())
+                    if (membresVilles.Membres.Any(m => m.Role.Code_Role == 1))
                     {
-                        subrepeaterOthers.DataSource = membresVilles.Others;
+                        subrepeaterOthers.DataSource = membresVilles.Membres.Where(m => m.Role.Code_Role == 1);
                         subrepeaterOthers.DataBind();
                     }
                     else
