@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EPSILab.Jupiter {
+namespace SolarSystem.Jupiter {
     
     
     public partial class SiteMaster {

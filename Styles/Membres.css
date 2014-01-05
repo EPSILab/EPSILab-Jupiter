@@ -2,7 +2,7 @@
     margin-bottom: 20px;
 }
 
-.listeBureau, .listeMembres {
+.listBureau, .listMembres {
     display: inline-block;
     vertical-align: top;
 }
@@ -90,12 +90,12 @@
         width: 328px;
     }
 
-    .listeBureau {
+    .listBureau {
         width: 326px;
         margin-right: 5px;
     }
 
-    .listeMembres {
+    .listMembres {
         width: 661px;
     }
 }
@@ -106,19 +106,19 @@
         width: 248px;
     }
 
-    .listeBureau {
+    .listBureau {
         width: 248px;
         margin-right: 5px;
     }
 
-    .listeMembres {
+    .listMembres {
         width: 500px;
     }
 }
 
 /* Changement des éléments de l'écran si on est entre 400 et 600px */
 @media screen and (min-width: 400px) and (max-width: 600px) {
-    .blocMembre, .listeBureau, .listeMembres {
+    .blocMembre, .listBureau, .listMembres {
         width: 100%;
     }
 }
@@ -143,7 +143,7 @@
             margin: 0 75px;
         }
 
-    .blocMembre, .listeBureau, .listeMembres {
+    .blocMembre, .listBureau, .listMembres {
         width: 100%;
     }
 

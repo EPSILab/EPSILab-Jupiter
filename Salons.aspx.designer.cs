@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EPSILab.Jupiter {
+namespace SolarSystem.Jupiter {
     
     
     public partial class Salons {
@@ -31,57 +31,57 @@ namespace EPSILab.Jupiter {
         protected global::System.Web.UI.WebControls.Panel panelSalon;
         
         /// <summary>
-        /// imgSalon control.
+        /// imageSalon control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgSalon;
+        protected global::System.Web.UI.WebControls.Image imageSalon;
         
         /// <summary>
-        /// lblNom control.
+        /// labelName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNom;
+        protected global::System.Web.UI.WebControls.Label labelName;
         
         /// <summary>
-        /// lblDateHeure control.
+        /// labelDateTime control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDateHeure;
+        protected global::System.Web.UI.WebControls.Label labelDateTime;
         
         /// <summary>
-        /// lblLieu control.
+        /// labelPlace control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblLieu;
+        protected global::System.Web.UI.WebControls.Label labelPlace;
         
         /// <summary>
-        /// lblDescription control.
+        /// labelDescription control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDescription;
+        protected global::System.Web.UI.WebControls.Label labelDescription;
         
         /// <summary>
-        /// lvSalons control.
+        /// listviewSalons control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView lvSalons;
+        protected global::System.Web.UI.WebControls.ListView listviewSalons;
     }
 }

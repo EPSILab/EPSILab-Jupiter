@@ -1,1 +1,1 @@
-﻿<%@ WebHandler Language="C#" CodeBehind="RSS.ashx.cs" Class="EPSILab.Jupiter.RSS" %>
+﻿<%@ WebHandler Language="C#" CodeBehind="RSS.ashx.cs" Class="SolarSystem.Jupiter.RSS" %>

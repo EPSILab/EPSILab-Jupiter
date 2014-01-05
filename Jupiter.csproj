@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EPSILab.Jupiter</RootNamespace>
-    <AssemblyName>EPSILab.Jupiter</AssemblyName>
+    <RootNamespace>SolarSystem.Jupiter</RootNamespace>
+    <AssemblyName>SolarSystem.Jupiter</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <UseIISExpress>false</UseIISExpress>
     <SccProjectName>SAK</SccProjectName>
@@ -70,6 +70,7 @@
     <Content Include="Evenements.aspx" />
     <Content Include="googlea5e2124347c9c941.html" />
     <Content Include="Images\backButton.png" />
+    <Content Include="Images\GitHub.png" />
     <Content Include="Images\Menu_Accueil.png" />
     <Content Include="Images\Menu_Actualites.png" />
     <Content Include="Images\Menu_Conferences.png" />
@@ -101,8 +102,6 @@
     <Content Include="Membres.aspx" />
     <Content Include="Projets.aspx" />
     <Content Include="Recherche.aspx" />
-    <Content Include="References\Recaptcha.dll" />
-    <Content Include="References\Recaptcha.pdb" />
     <Content Include="Salons.aspx" />
     <Content Include="Scripts\Actualites.js" />
     <Content Include="Scripts\Conferences.js" />
@@ -120,41 +119,11 @@
     <Content Include="Scripts\Salons.js" />
     <Content Include="Scripts\ShareThis.js" />
     <Content Include="Scripts\SiteMaster.js" />
-    <Content Include="Service References\Webservice\EPSILab.Jupiter.Webservice.Classe.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\Webservice\EPSILab.Jupiter.Webservice.Conference.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\Webservice\EPSILab.Jupiter.Webservice.Lien.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\Webservice\EPSILab.Jupiter.Webservice.Membre.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\Webservice\EPSILab.Jupiter.Webservice.News.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\Webservice\EPSILab.Jupiter.Webservice.Projet.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\Webservice\EPSILab.Jupiter.Webservice.Publicite.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\Webservice\EPSILab.Jupiter.Webservice.Role.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\Webservice\EPSILab.Jupiter.Webservice.Salon.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\Webservice\EPSILab.Jupiter.Webservice.Ville.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="packages.config" />
-    <None Include="Service References\Webservice\ReadersService.disco" />
-    <None Include="Service References\Webservice\configuration91.svcinfo" />
-    <None Include="Service References\Webservice\configuration.svcinfo" />
-    <None Include="Service References\Webservice\Reference.svcmap">
+    <None Include="Service References\ReadersService\ReadersService.disco" />
+    <None Include="Service References\ReadersService\configuration91.svcinfo" />
+    <None Include="Service References\ReadersService\configuration.svcinfo" />
+    <None Include="Service References\ReadersService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -192,19 +161,40 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <None Include="Service References\Webservice\ReadersService.wsdl" />
-    <None Include="Service References\Webservice\ReadersService.xsd">
+    <None Include="Service References\ReadersService\ReadersService.wsdl" />
+    <None Include="Service References\ReadersService\ReadersService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\Webservice\ReadersService1.xsd">
+    <None Include="Service References\ReadersService\ReadersService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\Webservice\ReadersService2.xsd">
+    <None Include="Service References\ReadersService\ReadersService2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\Webservice\ReadersService3.xsd">
-      <SubType>Designer</SubType>
-    </None>
+    <Content Include="Service References\ReadersService\SolarSystem.Jupiter.ReadersService.Conference.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReadersService\SolarSystem.Jupiter.ReadersService.Lien.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReadersService\SolarSystem.Jupiter.ReadersService.Membre.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReadersService\SolarSystem.Jupiter.ReadersService.News.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReadersService\SolarSystem.Jupiter.ReadersService.Projet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReadersService\SolarSystem.Jupiter.ReadersService.Publicite.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReadersService\SolarSystem.Jupiter.ReadersService.Salon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReadersService\SolarSystem.Jupiter.ReadersService.Ville.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Actualites.aspx.cs">
@@ -277,6 +267,21 @@
     <Compile Include="Recherche.aspx.designer.cs">
       <DependentUpon>Recherche.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\EmailRessources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmailRessources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\ErrorRessources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ErrorRessources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\GlobalRessources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlobalRessources.resx</DependentUpon>
+    </Compile>
     <Compile Include="RSS.ashx.cs">
       <DependentUpon>RSS.ashx</DependentUpon>
     </Compile>
@@ -287,7 +292,7 @@
     <Compile Include="Salons.aspx.designer.cs">
       <DependentUpon>Salons.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Service References\Webservice\Reference.cs">
+    <Compile Include="Service References\ReadersService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -320,7 +325,21 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\Webservice\" />
+    <WCFMetadataStorage Include="Service References\ReadersService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\EmailRessources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>EmailRessources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ErrorRessources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ErrorRessources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\GlobalRessources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GlobalRessources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

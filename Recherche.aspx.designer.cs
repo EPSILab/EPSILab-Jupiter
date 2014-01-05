@@ -7,108 +7,108 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EPSILab.Jupiter {
+namespace SolarSystem.Jupiter {
     
     
     public partial class Recherche {
         
         /// <summary>
-        /// lblRecherche control.
+        /// labelRecherche control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblRecherche;
+        protected global::System.Web.UI.WebControls.Label labelRecherche;
         
         /// <summary>
-        /// panelNoResultats control.
+        /// panelNoResults control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel panelNoResultats;
+        protected global::System.Web.UI.WebControls.Panel panelNoResults;
         
         /// <summary>
-        /// panelResultats control.
+        /// panelResults control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel panelResultats;
+        protected global::System.Web.UI.WebControls.Panel panelResults;
         
         /// <summary>
-        /// lblNombreNews control.
+        /// labelNewsCount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNombreNews;
+        protected global::System.Web.UI.WebControls.Label labelNewsCount;
         
         /// <summary>
-        /// rptNews control.
+        /// repeaterNews control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptNews;
+        protected global::System.Web.UI.WebControls.Repeater repeaterNews;
         
         /// <summary>
-        /// lblNombreConferences control.
+        /// labelConferencesCount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNombreConferences;
+        protected global::System.Web.UI.WebControls.Label labelConferencesCount;
         
         /// <summary>
-        /// rptConferences control.
+        /// repeaterConferences control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptConferences;
+        protected global::System.Web.UI.WebControls.Repeater repeaterConferences;
         
         /// <summary>
-        /// lblNombreSalons control.
+        /// labelShowsCount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNombreSalons;
+        protected global::System.Web.UI.WebControls.Label labelShowsCount;
         
         /// <summary>
-        /// rptSalons control.
+        /// repeaterShows control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptSalons;
+        protected global::System.Web.UI.WebControls.Repeater repeaterShows;
         
         /// <summary>
-        /// lblNombreMembres control.
+        /// labelMembersCount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNombreMembres;
+        protected global::System.Web.UI.WebControls.Label labelMembersCount;
         
         /// <summary>
-        /// rptMembres control.
+        /// repeaterMembers control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptMembres;
+        protected global::System.Web.UI.WebControls.Repeater repeaterMembers;
     }
 }

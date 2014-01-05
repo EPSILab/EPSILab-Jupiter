@@ -1,64 +1,81 @@
-﻿using EPSILab.Jupiter.Webservice;
+﻿using SolarSystem.Jupiter.ReadersService;
+using SolarSystem.Jupiter.Resources;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace EPSILab.Jupiter
+namespace SolarSystem.Jupiter
 {
+    /// <summary>
+    /// Conferences pages
+    /// </summary>
     public partial class Conferences : Page
     {
-        private readonly IConferenceReader _client = new ConferenceReaderClient();
+        #region Attributes
 
+        /// <summary>
+        /// Webservice proxy
+        /// </summary>
+        private readonly IConferenceReader _webserviceConferences = new ConferenceReaderClient();
+
+        #endregion
+
+        #region Events
+
+        /// <summary>
+        /// Raised when the page is loaded
+        /// </summary>
+        /// <param name="sender">Element which raised the event.</param>
+        /// <param name="e">Event arguments</param>
         protected void Page_Load(object sender, EventArgs e)
         {
             int codeConference;
 
-            // On vérifie si un paramètre GET est passé. Si oui, on affiche une seule news, sinon on affiche la liste
-            if (int.TryParse(HttpContext.Current.Request["id"], out codeConference))
+            // Check if a news id is given in GET parameters. If yes, show the news and if not, show the list of news
+            if (int.TryParse(HttpContext.Current.Request["Id"], out codeConference))
             {
-                // Récupération des informations
-                Conference conference = _client.GetConference(codeConference);
+                Conference conference = _webserviceConferences.GetConference(codeConference);
 
                 if (conference != null)
                 {
-                    lvConferences.Visible = false;
+                    listviewConferences.Visible = false;
                     panelConference.Visible = true;
 
-                    // Génération des balises Meta
-                    Page.Title = conference.Nom + " - EPSILab, le laboratoire Microsoft de l'EPSI";
-                    metaDescription.Text = "<meta name=\"description\" content=\"Conférence " + conference.Nom +
-                                            ", le " + conference.Date_Heure_Debut.ToLongDateString() +
-                                            " de " + conference.Date_Heure_Debut.ToShortTimeString() +
-                                            " à " + conference.Date_Heure_Fin.ToShortTimeString() +
-                                            ", à l'EPSI " + conference.Ville.Libelle + "\" />";
+                    // Generate meta tags
+                    Page.Title = string.Format("{0} - {1}", conference.Nom, GlobalRessources.SiteName);
+                    metaDescription.Text = string.Format("<meta name=\"description\" content=\"Conférence organisée le {0:d} de {0:t} à {1:t}, à l'EPSI {2}", conference.Date_Heure_Debut, conference.Date_Heure_Fin, conference.Ville.Libelle);
 
-                    // Ecriture des informations associées
-                    lblNom.Text = conference.Nom;
-                    lblDateHeure.Text = conference.Date_Heure_Debut.ToLongDateString() +
-                                        " de " + conference.Date_Heure_Debut.ToShortTimeString() +
-                                        " à " + conference.Date_Heure_Fin.ToShortTimeString();
+                    // Write all conference's informations
                     imgConference.ImageUrl = conference.Image;
-                    lblLieu.Text = conference.Lieu;
-                    lblVille.Text = conference.Ville.Libelle;
-                    lblDescription.Text = conference.Description;
+                    labelName.Text = conference.Nom;
+                    labelDateTime.Text = string.Format("le {0:D}, de {0:t} à {1:t}", conference.Date_Heure_Debut, conference.Date_Heure_Fin);
+                    labelPlace.Text = conference.Lieu;
+                    labelCampus.Text = string.Format("(EPSI {0})", conference.Ville.Libelle);
+                    labelDescription.Text = conference.Description;
                 }
             }
         }
 
-        protected void lvConferences_PreRender(object sender, EventArgs e)
+        /// <summary>
+        /// Raised when the news listview is rendered. Prevents from pagination problems.
+        /// </summary>
+        /// <param name="sender">Element which raised the event.</param>
+        /// <param name="e">Event arguments</param>
+        protected void listviewConferences_PreRender(object sender, EventArgs e)
         {
             BaseDataBoundControl listView = (BaseDataBoundControl)sender;
 
             if (listView.Visible)
             {
-                IList<Conference> conferences = _client.GetConferences();
+                IList<Conference> conferences = _webserviceConferences.GetConferences();
 
-                listView.DataSource = !conferences.Any() ? null : conferences;
+                listView.DataSource = conferences;
                 listView.DataBind();
             }
         }
+
+        #endregion
     }
 }

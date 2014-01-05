@@ -1,32 +1,40 @@
-﻿using EPSILab.Jupiter.Webservice;
+﻿using SolarSystem.Jupiter.ReadersService;
 using System.Collections.Generic;
 
-namespace EPSILab.Jupiter.Classes
+namespace SolarSystem.Jupiter.Classes
 {
     /// <summary>
-    /// Classe permettant l'affichage des conférences par ville à l'aide de Repeater
+    /// Class for displaying conferences by campus using ASP.NET Repeater
     /// </summary>
     public class ConferencesVille
     {
-        /// <summary>
-        /// Ville
-        /// </summary>
-        public Ville Ville { get; set; }
+        #region Constructor
 
         /// <summary>
-        /// Les conférences de cette ville
+        /// Constructor
         /// </summary>
-        public IEnumerable<Conference> Conferences { get; set; }
-
-        /// <summary>
-        /// Constructeur
-        /// </summary>
-        /// <param name="ville">Ville</param>
-        /// <param name="conferences">Conférences</param>
+        /// <param name="ville">Campus</param>
+        /// <param name="conferences">Conferences to associate to the campus</param>
         public ConferencesVille(Ville ville, IEnumerable<Conference> conferences)
         {
             Ville = ville;
             Conferences = conferences;
         }
+
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// Campus
+        /// </summary>
+        public Ville Ville { get; set; }
+
+        /// <summary>
+        /// Campus's conferences
+        /// </summary>
+        public IEnumerable<Conference> Conferences { get; set; }
+
+        #endregion
     }
 }

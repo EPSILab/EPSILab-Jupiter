@@ -1,4 +1,5 @@
-﻿using EPSILab.Jupiter.Webservice;
+﻿using SolarSystem.Jupiter.ReadersService;
+using SolarSystem.Jupiter.Resources;
 using System;
 using System.Drawing;
 using System.Net;
@@ -7,86 +8,103 @@ using System.Text.RegularExpressions;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace EPSILab.Jupiter
+namespace SolarSystem.Jupiter
 {
+    /// <summary>
+    /// Contact page
+    /// </summary>
     public partial class Contact : Page
     {
+        #region Events
+
+        /// <summary>
+        /// Raised when the page is loaded
+        /// </summary>
+        /// <param name="sender">Element which raised the event.</param>
+        /// <param name="e">Event arguments</param>
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 IVilleReader client = new VilleReaderClient();
-                ddlVilles.DataSource = client.GetVilles();
-                ddlVilles.DataBind();
+                listCampus.DataSource = client.GetVilles();
+                listCampus.DataBind();
             }
         }
 
-        protected void btEnvoyer_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Raised when the user click on the Send button.
+        /// </summary>
+        /// <param name="sender">Element which raised the event.</param>
+        /// <param name="e">Event arguments</param>
+        protected void btnSend_Click(object sender, EventArgs e)
         {
-            LB_Message.ForeColor = Color.Red;
-            
+            labelMessage.ForeColor = Color.Red;
+
             if (Page.IsValid)
             {
-                if (string.IsNullOrWhiteSpace(tbNom.Text))
+                if (string.IsNullOrWhiteSpace(txtSurname.Text))
                 {
-                    LB_Message.Text = "Veuillez entrer votre nom.";
+                    labelMessage.Text = ErrorRessources.EnterSurname;
                 }
-                else if (string.IsNullOrWhiteSpace(tbPrenom.Text))
+                else if (string.IsNullOrWhiteSpace(txtFirstName.Text))
                 {
-                    LB_Message.Text = "Veuillez entrer votre prénom.";
+                    labelMessage.Text = ErrorRessources.EnterFirstName;
                 }
-                else if (string.IsNullOrWhiteSpace(tbEmail.Text))
+                else if (string.IsNullOrWhiteSpace(txtEmail.Text))
                 {
-                    LB_Message.Text = "Veuillez entrer votre adresse email.";
+                    labelMessage.Text = ErrorRessources.EnterEmail;
                 }
-                else if (!Regex.IsMatch(tbEmail.Text, @"\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"))
+                else if (!Regex.IsMatch(txtEmail.Text, @"\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"))
                 {
-                    LB_Message.Text = "Veuillez entrer votre adresse email valide.";
+                    labelMessage.Text = ErrorRessources.EmailFormatInvalid;
                 }
                 else
                 {
-                    EnvoyerMail();
+                    SendEmail();
 
                     panelFormulaire.Visible = false;
 
-                    LB_Message.ForeColor = Color.Green;
-                    LB_Message.Text = "Votre message a bien été envoyé.";
+                    labelMessage.ForeColor = Color.Green;
+                    labelMessage.Text = ErrorRessources.EmailSent;
                 }
             }
             else
             {
-                LB_Message.Text = "Le code que vous avez rentré est erroné.";
+                labelMessage.Text = ErrorRessources.CaptchaError;
             }
         }
 
-        private void EnvoyerMail()
+        #endregion
+
+        #region Methods
+
+        private void SendEmail()
         {
             IVilleReader client = new VilleReaderClient();
 
-            ListItem li = ddlVilles.SelectedItem;
-            Ville ville = client.GetVille(int.Parse(li.Value));
+            ListItem selectedIdVille = listCampus.SelectedItem;
+            int idVille = int.Parse(selectedIdVille.Value);
+            Ville ville = client.GetVille(idVille);
 
             using (MailMessage mail = new MailMessage())
             {
-                MailAddress expediteur = new MailAddress(tbEmail.Text);
-                mail.From = expediteur;
+                MailAddress sender = new MailAddress(txtEmail.Text);
+                mail.From = sender;
 
-                MailAddress destinataire = new MailAddress(ville.Email);
-                mail.To.Add(destinataire);
+                MailAddress reciever = new MailAddress(ville.Email);
+                mail.To.Add(reciever);
 
-                mail.Subject = "Formulaire de contact du site EPSILab";
+                mail.Subject = EmailRessources.Title;
                 mail.IsBodyHtml = true;
-                mail.Body = "Un message a été laissé sur le site par <strong>" + tbPrenom.Text + "</strong> <strong>" +
-                            tbNom.Text + "</strong>.<br /><br />";
-                mail.Body += Regex.Replace(tbMessage.Text, "<.*?>", string.Empty) + "<br /><br />";
-                mail.Body += "Son adresse email: <strong>" + tbEmail.Text + "</strong>";
+                mail.Body = string.Format(EmailRessources.Body, txtFirstName.Text, txtSurname.Text, Regex.Replace(txtEmail.Text, "<.*?>", string.Empty), txtEmail.Text);
                 mail.Priority = MailPriority.Normal;
 
                 SmtpClient smtp = new SmtpClient
                     {
-                        Credentials = new NetworkCredential("epsilab@outlook.com", "3ps1l4b62!"),
-                        Host = "smtp.live.com",
-                        Port = 587,
+                        Credentials = new NetworkCredential(EmailRessources.Login, EmailRessources.Password),
+                        Host = EmailRessources.Host,
+                        Port = int.Parse(EmailRessources.Port),
                         DeliveryMethod = SmtpDeliveryMethod.Network,
                         EnableSsl = true
                     };
@@ -95,10 +113,12 @@ namespace EPSILab.Jupiter
                 smtp.Dispose();
             }
 
-            tbNom.Text = string.Empty;
-            tbPrenom.Text = string.Empty;
-            tbEmail.Text = string.Empty;
-            tbMessage.Text = string.Empty;
+            txtSurname.Text = string.Empty;
+            txtFirstName.Text = string.Empty;
+            txtEmail.Text = string.Empty;
+            txtMessage.Text = string.Empty;
         }
+
+        #endregion
     }
 }

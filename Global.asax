@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="EPSILab.Jupiter.Global" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="SolarSystem.Jupiter.Global" Language="C#" %>

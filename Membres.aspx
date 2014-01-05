@@ -1,42 +1,42 @@
-﻿<%@ Page Title="Membres - EPSILab, le laboratoire Microsoft de l'EPSI" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Membres.aspx.cs" Inherits="EPSILab.Jupiter.Membres" %>
+﻿<%@ Page Title="Membres - EPSILab, le laboratoire Microsoft de l'EPSI" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Membres.aspx.cs" Inherits="SolarSystem.Jupiter.Membres" %>
 
+<%-- Head content --%>
 <asp:Content ID="HeaderContent" ContentPlaceHolderID="HeadContent" runat="server">
     <asp:Literal ID="metaDescription" runat="server" Text='<meta name="description" content="Voici les membres qui composent EPSILab à ce jour." />' />
     <script type="text/javascript" src="Scripts/Membres.js"></script>
     <link rel="stylesheet" type="text/css" href="Styles/Membres.css" />
 </asp:Content>
 
-<asp:Content ID="CNT_ListeMembres" ContentPlaceHolderID="MainContent" runat="server">
+<%-- Body content --%>
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <a href="Membres.aspx">Membres</a>
 
-    <!-- Affichage d'un seul membre -->
+    <%-- One member's informations --%>
     <asp:Panel runat="server" CssClass="membre" ID="panelMembre">
         <div>&nbsp;</div>
 
         <div class="templateTitle">
             <div id="image">
-                <asp:Image runat="server" ID="imgMembre" Width="100" Height="100" />
+                <asp:Image runat="server" ID="imageMembre" Width="100" Height="100" />
             </div>
             <h1 id="nom_prenom">
-                <asp:Label runat="server" ID="lblPrenom" />
-                <asp:Label runat="server" ID="lblNom" />
+                <asp:Label runat="server" ID="labelName" />
             </h1>
             <div>
-                <asp:Label runat="server" ID="lblStatut" />
+                <asp:Label runat="server" ID="labelStatus" />
             </div>
             <div>
-                <asp:Label runat="server" ID="lblPromo" />, EPSI
-                <asp:Label runat="server" ID="lblVille" />
+                <asp:Label runat="server" ID="labelEPSI" />
             </div>
             <div>
                 de
-                <asp:HyperLink runat="server" ID="lnkVilleOrigine" CssClass="titre" Target="_blank" />
+                <asp:Label runat="server" ID="labelCityFrom" CssClass="titre" />
             </div>
         </div>
 
         <div class="presentation">
-            <asp:Label runat="server" ID="lblPresentation" />
+            <asp:Label runat="server" ID="labelPresentation" />
         </div>
 
         <div>&nbsp;</div>
@@ -64,48 +64,78 @@
         </div>
     </asp:Panel>
 
-    <!-- Affichage de l'ensemble du bureau et des membres par ville -->
+    <%-- Memebrs list by cities --%>
     <asp:Panel ID="panelMembres" runat="server">
         <h1>Bureau et membres</h1>
         <br />
 
-        <asp:Repeater ID="rptVilles" runat="server" OnItemDataBound="prtVilles_ItemDataBound">
+        <asp:Repeater ID="repeaterVilles" runat="server" OnItemDataBound="repeaterVilles_ItemDataBound">
             <ItemTemplate>
                 <div class="ville">
                     <h2 class="titreVille"><%# Eval("Libelle") %></h2>
-                    <div class="listeBureau">
-                        <h3 class="titreListe">Bureau</h3>
-                        <asp:Repeater ID="rptBureau" runat="server">
-                            <ItemTemplate>
-                                <a class="blocMembre" href="Membres-<%# Eval("Code_Membre") %>-<%# Eval("Url") %>.aspx">
-                                    <img class="photoMembre" src="<%# Eval("Image") %>" alt="<%# Eval("Prenom") %> <%# Eval("Nom") %>" width="75" height="75" />
-                                    <span class="descMembre">
-                                        <span class="nomMembre">
-                                            <%# Eval("Prenom") %> <%# Eval("Nom") %>
-                                        </span>
-                                        <br />
-                                        <%# Eval("Statut") %>
-                                    </span>
-                                </a>
-                            </ItemTemplate>
-                        </asp:Repeater>
-                    </div>
 
-                    <div class="listeMembres">
-                        <h3 class="titreListe">Membres</h3>
-                        <asp:Repeater ID="rptMembres" runat="server">
-                            <ItemTemplate>
-                                <a class="blocMembre" href="Membres-<%# Eval("Code_Membre") %>-<%# Eval("Url") %>.aspx">
-                                    <img class="photoMembre" src="<%# Eval("Image") %>" alt="<%# Eval("Prenom") %> <%# Eval("Nom") %>" width="75" height="75" />
-                                    <span class="descMembre">
-                                        <span class="nomMembre">
-                                            <%# Eval("Prenom") %> <%# Eval("Nom") %>
-                                        </span>
+                    <asp:Repeater ID="repeaterBureau" runat="server">
+                        <HeaderTemplate>
+                            <div class="listBureau">
+                                <h3 class="titreListe">Bureau</h3>
+                        </HeaderTemplate>
+                        <ItemTemplate>
+                            <a class="blocMembre" href="Membres-<%# Eval("Code_Membre") %>-<%# Eval("Url") %>.aspx">
+                                <img class="photoMembre" src="<%# Eval("Image") %>" alt="<%# Eval("Prenom") %> <%# Eval("Nom") %>" width="75" height="75" />
+                                <span class="descMembre">
+                                    <span class="nomMembre">
+                                        <%# Eval("Prenom") %> <%# Eval("Nom") %>
                                     </span>
-                                </a>
-                            </ItemTemplate>
-                        </asp:Repeater>
-                    </div>
+                                    <br />
+                                    <%# Eval("Statut") %>
+                                </span>
+                            </a>
+                        </ItemTemplate>
+                        <FooterTemplate>
+                            </div>
+                        </FooterTemplate>
+                    </asp:Repeater>
+
+                    <asp:Repeater ID="repeaterOthers" runat="server">
+                        <HeaderTemplate>
+                            <div class="listMembres">
+                                <h3 class="titreListe">Membres</h3>
+                        </HeaderTemplate>
+                        <ItemTemplate>
+                            <a class="blocMembre" href="Membres-<%# Eval("Code_Membre") %>-<%# Eval("Url") %>.aspx">
+                                <img class="photoMembre" src="<%# Eval("Image") %>" alt="<%# Eval("Prenom") %> <%# Eval("Nom") %>" width="75" height="75" />
+                                <span class="descMembre">
+                                    <span class="nomMembre">
+                                        <%# Eval("Prenom") %> <%# Eval("Nom") %>
+                                    </span>
+                                </span>
+                            </a>
+                        </ItemTemplate>
+                        <FooterTemplate>
+                            </div>
+                        </FooterTemplate>
+                    </asp:Repeater>
+
+                    <asp:Repeater ID="repeaterAlumnis" runat="server">
+                        <HeaderTemplate>
+                            <div class="listAlumnis">
+                                <h3 class="titreListe">Anciens</h3>
+                        </HeaderTemplate>
+                        <ItemTemplate>
+                            <a class="blocMembre" href="Membres-<%# Eval("Code_Membre") %>-<%# Eval("Url") %>.aspx">
+                                <img class="photoMembre" src="<%# Eval("Image") %>" alt="<%# Eval("Prenom") %> <%# Eval("Nom") %>" width="75" height="75" />
+                                <span class="descMembre">
+                                    <span class="nomMembre">
+                                        <%# Eval("Prenom") %> <%# Eval("Nom") %>
+                                    </span>
+                                </span>
+                            </a>
+                        </ItemTemplate>
+                        <FooterTemplate>
+                            </div>
+                        </FooterTemplate>
+                    </asp:Repeater>
+
                 </div>
             </ItemTemplate>
         </asp:Repeater>

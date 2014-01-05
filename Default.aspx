@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="EPSILab, le laboratoire Microsoft de l'EPSI" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true"
-    CodeBehind="Default.aspx.cs" Inherits="EPSILab.Jupiter.Default" %>
+    CodeBehind="Default.aspx.cs" Inherits="SolarSystem.Jupiter.Default" %>
 
+<%-- Head content --%>
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
     <meta name="description" content="Le laboratoire Microsoft dirigé par les étudiants de l'EPSI. Retrouvez nos actualités, nos projets, nos évènements et bien d'autres..." />
     <meta name="keywords" content="epsilab, laboratoire, microsoft, laboratoire, windows, office, visual studio, wpf, wcf, windows phone" />
@@ -12,12 +13,13 @@
     <script type="text/javascript" src="Scripts/Default.js"></script>
 </asp:Content>
 
+<%-- Body content --%>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <div>&nbsp;</div>
 
-    <!-- Actualités temporaires -->
+    <%-- Ads --%>
     <section id="sectionTemporaryNews" title="TemporaryNews">
-        <asp:Repeater runat="server" ID="RPT_TemporaryNews">
+        <asp:Repeater runat="server" ID="repeater_TemporaryNews">
             <HeaderTemplate>
                 <div id="temporaryNews">
             </HeaderTemplate>
@@ -36,16 +38,14 @@
         </asp:Repeater>
     </section>
 
-    <!-- Dernières actualités -->
+    <%-- Last news --%>
     <section title="Dernières actualités">
 
         <h1>Dernières actualités</h1>
 
-        <asp:Repeater runat="server" ID="rptNews">
+        <asp:Repeater runat="server" ID="repeaterNews">
             <HeaderTemplate>
-                <!-- Le div principal du carousel (contenu du carousel des news + navigation du carousel) -->
                 <p id="NewsCarousel">
-                    <!-- Contenu du carousel (ensemble des images / balises a) -->
                     <div id="NewsInternCarousel">
             </HeaderTemplate>
             <ItemTemplate>
@@ -57,11 +57,14 @@
                 </a>
             </ItemTemplate>
             <FooterTemplate>
-                </div>
-                    <!-- Empêche des problèmes d'affichage : utiliser le clear -->
+                    </div>
+
+                <%-- Prevents display problems --%>
                 <div class="clearfix"></div>
-                <!-- Affiche la navigation (entre les blocs de news) -->
+
+                <%-- Pagination system --%>
                 <div class="paginationNews" id="news_pag"></div>
+
                 </p>
             </FooterTemplate>
         </asp:Repeater>
