@@ -7,18 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EPSILab.Jupiter {
+namespace SolarSystem.Jupiter {
     
     
     public partial class Projets {
         
         /// <summary>
-        /// RPT_Villes control.
+        /// repeaterVilles control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater RPT_Villes;
+        protected global::System.Web.UI.WebControls.Repeater repeaterVilles;
     }
 }

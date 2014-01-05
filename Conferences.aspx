@@ -1,7 +1,8 @@
 ﻿<%@ Page Title="Conférences - EPSILab, le laboratoire Microsoft de l'EPSI" Language="C#"
     MasterPageFile="~/Site.master" AutoEventWireup="true" CodeBehind="Conferences.aspx.cs"
-    Inherits="EPSILab.Jupiter.Conferences" %>
+    Inherits="SolarSystem.Jupiter.Conferences" %>
 
+<%-- Head content --%>
 <asp:Content ID="HeaderContent" ContentPlaceHolderID="HeadContent" runat="server">
     <asp:Literal ID="metaDescription" runat="server" Text='<meta name="description" content="Retrouvez les conférences que nous organisons pour les étudiants dans chaque école." />' />
     <script type="text/javascript" src="Scripts/Conferences.js"></script>
@@ -12,13 +13,14 @@
     <link rel="stylesheet" type="text/css" href="Styles/Conferences.css" />
 </asp:Content>
 
+<%-- Body content --%>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <a href="Evenements.aspx">Evènements</a>
     &gt;
     <a href="Conferences.aspx">Conférences</a>
-    
-    <!-- Affichage d'une conférence -->
+
+    <%-- One conference --%>
     <asp:Panel runat="server" ID="panelConference" Visible="false">
         <div>&nbsp;</div>
 
@@ -27,50 +29,49 @@
                 <asp:Image runat="server" ID="imgConference" Height="100" Width="100" />
             </div>
             <h1>
-                <asp:Label runat="server" ID="lblNom" />
+                <asp:Label runat="server" ID="labelName" />
             </h1>
             <div class="date">
-                <asp:Label runat="server" ID="lblDateHeure" />
+                <asp:Label runat="server" ID="labelDateTime" />
             </div>
             <div class="date">
-                <asp:Label runat="server" ID="lblLieu" />
-                (EPSI
-            <asp:Label runat="server" ID="lblVille" />)
+                <asp:Label runat="server" ID="labelPlace" />
+                <asp:Label runat="server" ID="labelCampus" />
             </div>
         </div>
 
         <div class="social">
             <span class='st_facebook_large' displaytext='Facebook'></span>
-            <span class='st_twitter_large' displaytext='Tweet'></span>
+            <span class='st_twitter_large' displaytext='Twitter'></span>
             <span class='st_viadeo_large' displaytext='Viadeo'></span>
             <span class='st_linkedin_large' displaytext='LinkedIn'></span>
             <span class='st_email_large' displaytext='Email'></span>
         </div>
         <br />
         <div class="texte">
-            <asp:Label runat="server" ID="lblDescription" />
+            <asp:Label runat="server" ID="labelDescription" />
         </div>
     </asp:Panel>
-    
-    <!-- Liste des conférences -->
-    <asp:ListView runat="server" ID="lvConferences" ItemPlaceholderID="phConferences" OnPreRender="lvConferences_PreRender">
+
+    <%-- Liste des conférences --%>
+    <asp:ListView runat="server" ID="listviewConferences" ItemPlaceholderID="phConferences" OnPreRender="listviewConferences_PreRender">
         <LayoutTemplate>
             <h1>Nos conférences</h1>
 
-            <!-- Affiche la navigation au dessus des news -->
+            <%-- Pagination system --%>
             <div class="paginationConferences" id="news_pag"></div>
 
-            <!-- Empêche des problèmes d'affichage : utiliser le clear -->
+            <%-- Prevents display problems --%>
             <div class="clearfix"></div>
 
             <div id="ConferencesInternCarousel">
                 <asp:PlaceHolder runat="server" ID="phConferences" />
             </div>
 
-            <!-- Empêche des problèmes d'affichage : utiliser le clear -->
+            <%-- Prevents display problems --%>
             <div class="clearfix"></div>
 
-            <!-- Affiche la navigation en dessous des news -->
+            <%-- Pagination system --%>
             <div class="paginationConferences" id="news_pag2"></div>
         </LayoutTemplate>
         <ItemTemplate>
@@ -83,8 +84,8 @@
                     </div>
 
                     <div class="date">
-                        Le <%# Eval("Date_Heure_Debut", "{0:dd MMMM yyyy}")%> de <%# Eval("Date_Heure_Debut", "{0:HH:mm}")%>
-                        à  <%# Eval("Date_Heure_Fin", "{0:HH:mm}")%>
+                        Le <%# Eval("Date_Heure_Debut", "{0:d}")%> de <%# Eval("Date_Heure_Debut", "{0:t}")%>
+                        à  <%# Eval("Date_Heure_Fin", "{0:t}")%>
                     </div>
 
                     <div class="date">

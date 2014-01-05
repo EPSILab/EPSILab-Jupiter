@@ -1,45 +1,54 @@
-﻿using EPSILab.Jupiter.Webservice;
+﻿using SolarSystem.Jupiter.ReadersService;
 using System.Collections.Generic;
-using System.Linq;
 
-namespace EPSILab.Jupiter.Classes
+namespace SolarSystem.Jupiter.Classes
 {
     /// <summary>
-    /// Classe permettant l'affichage du bureau et des membres par ville à l'aide de Repeater
+    /// Class for displaying members (bureau and not) by campus using ASP.NET Repeater
     /// </summary>
     public class MembresVille
     {
-        /// <summary>
-        /// Ville
-        /// </summary>
-        public Ville Ville { get; private set; }
+        #region Constructor
 
         /// <summary>
-        /// Bureau
+        /// Constructor
+        /// </summary>
+        /// <param name="campus">Campus</param>
+        /// <param name="bureau">Members in the campus bureau</param>
+        /// <param name="others">Members who are not in the campus bureau</param>
+        /// <param name="alumnis">Alumnis</param>
+        public MembresVille(Ville campus, IEnumerable<Membre> bureau, IEnumerable<Membre> others, IEnumerable<Membre> alumnis)
+        {
+            Campus = campus;
+            Bureau = bureau;
+            Others = others;
+            Alumnis = alumnis;
+        }
+
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// Campus
+        /// </summary>
+        public Ville Campus { get; private set; }
+
+        /// <summary>
+        /// Members of the bureau
         /// </summary>
         public IEnumerable<Membre> Bureau { get; private set; }
 
         /// <summary>
-        /// Membres
+        /// Members who are not in the bureau
         /// </summary>
-        public IEnumerable<Membre> Membres { get; private set; }
+        public IEnumerable<Membre> Others { get; private set; }
 
         /// <summary>
-        /// Constructeur
+        /// Alumnis
         /// </summary>
-        /// <param name="ville">Ville</param>
-        /// <param name="membres">Liste des membres (bureau et membres)</param>
-        public MembresVille(Ville ville, ICollection<Membre> membres)
-        {
-            Ville = ville;
+        public IEnumerable<Membre> Alumnis { get; private set; }
 
-            Bureau = (from m in membres
-                      where m.Role.Code_Role > 1
-                      select m);
-
-            Membres = (from m in membres
-                       where m.Role.Code_Role == 1
-                       select m);
-        }
+        #endregion
     }
 }

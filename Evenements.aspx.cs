@@ -1,30 +1,49 @@
-﻿using EPSILab.Jupiter.Webservice;
+﻿using SolarSystem.Jupiter.ReadersService;
 using System;
 using System.Collections.Generic;
 using System.Web.UI;
 
-namespace EPSILab.Jupiter
+namespace SolarSystem.Jupiter
 {
+    /// <summary>
+    /// Events page (Shows and Conferences)
+    /// </summary>
     public partial class Evenements : Page
     {
-        private readonly ISalonReader _clientSalons = new SalonReaderClient();
-        private readonly IConferenceReader _clientConferences = new ConferenceReaderClient();
+        #region Attributes
 
+        /// <summary>
+        /// Webservice proxy for shows
+        /// </summary>
+        private readonly ISalonReader _webserviceSalons = new SalonReaderClient();
+
+        /// <summary>
+        /// Webservice proxy for conferences
+        /// </summary>
+        private readonly IConferenceReader _webserviceConferences = new ConferenceReaderClient();
+
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// Raised when the page is loaded
+        /// </summary>
+        /// <param name="sender">Element which raised the event.</param>
+        /// <param name="e">Event arguments</param>
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Traitement des salons 
-            IEnumerable<Salon> salons = _clientSalons.GetSalonsLimited(0, 6);
-            rptSalons.DataSource = salons;
+            // Load shows from the webservice
+            IEnumerable<Salon> salons = _webserviceSalons.GetSalonsLimited(0, 6);
+            repeaterSalons.DataSource = salons;
+            repeaterSalons.DataBind();
 
-            rptSalons.DataBind();
-
-            // Traitement des conférences
-            IEnumerable<Conference> conferences = _clientConferences.GetConferencesLimited(0, 8);
-            rptConferences.DataSource = conferences;
-            rptConferences.DataBind();
+            // Load conferences from the webservice
+            IEnumerable<Conference> conferences = _webserviceConferences.GetConferencesLimited(0, 8);
+            repeaterConferences.DataSource = conferences;
+            repeaterConferences.DataBind();
         }
+
+        #endregion
     }
 }
-
-        
-    

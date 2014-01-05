@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EPSILab.Jupiter {
+namespace SolarSystem.Jupiter {
     
     
     public partial class Actualites {
@@ -58,57 +58,57 @@ namespace EPSILab.Jupiter {
         protected global::System.Web.UI.WebControls.Image imgNews;
         
         /// <summary>
-        /// lblTitre control.
+        /// labelTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTitre;
+        protected global::System.Web.UI.WebControls.Label labelTitle;
         
         /// <summary>
-        /// lblDateHeure control.
+        /// labelDateTime control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDateHeure;
+        protected global::System.Web.UI.WebControls.Label labelDateTime;
         
         /// <summary>
-        /// lnkAuteur control.
+        /// linkAuthor control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink lnkAuteur;
+        protected global::System.Web.UI.WebControls.HyperLink linkAuthor;
         
         /// <summary>
-        /// rptKeywords control.
+        /// repeaterKeywords control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptKeywords;
+        protected global::System.Web.UI.WebControls.Repeater repeaterKeywords;
         
         /// <summary>
-        /// lblTexteLong control.
+        /// labelTexteLong control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTexteLong;
+        protected global::System.Web.UI.WebControls.Label labelTexteLong;
         
         /// <summary>
-        /// lvNews control.
+        /// listviewNews control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView lvNews;
+        protected global::System.Web.UI.WebControls.ListView listviewNews;
     }
 }

@@ -7,27 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EPSILab.Jupiter {
+namespace SolarSystem.Jupiter {
     
     
     public partial class Evenements {
         
         /// <summary>
-        /// rptConferences control.
+        /// repeaterConferences control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptConferences;
+        protected global::System.Web.UI.WebControls.Repeater repeaterConferences;
         
         /// <summary>
-        /// rptSalons control.
+        /// repeaterSalons control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptSalons;
+        protected global::System.Web.UI.WebControls.Repeater repeaterSalons;
     }
 }

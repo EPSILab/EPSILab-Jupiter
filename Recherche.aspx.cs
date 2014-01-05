@@ -1,54 +1,80 @@
-﻿using EPSILab.Jupiter.Webservice;
+﻿using SolarSystem.Jupiter.ReadersService;
 using System;
 using System.Collections.Generic;
 using System.Web;
 using System.Web.UI;
 
-namespace EPSILab.Jupiter
+namespace SolarSystem.Jupiter
 {
+    /// <summary>
+    /// Search page
+    /// </summary>
     public partial class Recherche : Page
     {
-        private readonly INewsReader _clientNews = new NewsReaderClient();
-        private readonly IConferenceReader _clientConferences = new ConferenceReaderClient();
-        private readonly ISalonReader _clientSalons = new SalonReaderClient();
-        private readonly IMembreReader _clientMembres = new MembreReaderClient();
+        #region Attributes
+
+        /// <summary>
+        /// Webservice proxy for news
+        /// </summary>
+        private readonly INewsReader _webserviceNews = new NewsReaderClient();
+
+        /// <summary>
+        /// Webservice proxy for conferences
+        /// </summary>
+        private readonly IConferenceReader _webserviceConferences = new ConferenceReaderClient();
+
+        /// <summary>
+        /// Webservice proxy for shows
+        /// </summary>
+        private readonly ISalonReader _webserviceSalons = new SalonReaderClient();
+
+        /// <summary>
+        /// Webservice proxy for members
+        /// </summary>
+        private readonly IMembreReader _webserviceMembres = new MembreReaderClient();
+
+        #endregion
+
+        #region Events
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            // On vérifie qu'un critère de recherche existe bien
-            if (!string.IsNullOrWhiteSpace(HttpContext.Current.Request["mots"]))
+            // Check if search arguments has been given in the GET parameters
+            if (!string.IsNullOrWhiteSpace(HttpContext.Current.Request["search"]))
             {
-                panelNoResultats.Visible = false;
-                panelResultats.Visible = true;
+                panelNoResults.Visible = false;
+                panelResults.Visible = true;
 
-                string keywords = HttpContext.Current.Request["mots"].Trim();
+                string keywords = HttpContext.Current.Request["search"].Trim();
 
-                lblRecherche.Text = keywords;
+                labelRecherche.Text = keywords;
 
-                // Récupération des news correspondantes
-                ICollection<News> news = _clientNews.SearchNews(keywords);
-                lblNombreNews.Text = news.Count.ToString();
-                rptNews.DataSource = news;
-                rptNews.DataBind();
+                // Search in news
+                ICollection<News> news = _webserviceNews.SearchNews(keywords);
+                labelNewsCount.Text = news.Count.ToString("0");
+                repeaterNews.DataSource = news;
+                repeaterNews.DataBind();
 
-                // Récupération des conférences correspondantes
-                ICollection<Conference> conferences = _clientConferences.SearchConferences(keywords);
-                lblNombreConferences.Text = conferences.Count.ToString();
-                rptConferences.DataSource = conferences;
-                rptConferences.DataBind();
+                // Search in conferences
+                ICollection<Conference> conferences = _webserviceConferences.SearchConferences(keywords);
+                labelConferencesCount.Text = conferences.Count.ToString("0");
+                repeaterConferences.DataSource = conferences;
+                repeaterConferences.DataBind();
 
-                // Récupération des salons correspondants
-                ICollection<Salon> salons = _clientSalons.SearchSalons(keywords);
-                lblNombreSalons.Text = salons.Count.ToString();
-                rptSalons.DataSource = salons;
-                rptSalons.DataBind();
+                // Search in shows
+                ICollection<Salon> salons = _webserviceSalons.SearchSalons(keywords);
+                labelShowsCount.Text = salons.Count.ToString("0");
+                repeaterShows.DataSource = salons;
+                repeaterShows.DataBind();
 
-                // Récupération des membres correspondants
-                ICollection<Membre> membres = _clientMembres.SearchMembres(keywords);
-                lblNombreMembres.Text = membres.Count.ToString();
-                rptMembres.DataSource = membres;
-                rptMembres.DataBind();
+                // Search in members
+                ICollection<Membre> membres = _webserviceMembres.SearchMembres(keywords);
+                labelMembersCount.Text = membres.Count.ToString("0");
+                repeaterMembers.DataSource = membres;
+                repeaterMembers.DataBind();
             }
         }
+
+        #endregion
     }
 }

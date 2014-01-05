@@ -1,15 +1,32 @@
-﻿using EPSILab.Jupiter.Webservice;
+﻿using SolarSystem.Jupiter.ReadersService;
 using System.Collections.Generic;
 
-namespace EPSILab.Jupiter.Classes
+namespace SolarSystem.Jupiter.Classes
 {
     /// <summary>
-    /// Classe permettant l'affichage des projets par ville à l'aide de Repeater
+    /// Class for displaying projects by campus using ASP.NET Repeater
     /// </summary>
     public class ProjetsVille
     {
+        #region Constructor
+
         /// <summary>
-        /// Ville
+        /// Constructor
+        /// </summary>
+        /// <param name="ville">City</param>
+        /// <param name="projets">Projects list of the campus</param>
+        public ProjetsVille(Ville ville, IEnumerable<Projet> projets)
+        {
+            Ville = ville;
+            Projets = projets;
+        }
+
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// Campus
         /// </summary>
         public Ville Ville { get; private set; }
 
@@ -18,15 +35,6 @@ namespace EPSILab.Jupiter.Classes
         /// </summary>
         public IEnumerable<Projet> Projets { get; private set; }
 
-        /// <summary>
-        /// Constructeur
-        /// </summary>
-        /// <param name="ville">Ville</param>
-        /// <param name="projets">Liste des projets</param>
-        public ProjetsVille(Ville ville, IEnumerable<Projet> projets)
-        {
-            Ville = ville;
-            Projets = projets;
-        }
+        #endregion
     }
 }

@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="EPSILab.Jupiter.SiteMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="SolarSystem.Jupiter.SiteMaster" %>
 
 <!DOCTYPE html>
 <html>
@@ -117,6 +117,15 @@
                                     title="Suivez-nous sur Twitter" />
                             </a>
                         </li>
+                        
+                        <li id="ico-github">
+                            <a href="http://www.github.com/epsilab" target="_blank">
+                                <img src="Images/GitHub.png"
+                                    width="50" height="50"
+                                    alt="Retrouvez-nous sur GitHub"
+                                    title="Retrouvez-nous sur GitHub" />
+                            </a>
+                        </li>
                     </ul>
                 </li>
 
@@ -164,9 +173,11 @@
             </ul>
             <br />
 
-            <div style="font-size: 11px; font-family: Arial, Helvetica, sans-serif; text-align: center"><a href="http://express.ikoula.com/serveur-dedie" title="Choisissez Ikoula pour tous vos projets d’hébergement web" target="_blank">
-                <img alt="Choisissez Ikoula pour tous vos projets d’hébergement web" src="http://www.ikoula.com/img/heberge_par_ik_white.gif" border="0" /></a><br>
-                <a href=" http://www.ex10.biz/messagerie_exchange" title="Choisissez Ikoula pour tous vos projets d’hébergement web" target="_blank">Messagerie Exchange</a> | <a href="http://express.ikoula.com/serveur-dedie" title="Choisissez Ikoula pour tous vos projets d’hébergement web" target="_blank">serveur dédié</a></div>
+            <div style="font-size: 11px; font-family: Arial, Helvetica, sans-serif; text-align: center">
+                <a href="http://express.ikoula.com/serveur-dedie" title="Choisissez Ikoula pour tous vos projets d’hébergement web" target="_blank">
+                    <img alt="Choisissez Ikoula pour tous vos projets d’hébergement web" src="http://www.ikoula.com/img/heberge_par_ik_white.gif" border="0" /></a><br>
+                <a href=" http://www.ex10.biz/messagerie_exchange" title="Choisissez Ikoula pour tous vos projets d’hébergement web" target="_blank">Messagerie Exchange</a> | <a href="http://express.ikoula.com/serveur-dedie" title="Choisissez Ikoula pour tous vos projets d’hébergement web" target="_blank">serveur dédié</a>
+            </div>
 
             <div id="copyright">
                 © EPSILab 2004-<% Response.Write(DateTime.Now.Year); %> - Tous droits réservés |

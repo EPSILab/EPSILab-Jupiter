@@ -7,27 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EPSILab.Jupiter {
+namespace SolarSystem.Jupiter {
     
     
     public partial class Default {
         
         /// <summary>
-        /// RPT_TemporaryNews control.
+        /// repeater_TemporaryNews control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater RPT_TemporaryNews;
+        protected global::System.Web.UI.WebControls.Repeater repeater_TemporaryNews;
         
         /// <summary>
-        /// rptNews control.
+        /// repeaterNews control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptNews;
+        protected global::System.Web.UI.WebControls.Repeater repeaterNews;
     }
 }

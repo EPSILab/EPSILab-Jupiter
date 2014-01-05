@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EPSILab.Jupiter {
+namespace SolarSystem.Jupiter {
     
     
     public partial class Membres {
@@ -31,76 +31,58 @@ namespace EPSILab.Jupiter {
         protected global::System.Web.UI.WebControls.Panel panelMembre;
         
         /// <summary>
-        /// imgMembre control.
+        /// imageMembre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgMembre;
+        protected global::System.Web.UI.WebControls.Image imageMembre;
         
         /// <summary>
-        /// lblPrenom control.
+        /// labelName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPrenom;
+        protected global::System.Web.UI.WebControls.Label labelName;
         
         /// <summary>
-        /// lblNom control.
+        /// labelStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNom;
+        protected global::System.Web.UI.WebControls.Label labelStatus;
         
         /// <summary>
-        /// lblStatut control.
+        /// labelEPSI control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblStatut;
+        protected global::System.Web.UI.WebControls.Label labelEPSI;
         
         /// <summary>
-        /// lblPromo control.
+        /// labelCityFrom control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPromo;
+        protected global::System.Web.UI.WebControls.Label labelCityFrom;
         
         /// <summary>
-        /// lblVille control.
+        /// labelPresentation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblVille;
-        
-        /// <summary>
-        /// lnkVilleOrigine control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink lnkVilleOrigine;
-        
-        /// <summary>
-        /// lblPresentation control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPresentation;
+        protected global::System.Web.UI.WebControls.Label labelPresentation;
         
         /// <summary>
         /// lnkWebsite control.
@@ -157,12 +139,12 @@ namespace EPSILab.Jupiter {
         protected global::System.Web.UI.WebControls.Panel panelMembres;
         
         /// <summary>
-        /// rptVilles control.
+        /// repeaterVilles control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptVilles;
+        protected global::System.Web.UI.WebControls.Repeater repeaterVilles;
     }
 }
