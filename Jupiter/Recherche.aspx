@@ -31,7 +31,7 @@
             </HeaderTemplate>
             <ItemTemplate>
                 <li>
-                    <a class="titre" href="Actualites-<%# Eval("Code_News") %>-<%# Eval("Url") %>.aspx">
+                    <a class="title" href="Actualites-<%# Eval("Code_News") %>-<%# Eval("Url") %>.aspx">
                         <%# Eval("Titre") %>
                     </a>
                     (<span class="date"><%# Eval("Date_Heure", "{0:d à HH:mm}")%></span>)
@@ -53,7 +53,7 @@
             </HeaderTemplate>
             <ItemTemplate>
                 <li>
-                    <a class="titre" href="Conferences-<%# Eval("Code_Conference") %>-<%# Eval("Url") %>.aspx">
+                    <a class="title" href="Conferences-<%# Eval("Code_Conference") %>-<%# Eval("Url") %>.aspx">
                         <%# Eval("Nom") %>
                     </a>
                     <span class="date">( du <%# Eval("Date_Heure_Debut", "{0:dd/MM/yyyy HH:mm}")%>
@@ -78,7 +78,7 @@
             </HeaderTemplate>
             <ItemTemplate>
                 <li>
-                    <a class="titre" href="Salons-<%# Eval("Code_Salon") %>-<%# Eval("Url") %>.aspx">
+                    <a class="title" href="Salons-<%# Eval("Code_Salon") %>-<%# Eval("Url") %>.aspx">
                         <%# Eval("Nom") %>
                     </a>
                     <span class="date">( du <%# Eval("Date_Heure_Debut", "{0:dd/MM/yyyy HH:mm}")%>
@@ -103,7 +103,7 @@
             </HeaderTemplate>
             <ItemTemplate>
                 <li>
-                    <a class="titre" href="Membres-<%# Eval("Code_Membre") %>-<%# Eval("Url") %>.aspx">
+                    <a class="title" href="Membres-<%# Eval("Code_Membre") %>-<%# Eval("Url") %>.aspx">
                         <%# Eval("Prenom") %> <%# Eval("Nom") %>
                     </a>
                 </li>

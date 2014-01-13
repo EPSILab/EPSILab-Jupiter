@@ -23,7 +23,7 @@
 
         <div class="templateTitle">
             <div class="image">
-                <asp:Image runat="server" ID="imgNews" Height="100" Width="100" />
+                <asp:Image runat="server" ID="imgNews" CssClass="image" Height="100" Width="100" />
             </div>
             <h1>
                 <asp:Label runat="server" ID="labelTitle" />
@@ -33,7 +33,7 @@
             </div>
             <div class="date">
                 par
-                <asp:HyperLink runat="server" ID="linkAuthor" CssClass="titre" />
+                <asp:HyperLink runat="server" ID="linkAuthor" CssClass="title" />
             </div>
         </div>
         <div class="social">
@@ -82,7 +82,7 @@
                 <a class="lienNews" href="Actualites-<%# Eval("Code_News") %>-<%# Eval("Url") %>.aspx">
                     <img class="image" src="<%# Eval("Image") %>" alt="<%# Eval("Titre") %>" title="<%# Eval("Titre") %>" width="70" height="70" />
 
-                    <div class="titreNews">
+                    <div class="titleNews">
                         <%# Eval("Titre") %>
                     </div>
 

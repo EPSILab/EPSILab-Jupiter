@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{4838E8
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolarSystem.Jupiter", "SolarSystem.Jupiter\SolarSystem.Jupiter.csproj", "{EDC462E4-9054-413E-A52A-65A2E9183184}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jupiter", "Jupiter\Jupiter.csproj", "{EDC462E4-9054-413E-A52A-65A2E9183184}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

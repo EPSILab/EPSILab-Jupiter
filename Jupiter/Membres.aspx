@@ -31,7 +31,7 @@
             </div>
             <div>
                 de
-                <asp:Label runat="server" ID="labelCityFrom" CssClass="titre" />
+                <asp:Label runat="server" ID="labelCityFrom" CssClass="title" />
             </div>
         </div>
 
@@ -72,12 +72,12 @@
         <asp:Repeater ID="repeaterVilles" runat="server" OnItemDataBound="repeaterVilles_ItemDataBound">
             <ItemTemplate>
                 <div class="ville">
-                    <h2 class="titreVille"><%# Eval("Libelle") %></h2>
+                    <h2 class="titleVille"><%# Eval("Libelle") %></h2>
 
                     <asp:Repeater ID="repeaterBureau" runat="server">
                         <HeaderTemplate>
                             <div class="listBureau">
-                                <h3 class="titreListe">Bureau</h3>
+                                <h3 class="titleListe">Bureau</h3>
                         </HeaderTemplate>
                         <ItemTemplate>
                             <a class="blocMembre" href="Membres-<%# Eval("Code_Membre") %>-<%# Eval("Url") %>.aspx">
@@ -99,7 +99,7 @@
                     <asp:Repeater ID="repeaterOthers" runat="server">
                         <HeaderTemplate>
                             <div class="listMembres">
-                                <h3 class="titreListe">Membres</h3>
+                                <h3 class="titleListe">Membres</h3>
                         </HeaderTemplate>
                         <ItemTemplate>
                             <a class="blocMembre" href="Membres-<%# Eval("Code_Membre") %>-<%# Eval("Url") %>.aspx">
@@ -119,7 +119,7 @@
                     <asp:Repeater ID="repeaterAlumnis" runat="server">
                         <HeaderTemplate>
                             <div class="listAlumnis">
-                                <h3 class="titreListe">Anciens</h3>
+                                <h3 class="titleListe">Anciens</h3>
                         </HeaderTemplate>
                         <ItemTemplate>
                             <a class="blocMembre" href="Membres-<%# Eval("Code_Membre") %>-<%# Eval("Url") %>.aspx">

@@ -28,7 +28,7 @@
                     <div class="item">
                         <img class="image" src="<%# Eval("Image") %>" alt="<%# Eval("Nom") %>" width="150" height="150" />
 
-                        <div class="titre"><%# Eval("Nom") %></div>
+                        <div class="title"><%# Eval("Nom") %></div>
                         <div class="description"><%# Eval("Description")%></div>
                         <div class="avancement">
                             Avancement

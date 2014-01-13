@@ -44,7 +44,7 @@ namespace SolarSystem.Jupiter
 
                     // Generate meta tags
                     Page.Title = string.Format("{0} - {1}", news.Titre, GlobalRessources.SiteName);
-                    metaAuthor.Text = string.Format("<meta name=\"author\" content=\"{0} {1}\"", news.Membre.Prenom, news.Membre.Nom);
+                    metaAuthor.Text = string.Format("<meta name=\"author\" content=\"{0} {1}\" />", news.Membre.Prenom, news.Membre.Nom);
                     metaDescription.Text = string.Format("<meta name=\"description\" content=\"{0}\" />", news.Texte_Court);
                     metaKeywords.Text = string.Format("<meta name=\"keywords\" content=\"{0}\" />", news.Mots_Cles);
 
