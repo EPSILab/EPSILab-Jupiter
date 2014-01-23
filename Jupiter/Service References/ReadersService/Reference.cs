@@ -15,7 +15,7 @@ namespace SolarSystem.Jupiter.ReadersService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Conference", Namespace="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Conference", Namespace="http://schemas.datacontract.org/2004/07/EPSILab.SolarSystem.Earth.Common")]
     [System.SerializableAttribute()]
     public partial class Conference : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -204,7 +204,7 @@ namespace SolarSystem.Jupiter.ReadersService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Ville", Namespace="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Ville", Namespace="http://schemas.datacontract.org/2004/07/EPSILab.SolarSystem.Earth.Common")]
     [System.SerializableAttribute()]
     public partial class Ville : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -281,7 +281,7 @@ namespace SolarSystem.Jupiter.ReadersService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Lien", Namespace="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Lien", Namespace="http://schemas.datacontract.org/2004/07/EPSILab.SolarSystem.Earth.Common")]
     [System.SerializableAttribute()]
     public partial class Lien : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -406,7 +406,7 @@ namespace SolarSystem.Jupiter.ReadersService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Membre", Namespace="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Membre", Namespace="http://schemas.datacontract.org/2004/07/EPSILab.SolarSystem.Earth.Common")]
     [System.SerializableAttribute()]
     public partial class Membre : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -803,7 +803,7 @@ namespace SolarSystem.Jupiter.ReadersService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Classe", Namespace="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Classe", Namespace="http://schemas.datacontract.org/2004/07/EPSILab.SolarSystem.Earth.Common")]
     [System.SerializableAttribute()]
     public partial class Classe : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -896,7 +896,7 @@ namespace SolarSystem.Jupiter.ReadersService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Role", Namespace="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Role", Namespace="http://schemas.datacontract.org/2004/07/EPSILab.SolarSystem.Earth.Common")]
     [System.SerializableAttribute()]
     public partial class Role : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -957,7 +957,7 @@ namespace SolarSystem.Jupiter.ReadersService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="News", Namespace="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="News", Namespace="http://schemas.datacontract.org/2004/07/EPSILab.SolarSystem.Earth.Common")]
     [System.SerializableAttribute()]
     public partial class News : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -1146,7 +1146,7 @@ namespace SolarSystem.Jupiter.ReadersService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Projet", Namespace="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Projet", Namespace="http://schemas.datacontract.org/2004/07/EPSILab.SolarSystem.Earth.Common")]
     [System.SerializableAttribute()]
     public partial class Projet : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -1271,7 +1271,7 @@ namespace SolarSystem.Jupiter.ReadersService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Publicite", Namespace="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Publicite", Namespace="http://schemas.datacontract.org/2004/07/EPSILab.SolarSystem.Earth.Common")]
     [System.SerializableAttribute()]
     public partial class Publicite : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -1396,7 +1396,7 @@ namespace SolarSystem.Jupiter.ReadersService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Salon", Namespace="http://schemas.datacontract.org/2004/07/SolarSystem.Earth.Common")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Salon", Namespace="http://schemas.datacontract.org/2004/07/EPSILab.SolarSystem.Earth.Common")]
     [System.SerializableAttribute()]
     public partial class Salon : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
