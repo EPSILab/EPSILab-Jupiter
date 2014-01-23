@@ -1,7 +1,7 @@
-﻿using SolarSystem.Jupiter.ReadersService;
+﻿using EPSILab.SolarSystem.Jupiter.ReadersService;
 using System.Collections.Generic;
 
-namespace SolarSystem.Jupiter.Classes
+namespace EPSILab.SolarSystem.Jupiter.Classes
 {
     /// <summary>
     /// Class for displaying projects by campus using ASP.NET Repeater

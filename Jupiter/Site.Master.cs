@@ -1,6 +1,6 @@
 ﻿using System.Web.UI;
 
-namespace SolarSystem.Jupiter
+namespace EPSILab.SolarSystem.Jupiter
 {
     /// <summary>
     /// Master page for all the website

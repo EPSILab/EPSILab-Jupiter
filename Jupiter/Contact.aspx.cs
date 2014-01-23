@@ -1,5 +1,5 @@
-﻿using SolarSystem.Jupiter.ReadersService;
-using SolarSystem.Jupiter.Resources;
+﻿using EPSILab.SolarSystem.Jupiter.ReadersService;
+using EPSILab.SolarSystem.Jupiter.Resources;
 using System;
 using System.Drawing;
 using System.Net;
@@ -8,7 +8,7 @@ using System.Text.RegularExpressions;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace SolarSystem.Jupiter
+namespace EPSILab.SolarSystem.Jupiter
 {
     /// <summary>
     /// Contact page

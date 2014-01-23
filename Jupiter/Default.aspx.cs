@@ -1,10 +1,10 @@
-﻿using SolarSystem.Jupiter.ReadersService;
+﻿using EPSILab.SolarSystem.Jupiter.ReadersService;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.UI;
 
-namespace SolarSystem.Jupiter
+namespace EPSILab.SolarSystem.Jupiter
 {
     /// <summary>
     /// Default page

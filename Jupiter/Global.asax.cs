@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web;
 
-namespace SolarSystem.Jupiter
+namespace EPSILab.SolarSystem.Jupiter
 {
     /// <summary>
     /// IIS global actions

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolarSystem.Jupiter.Resources {
+namespace EPSILab.SolarSystem.Jupiter.Resources {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace SolarSystem.Jupiter.Resources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SolarSystem.Jupiter.Resources.ErrorRessources", typeof(ErrorRessources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("EPSILab.SolarSystem.Jupiter.Resources.ErrorRessources", typeof(ErrorRessources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

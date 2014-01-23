@@ -1,8 +1,8 @@
-﻿using SolarSystem.Jupiter.ReadersService;
+﻿using EPSILab.SolarSystem.Jupiter.ReadersService;
 using System;
 using System.Web.UI;
 
-namespace SolarSystem.Jupiter
+namespace EPSILab.SolarSystem.Jupiter
 {
     /// <summary>
     /// Links page

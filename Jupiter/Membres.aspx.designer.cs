@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolarSystem.Jupiter {
+namespace EPSILab.SolarSystem.Jupiter {
     
     
     public partial class Membres {

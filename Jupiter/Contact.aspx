@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="Nous contacter - EPSILab, le laboratoire Microsoft de l'EPSI" Language="C#"
     MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs"
-    Inherits="SolarSystem.Jupiter.Contact" %>
+    Inherits="EPSILab.SolarSystem.Jupiter.Contact" %>
 
 <%@ Register TagPrefix="recaptcha" Namespace="Recaptcha" Assembly="Recaptcha" %>
 

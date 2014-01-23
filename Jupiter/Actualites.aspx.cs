@@ -1,10 +1,10 @@
-﻿using SolarSystem.Jupiter.ReadersService;
-using SolarSystem.Jupiter.Resources;
+﻿using EPSILab.SolarSystem.Jupiter.ReadersService;
+using EPSILab.SolarSystem.Jupiter.Resources;
 using System;
 using System.Web;
 using System.Web.UI;
 
-namespace SolarSystem.Jupiter
+namespace EPSILab.SolarSystem.Jupiter
 {
     /// <summary>
     /// News page

@@ -1,6 +1,6 @@
-﻿using SolarSystem.Jupiter.Classes;
-using SolarSystem.Jupiter.ReadersService;
-using SolarSystem.Jupiter.Resources;
+﻿using EPSILab.SolarSystem.Jupiter.Classes;
+using EPSILab.SolarSystem.Jupiter.ReadersService;
+using EPSILab.SolarSystem.Jupiter.Resources;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace SolarSystem.Jupiter
+namespace EPSILab.SolarSystem.Jupiter
 {
     /// <summary>
     /// Members page

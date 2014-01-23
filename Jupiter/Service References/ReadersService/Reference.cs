@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolarSystem.Jupiter.ReadersService {
+namespace EPSILab.SolarSystem.Jupiter.ReadersService {
     using System.Runtime.Serialization;
     using System;
     
@@ -50,7 +50,7 @@ namespace SolarSystem.Jupiter.ReadersService {
         private string URLField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SolarSystem.Jupiter.ReadersService.Ville VilleField;
+        private EPSILab.SolarSystem.Jupiter.ReadersService.Ville VilleField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -180,7 +180,7 @@ namespace SolarSystem.Jupiter.ReadersService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public SolarSystem.Jupiter.ReadersService.Ville Ville {
+        public EPSILab.SolarSystem.Jupiter.ReadersService.Ville Ville {
             get {
                 return this.VilleField;
             }
@@ -417,7 +417,7 @@ namespace SolarSystem.Jupiter.ReadersService {
         private bool ActifField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SolarSystem.Jupiter.ReadersService.Classe ClasseField;
+        private EPSILab.SolarSystem.Jupiter.ReadersService.Classe ClasseField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int Code_MembreField;
@@ -450,7 +450,7 @@ namespace SolarSystem.Jupiter.ReadersService {
         private string PseudoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SolarSystem.Jupiter.ReadersService.Role RoleField;
+        private EPSILab.SolarSystem.Jupiter.ReadersService.Role RoleField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string Site_webField;
@@ -477,7 +477,7 @@ namespace SolarSystem.Jupiter.ReadersService {
         private string URL_ViadeoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SolarSystem.Jupiter.ReadersService.Ville VilleField;
+        private EPSILab.SolarSystem.Jupiter.ReadersService.Ville VilleField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string Ville_origineField;
@@ -506,7 +506,7 @@ namespace SolarSystem.Jupiter.ReadersService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public SolarSystem.Jupiter.ReadersService.Classe Classe {
+        public EPSILab.SolarSystem.Jupiter.ReadersService.Classe Classe {
             get {
                 return this.ClasseField;
             }
@@ -649,7 +649,7 @@ namespace SolarSystem.Jupiter.ReadersService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public SolarSystem.Jupiter.ReadersService.Role Role {
+        public EPSILab.SolarSystem.Jupiter.ReadersService.Role Role {
             get {
                 return this.RoleField;
             }
@@ -766,7 +766,7 @@ namespace SolarSystem.Jupiter.ReadersService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public SolarSystem.Jupiter.ReadersService.Ville Ville {
+        public EPSILab.SolarSystem.Jupiter.ReadersService.Ville Ville {
             get {
                 return this.VilleField;
             }
@@ -974,7 +974,7 @@ namespace SolarSystem.Jupiter.ReadersService {
         private string ImageField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SolarSystem.Jupiter.ReadersService.Membre MembreField;
+        private EPSILab.SolarSystem.Jupiter.ReadersService.Membre MembreField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string Mots_ClesField;
@@ -1044,7 +1044,7 @@ namespace SolarSystem.Jupiter.ReadersService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public SolarSystem.Jupiter.ReadersService.Membre Membre {
+        public EPSILab.SolarSystem.Jupiter.ReadersService.Membre Membre {
             get {
                 return this.MembreField;
             }
@@ -1169,7 +1169,7 @@ namespace SolarSystem.Jupiter.ReadersService {
         private string NomField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SolarSystem.Jupiter.ReadersService.Ville VilleField;
+        private EPSILab.SolarSystem.Jupiter.ReadersService.Ville VilleField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -1247,7 +1247,7 @@ namespace SolarSystem.Jupiter.ReadersService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public SolarSystem.Jupiter.ReadersService.Ville Ville {
+        public EPSILab.SolarSystem.Jupiter.ReadersService.Ville Ville {
             get {
                 return this.VilleField;
             }
@@ -1572,34 +1572,34 @@ namespace SolarSystem.Jupiter.ReadersService {
     public interface IConferenceReader {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IConferenceReader/GetConference", ReplyAction="http://tempuri.org/IConferenceReader/GetConferenceResponse")]
-        SolarSystem.Jupiter.ReadersService.Conference GetConference(int code);
+        EPSILab.SolarSystem.Jupiter.ReadersService.Conference GetConference(int code);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IConferenceReader/GetConferences", ReplyAction="http://tempuri.org/IConferenceReader/GetConferencesResponse")]
-        SolarSystem.Jupiter.ReadersService.Conference[] GetConferences();
+        EPSILab.SolarSystem.Jupiter.ReadersService.Conference[] GetConferences();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IConferenceReader/GetConferencesLimited", ReplyAction="http://tempuri.org/IConferenceReader/GetConferencesLimitedResponse")]
-        SolarSystem.Jupiter.ReadersService.Conference[] GetConferencesLimited(int indexFirstResult, int numberOfResults);
+        EPSILab.SolarSystem.Jupiter.ReadersService.Conference[] GetConferencesLimited(int indexFirstResult, int numberOfResults);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IConferenceReader/GetConferencesByVille", ReplyAction="http://tempuri.org/IConferenceReader/GetConferencesByVilleResponse")]
-        SolarSystem.Jupiter.ReadersService.Conference[] GetConferencesByVille(SolarSystem.Jupiter.ReadersService.Ville ville);
+        EPSILab.SolarSystem.Jupiter.ReadersService.Conference[] GetConferencesByVille(EPSILab.SolarSystem.Jupiter.ReadersService.Ville ville);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IConferenceReader/GetConferencesByVilleLimited", ReplyAction="http://tempuri.org/IConferenceReader/GetConferencesByVilleLimitedResponse")]
-        SolarSystem.Jupiter.ReadersService.Conference[] GetConferencesByVilleLimited(SolarSystem.Jupiter.ReadersService.Ville ville, int indexFirstResult, int numberOfResults);
+        EPSILab.SolarSystem.Jupiter.ReadersService.Conference[] GetConferencesByVilleLimited(EPSILab.SolarSystem.Jupiter.ReadersService.Ville ville, int indexFirstResult, int numberOfResults);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IConferenceReader/GetConferenceLastInsertedId", ReplyAction="http://tempuri.org/IConferenceReader/GetConferenceLastInsertedIdResponse")]
         int GetConferenceLastInsertedId();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IConferenceReader/SearchConferences", ReplyAction="http://tempuri.org/IConferenceReader/SearchConferencesResponse")]
-        SolarSystem.Jupiter.ReadersService.Conference[] SearchConferences(string keywords);
+        EPSILab.SolarSystem.Jupiter.ReadersService.Conference[] SearchConferences(string keywords);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IConferenceReaderChannel : SolarSystem.Jupiter.ReadersService.IConferenceReader, System.ServiceModel.IClientChannel {
+    public interface IConferenceReaderChannel : EPSILab.SolarSystem.Jupiter.ReadersService.IConferenceReader, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ConferenceReaderClient : System.ServiceModel.ClientBase<SolarSystem.Jupiter.ReadersService.IConferenceReader>, SolarSystem.Jupiter.ReadersService.IConferenceReader {
+    public partial class ConferenceReaderClient : System.ServiceModel.ClientBase<EPSILab.SolarSystem.Jupiter.ReadersService.IConferenceReader>, EPSILab.SolarSystem.Jupiter.ReadersService.IConferenceReader {
         
         public ConferenceReaderClient() {
         }
@@ -1620,23 +1620,23 @@ namespace SolarSystem.Jupiter.ReadersService {
                 base(binding, remoteAddress) {
         }
         
-        public SolarSystem.Jupiter.ReadersService.Conference GetConference(int code) {
+        public EPSILab.SolarSystem.Jupiter.ReadersService.Conference GetConference(int code) {
             return base.Channel.GetConference(code);
         }
         
-        public SolarSystem.Jupiter.ReadersService.Conference[] GetConferences() {
+        public EPSILab.SolarSystem.Jupiter.ReadersService.Conference[] GetConferences() {
             return base.Channel.GetConferences();
         }
         
-        public SolarSystem.Jupiter.ReadersService.Conference[] GetConferencesLimited(int indexFirstResult, int numberOfResults) {
+        public EPSILab.SolarSystem.Jupiter.ReadersService.Conference[] GetConferencesLimited(int indexFirstResult, int numberOfResults) {
             return base.Channel.GetConferencesLimited(indexFirstResult, numberOfResults);
         }
         
-        public SolarSystem.Jupiter.ReadersService.Conference[] GetConferencesByVille(SolarSystem.Jupiter.ReadersService.Ville ville) {
+        public EPSILab.SolarSystem.Jupiter.ReadersService.Conference[] GetConferencesByVille(EPSILab.SolarSystem.Jupiter.ReadersService.Ville ville) {
             return base.Channel.GetConferencesByVille(ville);
         }
         
-        public SolarSystem.Jupiter.ReadersService.Conference[] GetConferencesByVilleLimited(SolarSystem.Jupiter.ReadersService.Ville ville, int indexFirstResult, int numberOfResults) {
+        public EPSILab.SolarSystem.Jupiter.ReadersService.Conference[] GetConferencesByVilleLimited(EPSILab.SolarSystem.Jupiter.ReadersService.Ville ville, int indexFirstResult, int numberOfResults) {
             return base.Channel.GetConferencesByVilleLimited(ville, indexFirstResult, numberOfResults);
         }
         
@@ -1644,7 +1644,7 @@ namespace SolarSystem.Jupiter.ReadersService {
             return base.Channel.GetConferenceLastInsertedId();
         }
         
-        public SolarSystem.Jupiter.ReadersService.Conference[] SearchConferences(string keywords) {
+        public EPSILab.SolarSystem.Jupiter.ReadersService.Conference[] SearchConferences(string keywords) {
             return base.Channel.SearchConferences(keywords);
         }
     }
@@ -1654,19 +1654,19 @@ namespace SolarSystem.Jupiter.ReadersService {
     public interface ILienReader {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILienReader/GetLien", ReplyAction="http://tempuri.org/ILienReader/GetLienResponse")]
-        SolarSystem.Jupiter.ReadersService.Lien GetLien(int code);
+        EPSILab.SolarSystem.Jupiter.ReadersService.Lien GetLien(int code);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILienReader/GetLiens", ReplyAction="http://tempuri.org/ILienReader/GetLiensResponse")]
-        SolarSystem.Jupiter.ReadersService.Lien[] GetLiens();
+        EPSILab.SolarSystem.Jupiter.ReadersService.Lien[] GetLiens();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ILienReaderChannel : SolarSystem.Jupiter.ReadersService.ILienReader, System.ServiceModel.IClientChannel {
+    public interface ILienReaderChannel : EPSILab.SolarSystem.Jupiter.ReadersService.ILienReader, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class LienReaderClient : System.ServiceModel.ClientBase<SolarSystem.Jupiter.ReadersService.ILienReader>, SolarSystem.Jupiter.ReadersService.ILienReader {
+    public partial class LienReaderClient : System.ServiceModel.ClientBase<EPSILab.SolarSystem.Jupiter.ReadersService.ILienReader>, EPSILab.SolarSystem.Jupiter.ReadersService.ILienReader {
         
         public LienReaderClient() {
         }
@@ -1687,11 +1687,11 @@ namespace SolarSystem.Jupiter.ReadersService {
                 base(binding, remoteAddress) {
         }
         
-        public SolarSystem.Jupiter.ReadersService.Lien GetLien(int code) {
+        public EPSILab.SolarSystem.Jupiter.ReadersService.Lien GetLien(int code) {
             return base.Channel.GetLien(code);
         }
         
-        public SolarSystem.Jupiter.ReadersService.Lien[] GetLiens() {
+        public EPSILab.SolarSystem.Jupiter.ReadersService.Lien[] GetLiens() {
             return base.Channel.GetLiens();
         }
     }
@@ -1701,37 +1701,37 @@ namespace SolarSystem.Jupiter.ReadersService {
     public interface IMembreReader {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMembreReader/GetMembre", ReplyAction="http://tempuri.org/IMembreReader/GetMembreResponse")]
-        SolarSystem.Jupiter.ReadersService.Membre GetMembre(int code);
+        EPSILab.SolarSystem.Jupiter.ReadersService.Membre GetMembre(int code);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMembreReader/GetMembres", ReplyAction="http://tempuri.org/IMembreReader/GetMembresResponse")]
-        SolarSystem.Jupiter.ReadersService.Membre[] GetMembres();
+        EPSILab.SolarSystem.Jupiter.ReadersService.Membre[] GetMembres();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMembreReader/GetMembresByVille", ReplyAction="http://tempuri.org/IMembreReader/GetMembresByVilleResponse")]
-        SolarSystem.Jupiter.ReadersService.Membre[] GetMembresByVille(SolarSystem.Jupiter.ReadersService.Ville ville);
+        EPSILab.SolarSystem.Jupiter.ReadersService.Membre[] GetMembresByVille(EPSILab.SolarSystem.Jupiter.ReadersService.Ville ville);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMembreReader/GetMembresBureau", ReplyAction="http://tempuri.org/IMembreReader/GetMembresBureauResponse")]
-        SolarSystem.Jupiter.ReadersService.Membre[] GetMembresBureau();
+        EPSILab.SolarSystem.Jupiter.ReadersService.Membre[] GetMembresBureau();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMembreReader/GetMembresBureauByVille", ReplyAction="http://tempuri.org/IMembreReader/GetMembresBureauByVilleResponse")]
-        SolarSystem.Jupiter.ReadersService.Membre[] GetMembresBureauByVille(SolarSystem.Jupiter.ReadersService.Ville ville);
+        EPSILab.SolarSystem.Jupiter.ReadersService.Membre[] GetMembresBureauByVille(EPSILab.SolarSystem.Jupiter.ReadersService.Ville ville);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMembreReader/GetMembresAlumnis", ReplyAction="http://tempuri.org/IMembreReader/GetMembresAlumnisResponse")]
-        SolarSystem.Jupiter.ReadersService.Membre[] GetMembresAlumnis(SolarSystem.Jupiter.ReadersService.Ville ville);
+        EPSILab.SolarSystem.Jupiter.ReadersService.Membre[] GetMembresAlumnis(EPSILab.SolarSystem.Jupiter.ReadersService.Ville ville);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMembreReader/GetMembreLastInsertedId", ReplyAction="http://tempuri.org/IMembreReader/GetMembreLastInsertedIdResponse")]
         int GetMembreLastInsertedId();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMembreReader/SearchMembres", ReplyAction="http://tempuri.org/IMembreReader/SearchMembresResponse")]
-        SolarSystem.Jupiter.ReadersService.Membre[] SearchMembres(string keywords);
+        EPSILab.SolarSystem.Jupiter.ReadersService.Membre[] SearchMembres(string keywords);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IMembreReaderChannel : SolarSystem.Jupiter.ReadersService.IMembreReader, System.ServiceModel.IClientChannel {
+    public interface IMembreReaderChannel : EPSILab.SolarSystem.Jupiter.ReadersService.IMembreReader, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class MembreReaderClient : System.ServiceModel.ClientBase<SolarSystem.Jupiter.ReadersService.IMembreReader>, SolarSystem.Jupiter.ReadersService.IMembreReader {
+    public partial class MembreReaderClient : System.ServiceModel.ClientBase<EPSILab.SolarSystem.Jupiter.ReadersService.IMembreReader>, EPSILab.SolarSystem.Jupiter.ReadersService.IMembreReader {
         
         public MembreReaderClient() {
         }
@@ -1752,27 +1752,27 @@ namespace SolarSystem.Jupiter.ReadersService {
                 base(binding, remoteAddress) {
         }
         
-        public SolarSystem.Jupiter.ReadersService.Membre GetMembre(int code) {
+        public EPSILab.SolarSystem.Jupiter.ReadersService.Membre GetMembre(int code) {
             return base.Channel.GetMembre(code);
         }
         
-        public SolarSystem.Jupiter.ReadersService.Membre[] GetMembres() {
+        public EPSILab.SolarSystem.Jupiter.ReadersService.Membre[] GetMembres() {
             return base.Channel.GetMembres();
         }
         
-        public SolarSystem.Jupiter.ReadersService.Membre[] GetMembresByVille(SolarSystem.Jupiter.ReadersService.Ville ville) {
+        public EPSILab.SolarSystem.Jupiter.ReadersService.Membre[] GetMembresByVille(EPSILab.SolarSystem.Jupiter.ReadersService.Ville ville) {
             return base.Channel.GetMembresByVille(ville);
         }
         
-        public SolarSystem.Jupiter.ReadersService.Membre[] GetMembresBureau() {
+        public EPSILab.SolarSystem.Jupiter.ReadersService.Membre[] GetMembresBureau() {
             return base.Channel.GetMembresBureau();
         }
         
-        public SolarSystem.Jupiter.ReadersService.Membre[] GetMembresBureauByVille(SolarSystem.Jupiter.ReadersService.Ville ville) {
+        public EPSILab.SolarSystem.Jupiter.ReadersService.Membre[] GetMembresBureauByVille(EPSILab.SolarSystem.Jupiter.ReadersService.Ville ville) {
             return base.Channel.GetMembresBureauByVille(ville);
         }
         
-        public SolarSystem.Jupiter.ReadersService.Membre[] GetMembresAlumnis(SolarSystem.Jupiter.ReadersService.Ville ville) {
+        public EPSILab.SolarSystem.Jupiter.ReadersService.Membre[] GetMembresAlumnis(EPSILab.SolarSystem.Jupiter.ReadersService.Ville ville) {
             return base.Channel.GetMembresAlumnis(ville);
         }
         
@@ -1780,7 +1780,7 @@ namespace SolarSystem.Jupiter.ReadersService {
             return base.Channel.GetMembreLastInsertedId();
         }
         
-        public SolarSystem.Jupiter.ReadersService.Membre[] SearchMembres(string keywords) {
+        public EPSILab.SolarSystem.Jupiter.ReadersService.Membre[] SearchMembres(string keywords) {
             return base.Channel.SearchMembres(keywords);
         }
     }
@@ -1790,28 +1790,28 @@ namespace SolarSystem.Jupiter.ReadersService {
     public interface INewsReader {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INewsReader/GetNews", ReplyAction="http://tempuri.org/INewsReader/GetNewsResponse")]
-        SolarSystem.Jupiter.ReadersService.News GetNews(int code);
+        EPSILab.SolarSystem.Jupiter.ReadersService.News GetNews(int code);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INewsReader/GetListNews", ReplyAction="http://tempuri.org/INewsReader/GetListNewsResponse")]
-        SolarSystem.Jupiter.ReadersService.News[] GetListNews();
+        EPSILab.SolarSystem.Jupiter.ReadersService.News[] GetListNews();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INewsReader/GetListNewsLimited", ReplyAction="http://tempuri.org/INewsReader/GetListNewsLimitedResponse")]
-        SolarSystem.Jupiter.ReadersService.News[] GetListNewsLimited(int indexFirstElement, int numberOfResults);
+        EPSILab.SolarSystem.Jupiter.ReadersService.News[] GetListNewsLimited(int indexFirstElement, int numberOfResults);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INewsReader/GetNewsLastInsertedId", ReplyAction="http://tempuri.org/INewsReader/GetNewsLastInsertedIdResponse")]
         int GetNewsLastInsertedId();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INewsReader/SearchNews", ReplyAction="http://tempuri.org/INewsReader/SearchNewsResponse")]
-        SolarSystem.Jupiter.ReadersService.News[] SearchNews(string keywords);
+        EPSILab.SolarSystem.Jupiter.ReadersService.News[] SearchNews(string keywords);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface INewsReaderChannel : SolarSystem.Jupiter.ReadersService.INewsReader, System.ServiceModel.IClientChannel {
+    public interface INewsReaderChannel : EPSILab.SolarSystem.Jupiter.ReadersService.INewsReader, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class NewsReaderClient : System.ServiceModel.ClientBase<SolarSystem.Jupiter.ReadersService.INewsReader>, SolarSystem.Jupiter.ReadersService.INewsReader {
+    public partial class NewsReaderClient : System.ServiceModel.ClientBase<EPSILab.SolarSystem.Jupiter.ReadersService.INewsReader>, EPSILab.SolarSystem.Jupiter.ReadersService.INewsReader {
         
         public NewsReaderClient() {
         }
@@ -1832,15 +1832,15 @@ namespace SolarSystem.Jupiter.ReadersService {
                 base(binding, remoteAddress) {
         }
         
-        public SolarSystem.Jupiter.ReadersService.News GetNews(int code) {
+        public EPSILab.SolarSystem.Jupiter.ReadersService.News GetNews(int code) {
             return base.Channel.GetNews(code);
         }
         
-        public SolarSystem.Jupiter.ReadersService.News[] GetListNews() {
+        public EPSILab.SolarSystem.Jupiter.ReadersService.News[] GetListNews() {
             return base.Channel.GetListNews();
         }
         
-        public SolarSystem.Jupiter.ReadersService.News[] GetListNewsLimited(int indexFirstElement, int numberOfResults) {
+        public EPSILab.SolarSystem.Jupiter.ReadersService.News[] GetListNewsLimited(int indexFirstElement, int numberOfResults) {
             return base.Channel.GetListNewsLimited(indexFirstElement, numberOfResults);
         }
         
@@ -1848,7 +1848,7 @@ namespace SolarSystem.Jupiter.ReadersService {
             return base.Channel.GetNewsLastInsertedId();
         }
         
-        public SolarSystem.Jupiter.ReadersService.News[] SearchNews(string keywords) {
+        public EPSILab.SolarSystem.Jupiter.ReadersService.News[] SearchNews(string keywords) {
             return base.Channel.SearchNews(keywords);
         }
     }
@@ -1858,31 +1858,31 @@ namespace SolarSystem.Jupiter.ReadersService {
     public interface IProjetReader {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProjetReader/GetProjet", ReplyAction="http://tempuri.org/IProjetReader/GetProjetResponse")]
-        SolarSystem.Jupiter.ReadersService.Projet GetProjet(int code);
+        EPSILab.SolarSystem.Jupiter.ReadersService.Projet GetProjet(int code);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProjetReader/GetProjets", ReplyAction="http://tempuri.org/IProjetReader/GetProjetsResponse")]
-        SolarSystem.Jupiter.ReadersService.Projet[] GetProjets();
+        EPSILab.SolarSystem.Jupiter.ReadersService.Projet[] GetProjets();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProjetReader/GetProjetsLimited", ReplyAction="http://tempuri.org/IProjetReader/GetProjetsLimitedResponse")]
-        SolarSystem.Jupiter.ReadersService.Projet[] GetProjetsLimited(int indexFirstElement, int numberOfResults);
+        EPSILab.SolarSystem.Jupiter.ReadersService.Projet[] GetProjetsLimited(int indexFirstElement, int numberOfResults);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProjetReader/GetProjetsByVille", ReplyAction="http://tempuri.org/IProjetReader/GetProjetsByVilleResponse")]
-        SolarSystem.Jupiter.ReadersService.Projet[] GetProjetsByVille(SolarSystem.Jupiter.ReadersService.Ville ville);
+        EPSILab.SolarSystem.Jupiter.ReadersService.Projet[] GetProjetsByVille(EPSILab.SolarSystem.Jupiter.ReadersService.Ville ville);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProjetReader/GetProjetsByVilleLimited", ReplyAction="http://tempuri.org/IProjetReader/GetProjetsByVilleLimitedResponse")]
-        SolarSystem.Jupiter.ReadersService.Projet[] GetProjetsByVilleLimited(SolarSystem.Jupiter.ReadersService.Ville ville, int indexFirstElement, int numberOfResults);
+        EPSILab.SolarSystem.Jupiter.ReadersService.Projet[] GetProjetsByVilleLimited(EPSILab.SolarSystem.Jupiter.ReadersService.Ville ville, int indexFirstElement, int numberOfResults);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProjetReader/GetProjetLastInsertedId", ReplyAction="http://tempuri.org/IProjetReader/GetProjetLastInsertedIdResponse")]
         int GetProjetLastInsertedId();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IProjetReaderChannel : SolarSystem.Jupiter.ReadersService.IProjetReader, System.ServiceModel.IClientChannel {
+    public interface IProjetReaderChannel : EPSILab.SolarSystem.Jupiter.ReadersService.IProjetReader, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ProjetReaderClient : System.ServiceModel.ClientBase<SolarSystem.Jupiter.ReadersService.IProjetReader>, SolarSystem.Jupiter.ReadersService.IProjetReader {
+    public partial class ProjetReaderClient : System.ServiceModel.ClientBase<EPSILab.SolarSystem.Jupiter.ReadersService.IProjetReader>, EPSILab.SolarSystem.Jupiter.ReadersService.IProjetReader {
         
         public ProjetReaderClient() {
         }
@@ -1903,23 +1903,23 @@ namespace SolarSystem.Jupiter.ReadersService {
                 base(binding, remoteAddress) {
         }
         
-        public SolarSystem.Jupiter.ReadersService.Projet GetProjet(int code) {
+        public EPSILab.SolarSystem.Jupiter.ReadersService.Projet GetProjet(int code) {
             return base.Channel.GetProjet(code);
         }
         
-        public SolarSystem.Jupiter.ReadersService.Projet[] GetProjets() {
+        public EPSILab.SolarSystem.Jupiter.ReadersService.Projet[] GetProjets() {
             return base.Channel.GetProjets();
         }
         
-        public SolarSystem.Jupiter.ReadersService.Projet[] GetProjetsLimited(int indexFirstElement, int numberOfResults) {
+        public EPSILab.SolarSystem.Jupiter.ReadersService.Projet[] GetProjetsLimited(int indexFirstElement, int numberOfResults) {
             return base.Channel.GetProjetsLimited(indexFirstElement, numberOfResults);
         }
         
-        public SolarSystem.Jupiter.ReadersService.Projet[] GetProjetsByVille(SolarSystem.Jupiter.ReadersService.Ville ville) {
+        public EPSILab.SolarSystem.Jupiter.ReadersService.Projet[] GetProjetsByVille(EPSILab.SolarSystem.Jupiter.ReadersService.Ville ville) {
             return base.Channel.GetProjetsByVille(ville);
         }
         
-        public SolarSystem.Jupiter.ReadersService.Projet[] GetProjetsByVilleLimited(SolarSystem.Jupiter.ReadersService.Ville ville, int indexFirstElement, int numberOfResults) {
+        public EPSILab.SolarSystem.Jupiter.ReadersService.Projet[] GetProjetsByVilleLimited(EPSILab.SolarSystem.Jupiter.ReadersService.Ville ville, int indexFirstElement, int numberOfResults) {
             return base.Channel.GetProjetsByVilleLimited(ville, indexFirstElement, numberOfResults);
         }
         
@@ -1933,19 +1933,19 @@ namespace SolarSystem.Jupiter.ReadersService {
     public interface IPubliciteReader {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPubliciteReader/GetPublicite", ReplyAction="http://tempuri.org/IPubliciteReader/GetPubliciteResponse")]
-        SolarSystem.Jupiter.ReadersService.Publicite GetPublicite(int code);
+        EPSILab.SolarSystem.Jupiter.ReadersService.Publicite GetPublicite(int code);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPubliciteReader/GetPublicites", ReplyAction="http://tempuri.org/IPubliciteReader/GetPublicitesResponse")]
-        SolarSystem.Jupiter.ReadersService.Publicite[] GetPublicites();
+        EPSILab.SolarSystem.Jupiter.ReadersService.Publicite[] GetPublicites();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IPubliciteReaderChannel : SolarSystem.Jupiter.ReadersService.IPubliciteReader, System.ServiceModel.IClientChannel {
+    public interface IPubliciteReaderChannel : EPSILab.SolarSystem.Jupiter.ReadersService.IPubliciteReader, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class PubliciteReaderClient : System.ServiceModel.ClientBase<SolarSystem.Jupiter.ReadersService.IPubliciteReader>, SolarSystem.Jupiter.ReadersService.IPubliciteReader {
+    public partial class PubliciteReaderClient : System.ServiceModel.ClientBase<EPSILab.SolarSystem.Jupiter.ReadersService.IPubliciteReader>, EPSILab.SolarSystem.Jupiter.ReadersService.IPubliciteReader {
         
         public PubliciteReaderClient() {
         }
@@ -1966,11 +1966,11 @@ namespace SolarSystem.Jupiter.ReadersService {
                 base(binding, remoteAddress) {
         }
         
-        public SolarSystem.Jupiter.ReadersService.Publicite GetPublicite(int code) {
+        public EPSILab.SolarSystem.Jupiter.ReadersService.Publicite GetPublicite(int code) {
             return base.Channel.GetPublicite(code);
         }
         
-        public SolarSystem.Jupiter.ReadersService.Publicite[] GetPublicites() {
+        public EPSILab.SolarSystem.Jupiter.ReadersService.Publicite[] GetPublicites() {
             return base.Channel.GetPublicites();
         }
     }
@@ -1980,28 +1980,28 @@ namespace SolarSystem.Jupiter.ReadersService {
     public interface ISalonReader {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISalonReader/GetSalon", ReplyAction="http://tempuri.org/ISalonReader/GetSalonResponse")]
-        SolarSystem.Jupiter.ReadersService.Salon GetSalon(int code);
+        EPSILab.SolarSystem.Jupiter.ReadersService.Salon GetSalon(int code);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISalonReader/GetSalons", ReplyAction="http://tempuri.org/ISalonReader/GetSalonsResponse")]
-        SolarSystem.Jupiter.ReadersService.Salon[] GetSalons();
+        EPSILab.SolarSystem.Jupiter.ReadersService.Salon[] GetSalons();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISalonReader/GetSalonsLimited", ReplyAction="http://tempuri.org/ISalonReader/GetSalonsLimitedResponse")]
-        SolarSystem.Jupiter.ReadersService.Salon[] GetSalonsLimited(int indexFirstElement, int numberOfResults);
+        EPSILab.SolarSystem.Jupiter.ReadersService.Salon[] GetSalonsLimited(int indexFirstElement, int numberOfResults);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISalonReader/GetSalonLastInsertedId", ReplyAction="http://tempuri.org/ISalonReader/GetSalonLastInsertedIdResponse")]
         int GetSalonLastInsertedId();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISalonReader/SearchSalons", ReplyAction="http://tempuri.org/ISalonReader/SearchSalonsResponse")]
-        SolarSystem.Jupiter.ReadersService.Salon[] SearchSalons(string keywords);
+        EPSILab.SolarSystem.Jupiter.ReadersService.Salon[] SearchSalons(string keywords);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ISalonReaderChannel : SolarSystem.Jupiter.ReadersService.ISalonReader, System.ServiceModel.IClientChannel {
+    public interface ISalonReaderChannel : EPSILab.SolarSystem.Jupiter.ReadersService.ISalonReader, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class SalonReaderClient : System.ServiceModel.ClientBase<SolarSystem.Jupiter.ReadersService.ISalonReader>, SolarSystem.Jupiter.ReadersService.ISalonReader {
+    public partial class SalonReaderClient : System.ServiceModel.ClientBase<EPSILab.SolarSystem.Jupiter.ReadersService.ISalonReader>, EPSILab.SolarSystem.Jupiter.ReadersService.ISalonReader {
         
         public SalonReaderClient() {
         }
@@ -2022,15 +2022,15 @@ namespace SolarSystem.Jupiter.ReadersService {
                 base(binding, remoteAddress) {
         }
         
-        public SolarSystem.Jupiter.ReadersService.Salon GetSalon(int code) {
+        public EPSILab.SolarSystem.Jupiter.ReadersService.Salon GetSalon(int code) {
             return base.Channel.GetSalon(code);
         }
         
-        public SolarSystem.Jupiter.ReadersService.Salon[] GetSalons() {
+        public EPSILab.SolarSystem.Jupiter.ReadersService.Salon[] GetSalons() {
             return base.Channel.GetSalons();
         }
         
-        public SolarSystem.Jupiter.ReadersService.Salon[] GetSalonsLimited(int indexFirstElement, int numberOfResults) {
+        public EPSILab.SolarSystem.Jupiter.ReadersService.Salon[] GetSalonsLimited(int indexFirstElement, int numberOfResults) {
             return base.Channel.GetSalonsLimited(indexFirstElement, numberOfResults);
         }
         
@@ -2038,7 +2038,7 @@ namespace SolarSystem.Jupiter.ReadersService {
             return base.Channel.GetSalonLastInsertedId();
         }
         
-        public SolarSystem.Jupiter.ReadersService.Salon[] SearchSalons(string keywords) {
+        public EPSILab.SolarSystem.Jupiter.ReadersService.Salon[] SearchSalons(string keywords) {
             return base.Channel.SearchSalons(keywords);
         }
     }
@@ -2048,19 +2048,19 @@ namespace SolarSystem.Jupiter.ReadersService {
     public interface IVilleReader {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVilleReader/GetVille", ReplyAction="http://tempuri.org/IVilleReader/GetVilleResponse")]
-        SolarSystem.Jupiter.ReadersService.Ville GetVille(int code);
+        EPSILab.SolarSystem.Jupiter.ReadersService.Ville GetVille(int code);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVilleReader/GetVilles", ReplyAction="http://tempuri.org/IVilleReader/GetVillesResponse")]
-        SolarSystem.Jupiter.ReadersService.Ville[] GetVilles();
+        EPSILab.SolarSystem.Jupiter.ReadersService.Ville[] GetVilles();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IVilleReaderChannel : SolarSystem.Jupiter.ReadersService.IVilleReader, System.ServiceModel.IClientChannel {
+    public interface IVilleReaderChannel : EPSILab.SolarSystem.Jupiter.ReadersService.IVilleReader, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class VilleReaderClient : System.ServiceModel.ClientBase<SolarSystem.Jupiter.ReadersService.IVilleReader>, SolarSystem.Jupiter.ReadersService.IVilleReader {
+    public partial class VilleReaderClient : System.ServiceModel.ClientBase<EPSILab.SolarSystem.Jupiter.ReadersService.IVilleReader>, EPSILab.SolarSystem.Jupiter.ReadersService.IVilleReader {
         
         public VilleReaderClient() {
         }
@@ -2081,11 +2081,11 @@ namespace SolarSystem.Jupiter.ReadersService {
                 base(binding, remoteAddress) {
         }
         
-        public SolarSystem.Jupiter.ReadersService.Ville GetVille(int code) {
+        public EPSILab.SolarSystem.Jupiter.ReadersService.Ville GetVille(int code) {
             return base.Channel.GetVille(code);
         }
         
-        public SolarSystem.Jupiter.ReadersService.Ville[] GetVilles() {
+        public EPSILab.SolarSystem.Jupiter.ReadersService.Ville[] GetVilles() {
             return base.Channel.GetVilles();
         }
     }

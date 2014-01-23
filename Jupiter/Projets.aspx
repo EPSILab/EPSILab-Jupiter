@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Projets - EPSILab, le laboratoire Microsoft de l'EPSI" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Projets.aspx.cs" Inherits="SolarSystem.Jupiter.Projets" %>
+﻿<%@ Page Title="Projets - EPSILab, le laboratoire Microsoft de l'EPSI" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Projets.aspx.cs" Inherits="EPSILab.SolarSystem.Jupiter.Projets" %>
 
 <%-- Head content --%>
 <asp:Content ID="HeaderContent" ContentPlaceHolderID="HeadContent" runat="server">

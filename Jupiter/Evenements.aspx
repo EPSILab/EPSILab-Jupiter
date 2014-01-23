@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="Nos événements - EPSILab, le laboratoire Microsoft de l'EPSI" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true"
-    CodeBehind="Evenements.aspx.cs" Inherits="SolarSystem.Jupiter.Evenements" %>
+    CodeBehind="Evenements.aspx.cs" Inherits="EPSILab.SolarSystem.Jupiter.Evenements" %>
 
 <%-- Head content --%>
 <asp:Content ID="HeaderContent" ContentPlaceHolderID="HeadContent" runat="server">
