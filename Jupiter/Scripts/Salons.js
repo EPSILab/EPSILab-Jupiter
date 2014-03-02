@@ -32,30 +32,30 @@
 
     function setWidthConferences() {
         if (innerWidth < 400) {
-            $(".salon").css("width", (innerWidth - 60) + "px");
+            $(".Show").css("width", (innerWidth - 60) + "px");
         }
         else if (innerWidth < 600) {
-            $(".salon").css("width", (innerWidth - 80) + "px");
+            $(".Show").css("width", (innerWidth - 80) + "px");
         }
         else if (innerWidth < 1100) {
-            $(".salon").css("width", (innerWidth - 220) + "px");
+            $(".Show").css("width", (innerWidth - 220) + "px");
         } else {
-            $(".salon").css("width", "1000px");
+            $(".Show").css("width", "1000px");
         }
     }
 
     function genererCarousel() {
-        var nombreTotalItems = $("#SalonsInternCarousel").children().length;
-        var nombreItemsPerPage = NbItemsPerPage(nombreTotalItems);
+        var LastNamebreTotalItems = $("#ShowsInternCarousel").children().length;
+        var LastNamebreItemsPerPage = NbItemsPerPage(LastNamebreTotalItems);
 
-        $("#SalonsInternCarousel").carouFredSel({
+        $("#ShowsInternCarousel").carouFredSel({
             direction: "up",
             circular: true,
             infinite: false,
             width: "variable",
             height: "variable",
             items: {
-                visible: nombreItemsPerPage
+                visible: LastNamebreItemsPerPage
             },
             auto: false,
             prev: {
@@ -64,7 +64,7 @@
             next: {
                 key: "down"
             },
-            pagination: ".paginationSalons",
+            pagination: ".paginationShows",
             swipe: true
         });
 
@@ -85,17 +85,17 @@
         }
     }
 
-    function NbItemsPerPage(nombreTotalItems) {
+    function NbItemsPerPage(LastNamebreTotalItems) {
         if (innerWidth < 400) {
-            return Math.max(Math.ceil(nombreTotalItems / NbPages()), 6);
+            return Math.max(Math.ceil(LastNamebreTotalItems / NbPages()), 6);
         }
         else if (innerWidth < 600) {
-            return Math.max(Math.ceil(nombreTotalItems / NbPages()), 8);
+            return Math.max(Math.ceil(LastNamebreTotalItems / NbPages()), 8);
         }
         else if (innerWidth < 1100) {
-            return Math.max(Math.ceil(nombreTotalItems / NbPages()), 10);
+            return Math.max(Math.ceil(LastNamebreTotalItems / NbPages()), 10);
         } else {
-            return Math.max(Math.ceil(nombreTotalItems / NbPages()), 12);
+            return Math.max(Math.ceil(LastNamebreTotalItems / NbPages()), 12);
         }
     }
 });

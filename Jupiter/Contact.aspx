@@ -42,7 +42,7 @@
             <div>&nbsp;</div>
 
             <div>* Ecole EPSI à contacter:</div>
-            <asp:DropDownList ID="listCampus" DataTextField="Libelle" DataValueField="Code_Ville" runat="server" Width="200px" />
+            <asp:DropDownList ID="listCampus" DataTextField="Place" DataValueField="Id" runat="server" Width="200px" />
 
             <div id="message">
                 <div>* Corps du message :</div>

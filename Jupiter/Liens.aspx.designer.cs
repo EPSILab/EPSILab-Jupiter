@@ -13,12 +13,12 @@ namespace EPSILab.SolarSystem.Jupiter {
     public partial class Liens {
         
         /// <summary>
-        /// repeaterLiens control.
+        /// repeaterLinks control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater repeaterLiens;
+        protected global::System.Web.UI.WebControls.Repeater repeaterLinks;
     }
 }

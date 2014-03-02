@@ -3,7 +3,7 @@
 
 <%-- Head content --%>
 <asp:Content ID="HeaderContent" ContentPlaceHolderID="HeadContent" runat="server">
-    <meta name="description" content="La list de nos conférences, des salons et de nos journées portes ouvertes." />
+    <meta name="description" content="La liste de nos conférences et des salons Microsoft." />
     <script type="text/javascript" src="Scripts/Evenements.js"></script>
     <link rel="stylesheet" type="text/css" href="Styles/Evenements.css" />
 </asp:Content>
@@ -21,18 +21,18 @@
 
     <asp:Repeater ID="repeaterConferences" runat="server">
         <ItemTemplate>
-            <a class="blocConferences" href="Conferences-<%# Eval("Code_Conference") %>-<%# Eval("Url") %>.aspx">
-                <img class="photoElement" src="<%# Eval("Image") %>" alt="<%# Eval("Nom") %>" width="75" height="75" />
+            <a class="blocConferences" href="Conferences-<%# Eval("Id") %>-<%# Eval("Url") %>.aspx">
+                <img class="photoElement" src="<%# Eval("ImageUrl") %>" alt="<%# Eval("Name") %>" width="75" height="75" />
                 <span class="descElement">
                     <span class="nom">
-                        <%# Eval("Nom") %>
+                        <%# Eval("Name") %>
                     </span>
                     <br />
-                    le <%# Eval("Date_Heure_Debut", "{0:d}")%>
-                        de <%# Eval("Date_Heure_Debut", "{0:t}")%>
-                        à <%# Eval("Date_Heure_Fin", "{0:t}")%>
+                    le <%# Eval("Start_DateTime", "{0:d}")%>
+                        de <%# Eval("Start_DateTime", "{0:t}")%>
+                        à <%# Eval("End_DateTime", "{0:t}")%>
                     <br />
-                    <%# Eval("Lieu")%>, EPSI <%# Eval("Ville.Libelle")%>
+                    <%# Eval("Place")%>, EPSI <%# Eval("Campus.Place")%>
                 </span>
 
             </a>
@@ -40,7 +40,7 @@
     </asp:Repeater>
     <br />
     <div class="lien">
-        <a href="Conferences.aspx">-&gt; Voir la list de toutes nos conférences</a>
+        <a href="Conferences.aspx">-&gt; Voir la liste de toutes nos conférences</a>
     </div>
 
     <p>&nbsp;</p>
@@ -48,22 +48,22 @@
     <%-- Last shows --%>
     <h2>Les derniers salons</h2>
 
-    <asp:Repeater ID="repeaterSalons" runat="server">
+    <asp:Repeater ID="repeaterShows" runat="server">
         <ItemTemplate>
-            <a class="blocSalons" href="Salons-<%# Eval("Code_Salon") %>-<%# Eval("Url") %>.aspx">
+            <a class="blocSalons" href="Salons-<%# Eval("Id") %>-<%# Eval("Url") %>.aspx">
                 <span class="descElement">
                     <span class="nom">
-                        <%# Eval("Nom") %>
+                        <%# Eval("Name") %>
                     </span>
                     <br />
-                    le <%# Eval("Date_Heure_Debut", "{0:d}")%>
-                        de <%# Eval("Date_Heure_Debut", "{0:t}")%>
-                        au  <%# Eval("Date_Heure_Fin", "{0:d}")%>
-                    <%# Eval("Date_Heure_Fin", "{0:t}")%>
+                    le <%# Eval("Start_DateTime", "{0:d}")%>
+                        de <%# Eval("Start_DateTime", "{0:t}")%>
+                        au  <%# Eval("End_DateTime", "{0:d}")%>
+                    <%# Eval("End_DateTime", "{0:t}")%>
                     <br />
-                    <%# Eval("Lieu")%>
+                    <%# Eval("Place")%>
                 </span>
-                <img class="photoElement" src="<%# Eval("Image") %>" alt="<%# Eval("Nom") %>" width="75" height="75" />
+                <img class="photoElement" src="<%# Eval("ImageUrl") %>" alt="<%# Eval("Name") %>" width="75" height="75" />
             </a>
         </ItemTemplate>
     </asp:Repeater>

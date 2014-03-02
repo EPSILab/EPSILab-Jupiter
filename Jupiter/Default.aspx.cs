@@ -16,7 +16,7 @@ namespace EPSILab.SolarSystem.Jupiter
         /// <summary>
         /// Webservice proxy for ads
         /// </summary>
-        private readonly IPubliciteReader _webservicePublicites = new PubliciteReaderClient();
+        private readonly ISlideReader _webserviceSlides = new SlideReaderClient();
 
         /// <summary>
         /// Webservice proxy for news
@@ -53,15 +53,13 @@ namespace EPSILab.SolarSystem.Jupiter
         protected void Page_Load(object sender, EventArgs e)
         {
             // Get ads
-            IEnumerable<Publicite> publicites = _webservicePublicites.GetPublicites();
+            IEnumerable<Slide> slides = _webserviceSlides.GetSlides();
 
-            if (!publicites.Any())
-            {
+            if (!slides.Any())
                 repeater_TemporaryNews.Visible = false;
-            }
             else
             {
-                repeater_TemporaryNews.DataSource = publicites;
+                repeater_TemporaryNews.DataSource = slides;
                 repeater_TemporaryNews.DataBind();
             }
 

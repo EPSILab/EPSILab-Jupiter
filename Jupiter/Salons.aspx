@@ -1,5 +1,4 @@
-﻿<%@ Page Title="Salons - EPSILab, le laboratoire Microsoft de l'EPSI" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true"
-    CodeBehind="Salons.aspx.cs" Inherits="EPSILab.SolarSystem.Jupiter.Salons" %>
+﻿<%@ Page Title="Shows - EPSILab, le laboratoire Microsoft de l'EPSI" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeBehind="Salons.aspx.cs" Inherits="EPSILab.SolarSystem.Jupiter.Salons" %>
 
 <%-- Head content --%>
 <asp:Content ID="HeaderContent" ContentPlaceHolderID="HeadContent" runat="server">
@@ -20,12 +19,12 @@
     <a href="Salons.aspx">Salons</a>
     
     <%-- One show --%>
-    <asp:Panel runat="server" ID="panelSalon" Visible="false">
+    <asp:Panel runat="server" ID="panelShow" Visible="false">
         <div>&nbsp;</div>
 
         <div class="templateTitle">
             <div class="image">
-                <asp:Image runat="server" ID="imageSalon" Height="100" Width="100" />
+                <asp:Image runat="server" ID="imageShow" Height="100" Width="100" />
             </div>
             <h1>
                 <asp:Label runat="server" ID="labelName" />
@@ -52,7 +51,7 @@
     </asp:Panel>
 
     <%-- Shows list --%>
-    <asp:ListView runat="server" ID="listviewSalons" ItemPlaceholderID="phConferences" OnPreRender="listviewSalons_PreRender">
+    <asp:ListView runat="server" ID="listviewShows" ItemPlaceholderID="phConferences" OnPreRender="listviewShows_PreRender">
         <LayoutTemplate>
             <h1>Les salons</h1>
 
@@ -62,7 +61,7 @@
             <%-- Prevents display problems --%>
             <div class="clearfix"></div>
 
-            <div id="SalonsInternCarousel">
+            <div id="ShowsInternCarousel">
                 <asp:PlaceHolder runat="server" ID="phConferences" />
             </div>
 
@@ -74,16 +73,16 @@
         </LayoutTemplate>
         <ItemTemplate>
             <article class="salon">
-                <a class="lienSalon" href="Salons-<%# Eval("Code_Salon") %>-<%# Eval("Url") %>.aspx">
-                    <img class="imageSalon" src="<%# Eval("Image") %>" alt="<%# Eval("Nom") %>" title="<%# Eval("Nom") %>" width="70" height="70" />
+                <a class="lienSalon" href="Salons-<%# Eval("Id") %>-<%# Eval("Url") %>.aspx">
+                    <img class="imageSalon" src="<%# Eval("ImageUrl") %>" alt="<%# Eval("Name") %>" title="<%# Eval("Name") %>" width="70" height="70" />
 
                     <div class="nomSalon">
-                        <%# Eval("Nom") %>
+                        <%# Eval("Name") %>
                     </div>
 
                     <div class="date">
-                        Le <%# Eval("Date_Heure_Debut", "{0:d}")%> de <%# Eval("Date_Heure_Debut", "{0:t}")%>
-                        au <%# Eval("Date_Heure_Fin", "{0:d}")%> de <%# Eval("Date_Heure_Fin", "{0:t}")%>
+                        Le <%# Eval("Start_DateTime", "{0:d}")%> de <%# Eval("Start_DateTime", "{0:t}")%>
+                        au <%# Eval("End_DateTime", "{0:d}")%> de <%# Eval("End_DateTime", "{0:t}")%>
                     </div>
                 </a>
             </article>

@@ -25,7 +25,7 @@
     </p>
 
     <h2>Réalisation du site:</h2>
-    <div>Version: 3.5.1 (Livraison janvier 2014)</div>
+    <div>Version: 3.6 (Livraison mars 2014)</div>
     <div>
         Responsable du projet: <a href="Membres-1-jean-baptiste-vigneron.aspx">Jean-Baptiste Vigneron</a>
     </div>
@@ -36,6 +36,10 @@
         <a href="Membres-39-nicolas-janssoone.aspx">Nicolas Janssoone</a>
         et
         <a href="Membres-43-paul-guilbert.aspx">Paul Guilbert</a>
+    </div>
+    <div>
+        Design:
+        <a href="Membres-14-jean-charles-kessler.aspx">Jean-Charles Kessler</a>
     </div>
     <h2>L'EPSI:</h2>
     <div>

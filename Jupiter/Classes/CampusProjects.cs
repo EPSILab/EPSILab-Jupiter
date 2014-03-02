@@ -6,19 +6,19 @@ namespace EPSILab.SolarSystem.Jupiter.Classes
     /// <summary>
     /// Class for displaying projects by campus using ASP.NET Repeater
     /// </summary>
-    public class ProjetsVille
+    public class CampusProjects
     {
         #region Constructor
 
         /// <summary>
         /// Constructor
         /// </summary>
-        /// <param name="ville">City</param>
-        /// <param name="projets">Projects list of the campus</param>
-        public ProjetsVille(Ville ville, IEnumerable<Projet> projets)
+        /// <param name="campus">City</param>
+        /// <param name="projects">Projects list of the campus</param>
+        public CampusProjects(Campus campus, IEnumerable<Project> projects)
         {
-            Ville = ville;
-            Projets = projets;
+            Campus = campus;
+            Projects = projects;
         }
 
         #endregion
@@ -28,12 +28,12 @@ namespace EPSILab.SolarSystem.Jupiter.Classes
         /// <summary>
         /// Campus
         /// </summary>
-        public Ville Ville { get; private set; }
+        public Campus Campus { get; private set; }
 
         /// <summary>
-        /// Liste des projets
+        /// Liste des projects
         /// </summary>
-        public IEnumerable<Projet> Projets { get; private set; }
+        public IEnumerable<Project> Projects { get; private set; }
 
         #endregion
     }

@@ -47,7 +47,7 @@
             Mots-clés:
             <asp:Repeater runat="server" ID="repeaterKeywords">
                 <ItemTemplate>
-                    <a href="Recherche.aspx?mots=<%# Container.DataItem %>"><%# Container.DataItem %></a>
+                    <a href="Recherche.aspx?keywords=<%# Container.DataItem %>"><%# Container.DataItem %></a>
                 </ItemTemplate>
             </asp:Repeater>
         </div>
@@ -79,21 +79,21 @@
         </LayoutTemplate>
         <ItemTemplate>
             <article class="news">
-                <a class="lienNews" href="Actualites-<%# Eval("Code_News") %>-<%# Eval("Url") %>.aspx">
-                    <img class="image" src="<%# Eval("Image") %>" alt="<%# Eval("Titre") %>" title="<%# Eval("Titre") %>" width="70" height="70" />
+                <a class="lienNews" href="Actualites-<%# Eval("Id") %>-<%# Eval("Url") %>.aspx">
+                    <img class="image" src="<%# Eval("ImageUrl") %>" alt="<%# Eval("Title") %>" title="<%# Eval("Title") %>" width="70" height="70" />
 
                     <div class="titleNews">
-                        <%# Eval("Titre") %>
+                        <%# Eval("Title") %>
                     </div>
 
                     <div class="date">
                         par
-                        <%# Eval("Membre.Prenom") %> <%# Eval("Membre.Nom") %>,
-                        <%# Eval("Date_Heure", "{0:f}")%>
+                        <%# Eval("Member.FirstName") %> <%# Eval("Member.LastName") %>,
+                        <%# Eval("DateTime", "{0:f}")%>
                     </div>
 
                     <div class="description">
-                        <%# Eval("Texte_Court") %>
+                        <%# Eval("ShortText") %>
                     </div>
                 </a>
             </article>
