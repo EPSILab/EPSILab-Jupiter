@@ -6,18 +6,18 @@ namespace EPSILab.SolarSystem.Jupiter.Classes
     /// <summary>
     /// Class for displaying conferences by campus using ASP.NET Repeater
     /// </summary>
-    public class ConferencesVille
+    public class CampusConferences
     {
         #region Constructor
 
         /// <summary>
         /// Constructor
         /// </summary>
-        /// <param name="ville">Campus</param>
+        /// <param name="campus">Campus</param>
         /// <param name="conferences">Conferences to associate to the campus</param>
-        public ConferencesVille(Ville ville, IEnumerable<Conference> conferences)
+        public CampusConferences(Campus campus, IEnumerable<Conference> conferences)
         {
-            Ville = ville;
+            Campus = campus;
             Conferences = conferences;
         }
 
@@ -28,12 +28,12 @@ namespace EPSILab.SolarSystem.Jupiter.Classes
         /// <summary>
         /// Campus
         /// </summary>
-        public Ville Ville { get; set; }
+        public Campus Campus { get; private set; }
 
         /// <summary>
         /// Campus's conferences
         /// </summary>
-        public IEnumerable<Conference> Conferences { get; set; }
+        public IEnumerable<Conference> Conferences { get; private set; }
 
         #endregion
     }
