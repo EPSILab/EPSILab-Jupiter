@@ -13,14 +13,14 @@
     <a href="Membres.aspx">Membres</a>
 
     <%-- One member's informations --%>
-    <asp:Panel runat="server" CssClass="membre" ID="panelMembre">
+    <asp:Panel runat="server" CssClass="member" ID="panelMember">
         <div>&nbsp;</div>
 
         <div class="templateTitle">
             <div id="image">
-                <asp:Image runat="server" ID="imageMembre" Width="100" Height="100" />
+                <asp:Image runat="server" ID="imageMember" Width="100" Height="100" />
             </div>
-            <h1 id="nom_prenom">
+            <h1 id="lastname_firstname">
                 <asp:Label runat="server" ID="labelName" />
             </h1>
             <div>
@@ -41,38 +41,42 @@
 
         <div>&nbsp;</div>
 
-        <div id="reseauxSociaux">
+        <div id="socialNetworks">
             <asp:HyperLink runat="server" ID="lnkWebsite" Visible="false" Target="_blank">
-                <img src="Images/Website.png" width="50" height="50" class="image_social" alt="Voir le site web" title="Voir le site web" />
+                <img src="Images/Social/Website.png" width="50" height="50" class="image_social" alt="Voir le site web" title="Voir le site web" />
             </asp:HyperLink>
 
             <asp:HyperLink runat="server" ID="lnkFacebook" Visible="false" Target="_blank">
-                <img src="Images/SocialFacebook.png" width="50" height="50" class="image_social" alt="Page Facebook" title="Page Facebook" />
+                <img src="Images/Social/Facebook.png" width="50" height="50" class="image_social" alt="Page Facebook" title="Page Facebook" />
             </asp:HyperLink>
 
             <asp:HyperLink runat="server" ID="lnkTwitter" Visible="false" Target="_blank">
-                <img src="Images/SocialTwitter.png" width="50" height="50" class="image_social" alt="Page Twitter" title="Page Twitter" />
+                <img src="Images/Social/Twitter.png" width="50" height="50" class="image_social" alt="Page Twitter" title="Page Twitter" />
             </asp:HyperLink>
 
             <asp:HyperLink runat="server" ID="lnkLinkedIn" Visible="false" Target="_blank">
-                <img src="Images/SocialLinkedIn.png" width="50" height="50" class="image_social" alt="Profil LinkedIn" title="Profil LinkedIn" />
+                <img src="Images/Social/LinkedIn.png" width="50" height="50" class="image_social" alt="Profil LinkedIn" title="Profil LinkedIn" />
             </asp:HyperLink>
 
             <asp:HyperLink runat="server" ID="lnkViadeo" Visible="false" Target="_blank">
-                <img src="Images/SocialViadeo.png" width="50" height="50" class="image_social" alt="Profil Viadeo" title="Profil Viadeo" />
+                <img src="Images/Social/Viadeo.png" width="50" height="50" class="image_social" alt="Profil Viadeo" title="Profil Viadeo" />
+            </asp:HyperLink>
+            
+            <asp:HyperLink runat="server" ID="lnkGitHub" Visible="false" Target="_blank">
+                <img src="Images/Social/GitHub.png" width="50" height="50" class="image_social" alt="Profil Viadeo" title="Profil GitHub" />
             </asp:HyperLink>
         </div>
     </asp:Panel>
 
     <%-- Memebrs list by cities --%>
-    <asp:Panel ID="panelMembres" runat="server">
+    <asp:Panel ID="panelMembers" runat="server">
         <h1>Bureau et membres</h1>
         <br />
 
-        <asp:Repeater ID="repeaterVilles" runat="server" OnItemDataBound="repeaterVilles_ItemDataBound">
+        <asp:Repeater ID="repeaterCampuses" runat="server" OnItemDataBound="repeaterCampuses_ItemDataBound">
             <ItemTemplate>
-                <div class="ville">
-                    <h2 class="titleVille"><%# Eval("Libelle") %></h2>
+                <div class="campus">
+                    <h2 class="titleCampus"><%# Eval("Place") %></h2>
 
                     <asp:Repeater ID="repeaterBureau" runat="server">
                         <HeaderTemplate>
@@ -80,14 +84,14 @@
                                 <h3 class="titleListe">Bureau</h3>
                         </HeaderTemplate>
                         <ItemTemplate>
-                            <a class="blocMembre" href="Membres-<%# Eval("Code_Membre") %>-<%# Eval("Url") %>.aspx">
-                                <img class="photoMembre" src="<%# Eval("Image") %>" alt="<%# Eval("Prenom") %> <%# Eval("Nom") %>" width="75" height="75" />
-                                <span class="descMembre">
-                                    <span class="nomMembre">
-                                        <%# Eval("Prenom") %> <%# Eval("Nom") %>
+                            <a class="blocMember" href="Membres-<%# Eval("Id") %>-<%# Eval("Url") %>.aspx">
+                                <img class="photoMember" src="<%# Eval("ImageUrl") %>" alt="<%# Eval("FirstName") %> <%# Eval("LastName") %>" width="75" height="75" />
+                                <span class="descMember">
+                                    <span class="title">
+                                        <%# Eval("FirstName") %> <%# Eval("LastName") %>
                                     </span>
                                     <br />
-                                    <%# Eval("Statut") %>
+                                    <%# Eval("Status") %>
                                 </span>
                             </a>
                         </ItemTemplate>
@@ -98,15 +102,15 @@
 
                     <asp:Repeater ID="repeaterOthers" runat="server">
                         <HeaderTemplate>
-                            <div class="listMembres">
+                            <div class="listMembers">
                                 <h3 class="titleListe">Membres</h3>
                         </HeaderTemplate>
                         <ItemTemplate>
-                            <a class="blocMembre" href="Membres-<%# Eval("Code_Membre") %>-<%# Eval("Url") %>.aspx">
-                                <img class="photoMembre" src="<%# Eval("Image") %>" alt="<%# Eval("Prenom") %> <%# Eval("Nom") %>" width="75" height="75" />
-                                <span class="descMembre">
-                                    <span class="nomMembre">
-                                        <%# Eval("Prenom") %> <%# Eval("Nom") %>
+                            <a class="blocMember" href="Membres-<%# Eval("Id") %>-<%# Eval("Url") %>.aspx">
+                                <img class="photoMember" src="<%# Eval("ImageUrl") %>" alt="<%# Eval("FirstName") %> <%# Eval("LastName") %>" width="75" height="75" />
+                                <span class="descMember">
+                                    <span class="title">
+                                        <%# Eval("FirstName") %> <%# Eval("LastName") %>
                                     </span>
                                 </span>
                             </a>
@@ -122,11 +126,11 @@
                                 <h3 class="titleListe">Anciens</h3>
                         </HeaderTemplate>
                         <ItemTemplate>
-                            <a class="blocMembre" href="Membres-<%# Eval("Code_Membre") %>-<%# Eval("Url") %>.aspx">
-                                <img src="<%# Eval("Image") %>" alt="<%# Eval("Prenom") %> <%# Eval("Nom") %>" width="50" height="50" />
-                                <span class="descMembre">
-                                    <span class="nomMembre">
-                                        <%# Eval("Prenom") %> <%# Eval("Nom") %>
+                            <a class="blocMember" href="Membres-<%# Eval("Id") %>-<%# Eval("Url") %>.aspx">
+                                <img src="<%# Eval("ImageUrl") %>" alt="<%# Eval("FirstName") %> <%# Eval("LastName") %>" width="50" height="50" />
+                                <span class="descMember">
+                                    <span class="title">
+                                        <%# Eval("FirstName") %> <%# Eval("LastName") %>
                                     </span>
                                 </span>
                             </a>

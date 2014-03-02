@@ -14,7 +14,7 @@ namespace EPSILab.SolarSystem.Jupiter
         /// <summary>
         /// Webservice proxy for links
         /// </summary>
-        private readonly ILienReader _webservice = new LienReaderClient();
+        private readonly ILinkReader _webservice = new LinkReaderClient();
 
         #endregion
 
@@ -27,8 +27,8 @@ namespace EPSILab.SolarSystem.Jupiter
         /// <param name="e">Event arguments</param>
         protected void Page_Load(object sender, EventArgs e)
         {
-            repeaterLiens.DataSource = _webservice.GetLiens();
-            repeaterLiens.DataBind();
+            repeaterLinks.DataSource = _webservice.GetLinks();
+            repeaterLinks.DataBind();
         }
 
         #endregion

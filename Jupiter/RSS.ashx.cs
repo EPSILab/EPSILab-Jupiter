@@ -39,8 +39,8 @@ namespace EPSILab.SolarSystem.Jupiter
                 writerRss.WriteAttributeString("version", "2.0");
                 writerRss.WriteStartElement("channel");
                 writerRss.WriteElementString("title", GlobalRessources.SiteName);
-                writerRss.WriteStartElement("image");
-                writerRss.WriteElementString("url", "Images/logo.png");
+                writerRss.WriteStartElement("ImageUrl");
+                writerRss.WriteElementString("Url", "Images/logo.png");
                 writerRss.WriteElementString("title", GlobalRessources.SiteName);
                 writerRss.WriteElementString("link", GlobalRessources.SiteUrl);
                 writerRss.WriteEndElement();
@@ -53,16 +53,16 @@ namespace EPSILab.SolarSystem.Jupiter
                 {
                     writerRss.WriteStartElement("item");
 
-                    writerRss.WriteElementString("title", item.Titre);
+                    writerRss.WriteElementString("title", item.Title);
 
                     writerRss.WriteStartElement("description");
-                    writerRss.WriteString(string.Format("<img src=\"{0}\" width=\"100\" height=\"113\" style=\"float: left\" />", item.Image));
-                    writerRss.WriteString(item.Texte_Long);
+                    writerRss.WriteString(string.Format("<img src=\"{0}\" width=\"100\" height=\"113\" style=\"float: left\" />", item.ImageUrl));
+                    writerRss.WriteString(item.Text);
                     writerRss.WriteEndElement();
 
-                    writerRss.WriteElementString("link", string.Format("http://www.epsilab.net/Actualites-{0}-{1}.aspx", item.Code_News, item.URL));
-                    writerRss.WriteElementString("pubDate",  item.Date_Heure.ToString("f"));
-                    writerRss.WriteElementString("author", string.Format("{0} {1}", item.Membre.Prenom, item.Membre.Nom));
+                    writerRss.WriteElementString("link", string.Format("http://www.epsilab.net/News-{0}-{1}.aspx", item.Id, item.Url));
+                    writerRss.WriteElementString("pubDate",  item.DateTime.ToString("f"));
+                    writerRss.WriteElementString("author", string.Format("{0} {1}", item.Member.FirstName, item.Member.LastName));
                     
                     writerRss.WriteEndElement();
                 }
@@ -80,10 +80,7 @@ namespace EPSILab.SolarSystem.Jupiter
 
         public bool IsReusable
         {
-            get
-            {
-                return true;
-            }
+            get { return true; }
         }
 
         #endregion

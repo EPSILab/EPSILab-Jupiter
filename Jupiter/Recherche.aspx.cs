@@ -26,12 +26,12 @@ namespace EPSILab.SolarSystem.Jupiter
         /// <summary>
         /// Webservice proxy for shows
         /// </summary>
-        private readonly ISalonReader _webserviceSalons = new SalonReaderClient();
+        private readonly IShowReader _webserviceShows = new ShowReaderClient();
 
         /// <summary>
         /// Webservice proxy for members
         /// </summary>
-        private readonly IMembreReader _webserviceMembres = new MembreReaderClient();
+        private readonly IMemberReader _webserviceMembers = new MemberReaderClient();
 
         #endregion
 
@@ -40,12 +40,12 @@ namespace EPSILab.SolarSystem.Jupiter
         protected void Page_Load(object sender, EventArgs e)
         {
             // Check if search arguments has been given in the GET parameters
-            if (!string.IsNullOrWhiteSpace(HttpContext.Current.Request["search"]))
+            if (!string.IsNullOrWhiteSpace(HttpContext.Current.Request["keywords"]))
             {
                 panelNoResults.Visible = false;
                 panelResults.Visible = true;
 
-                string keywords = HttpContext.Current.Request["search"].Trim();
+                string keywords = HttpContext.Current.Request["keywords"].Trim();
 
                 labelRecherche.Text = keywords;
 
@@ -62,15 +62,15 @@ namespace EPSILab.SolarSystem.Jupiter
                 repeaterConferences.DataBind();
 
                 // Search in shows
-                ICollection<Salon> salons = _webserviceSalons.SearchSalons(keywords);
-                labelShowsCount.Text = salons.Count.ToString("0");
-                repeaterShows.DataSource = salons;
+                ICollection<Show> shows = _webserviceShows.SearchShows(keywords);
+                labelShowsCount.Text = shows.Count.ToString("0");
+                repeaterShows.DataSource = shows;
                 repeaterShows.DataBind();
 
                 // Search in members
-                ICollection<Membre> membres = _webserviceMembres.SearchMembres(keywords);
-                labelMembersCount.Text = membres.Count.ToString("0");
-                repeaterMembers.DataSource = membres;
+                ICollection<Member> members = _webserviceMembers.SearchMembers(keywords);
+                labelMembersCount.Text = members.Count.ToString("0");
+                repeaterMembers.DataSource = members;
                 repeaterMembers.DataBind();
             }
         }

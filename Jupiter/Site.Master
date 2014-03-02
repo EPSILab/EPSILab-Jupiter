@@ -24,7 +24,7 @@
             <div id="search">
                 <asp:TextBox runat="server" ID="txtRechercher" Width="150" />
                 <asp:ImageButton ID="imgRechercher" runat="server" AlternateText="Rechercher"
-                    ImageUrl="Images/Rechercher.png" OnClick="imgRechercher_Click" />
+                    ImageUrl="Images/Search.png" OnClick="imgRechercher_Click" />
             </div>
 
             <!-- Logo EPSILab -->
@@ -37,43 +37,43 @@
                 <ul id="menu">
                     <li id="menu_default">
                         <a href="Default.aspx">
-                            <img src="Images/Menu_Accueil.png" alt="Accueil" width="35" height="25" />
+                            <img src="Images/Menu/Home.png" alt="Accueil" width="35" height="25" />
                             <span>Accueil</span>
                         </a>
                     </li>
                     <li id="menu_news">
                         <a href="Actualites.aspx">
-                            <img src="Images/Menu_Actualites.png" alt="Actualités" width="35" height="25" />
+                            <img src="Images/Menu/News.png" alt="Actualités" width="35" height="25" />
                             <span>Actualités</span>
                         </a>
                     </li>
                     <li id="menu_membres">
                         <a href="Membres.aspx">
-                            <img src="Images/Menu_Membres.png" alt="Membres" width="35" height="25" />
+                            <img src="Images/Menu/Members.png" alt="Membres" width="35" height="25" />
                             <span>Membres</span>
                         </a>
                     </li>
                     <li id="menu_projets">
                         <a href="Projets.aspx">
-                            <img src="Images/Menu_Projets.png" alt="Projets" width="35" height="25" />
+                            <img src="Images/Menu/Projects.png" alt="Projets" width="35" height="25" />
                             <span>Projets</span>
                         </a>
                     </li>
                     <li id="menu_liens">
                         <a href="Liens.aspx">
-                            <img src="Images/Menu_Liens.png" alt="Liens" width="35" height="25" />
+                            <img src="Images/Menu/Links.png" alt="Liens" width="35" height="25" />
                             <span>Liens</span>
                         </a>
                     </li>
                     <li id="menu_evenements">
                         <a href="Evenements.aspx">
-                            <img src="Images/Menu_Evenements.png" alt="Evénements" width="35" height="25" />
+                            <img src="Images/Menu/Events.png" alt="Evénements" width="35" height="25" />
                             <span>Evénements</span>
                         </a>
                     </li>
                     <li id="menu_contact">
                         <a href="Contact.aspx">
-                            <img src="Images/Menu_Contact.png" alt="Contact" width="35" height="25" />
+                            <img src="Images/Menu/Contact.png" alt="Contact" width="35" height="25" />
                             <span>Contact</span>
                         </a>
                     </li>
@@ -95,7 +95,7 @@
                         <h2>Retrouvez-nous sur</h2>
                         <li id="ico-rss">
                             <a href="RSS.ashx" target="_blank">
-                                <img src="Images/RSS.png"
+                                <img src="Images/Pages/RSS.png"
                                     width="50" height="50"
                                     alt="Suivez notre flux d'actualités RSS"
                                     title="Suivez notre flux d'actualités RSS" />
@@ -103,7 +103,7 @@
                         </li>
                         <li id="ico-facebook">
                             <a href="http://www.facebook.com/epsilab" target="_blank">
-                                <img src="Images/Facebook.png"
+                                <img src="Images/Pages/Facebook.png"
                                     width="50" height="50"
                                     alt="Retrouvez-nous sur Facebook"
                                     title="Retrouvez-nous sur Facebook" />
@@ -111,16 +111,16 @@
                         </li>
                         <li id="ico-twitter">
                             <a href="http://www.twitter.com/epsilab" target="_blank">
-                                <img src="Images/Twitter.png"
+                                <img src="Images/Pages/Twitter.png"
                                     width="50" height="50"
                                     alt="Suivez-nous sur Twitter"
                                     title="Suivez-nous sur Twitter" />
                             </a>
                         </li>
-                        
+
                         <li id="ico-github">
                             <a href="http://www.github.com/epsilab" target="_blank">
-                                <img src="Images/GitHub.png"
+                                <img src="Images/Pages/GitHub.png"
                                     width="50" height="50"
                                     alt="Retrouvez-nous sur GitHub"
                                     title="Retrouvez-nous sur GitHub" />
@@ -149,7 +149,7 @@
                                 <a href="Default.aspx">Page d'accueil</a>
                             </li>
                             <li>
-                                <a href="Actualites.aspx">Nos actualités</a>
+                                <a href="News.aspx">Nos actualités</a>
                             </li>
                             <li>
                                 <a href="Membres.aspx">Les membres</a>
@@ -158,10 +158,10 @@
                                 <a href="Evenements.aspx">Nos événements</a>
                             </li>
                             <li>
-                                <a href="Projets.aspx">Nos projets</a>
+                                <a href="Projets.aspx">Nos projects</a>
                             </li>
                             <li>
-                                <a href="Liens.aspx">Liens utiles</a>
+                                <a href="Liens.aspx">Links utiles</a>
                             </li>
                             <li>
                                 <a href="Contact.aspx">Nous contacter</a>
@@ -174,9 +174,9 @@
             <br />
 
             <div style="font-size: 11px; font-family: Arial, Helvetica, sans-serif; text-align: center">
-                <a href="http://express.ikoula.com/serveur-dedie" title="Choisissez Ikoula pour tous vos projets d’hébergement web" target="_blank">
-                    <img alt="Choisissez Ikoula pour tous vos projets d’hébergement web" src="http://www.ikoula.com/img/heberge_par_ik_white.gif" border="0" /></a><br>
-                <a href=" http://www.ex10.biz/messagerie_exchange" title="Choisissez Ikoula pour tous vos projets d’hébergement web" target="_blank">Messagerie Exchange</a> | <a href="http://express.ikoula.com/serveur-dedie" title="Choisissez Ikoula pour tous vos projets d’hébergement web" target="_blank">serveur dédié</a>
+                <a href="http://express.ikoula.com/serveur-dedie" title="Choisissez Ikoula pour tous vos projects d’hébergement web" target="_blank">
+                    <img alt="Choisissez Ikoula pour tous vos projects d’hébergement web" src="http://www.ikoula.com/img/heberge_par_ik_white.gif" border="0" /></a><br>
+                <a href=" http://www.ex10.biz/messagerie_exchange" title="Choisissez Ikoula pour tous vos projects d’hébergement web" target="_blank">Messagerie Exchange</a> | <a href="http://express.ikoula.com/serveur-dedie" title="Choisissez Ikoula pour tous vos projects d’hébergement web" target="_blank">serveur dédié</a>
             </div>
 
             <div id="copyright">

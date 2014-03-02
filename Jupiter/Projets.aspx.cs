@@ -18,17 +18,17 @@ namespace EPSILab.SolarSystem.Jupiter
         /// <summary>
         /// Webservice proxy for projects
         /// </summary>
-        private readonly IProjetReader _webserviceProjets = new ProjetReaderClient();
+        private readonly IProjectReader _webserviceProjects = new ProjectReaderClient();
 
         /// <summary>
         /// Webservice proxy for cities
         /// </summary>
-        private readonly IVilleReader _webserviceVilles = new VilleReaderClient();
+        private readonly ICampusReader _webserviceCampuses = new CampusReaderClient();
 
         /// <summary>
         /// List of the projects by cities
         /// </summary>
-        private List<ProjetsVille> _projetsVilles;
+        private List<CampusProjects> _projectsCampuses;
 
         #endregion
 
@@ -41,13 +41,13 @@ namespace EPSILab.SolarSystem.Jupiter
         /// <param name="e">Event arguments</param>
         protected void Page_Load(object sender, EventArgs e)
         {
-            IList<Ville> villes = _webserviceVilles.GetVilles();
+            IList<Campus> campuss = _webserviceCampuses.GetCampuses();
 
-            _projetsVilles = villes.Select(ville => new ProjetsVille(ville, _webserviceProjets.GetProjetsByVille(ville))).ToList();
-            _projetsVilles.RemoveAll(mp => !mp.Projets.Any());
+            _projectsCampuses = campuss.Select(campus => new CampusProjects(campus, _webserviceProjects.GetProjectsByCampus(campus))).ToList();
+            _projectsCampuses.RemoveAll(mp => !mp.Projects.Any());
 
-            repeaterVilles.DataSource = _projetsVilles.Select(pv => pv.Ville);
-            repeaterVilles.DataBind();
+            repeaterCampuses.DataSource = _projectsCampuses.Select(pv => pv.Campus);
+            repeaterCampuses.DataBind();
         }
 
         /// <summary>
@@ -56,21 +56,21 @@ namespace EPSILab.SolarSystem.Jupiter
         /// </summary>
         /// <param name="sender">Element which raised the event.</param>
         /// <param name="repeaterItemEventArgs">Event arguments</param>
-        protected void repeaterVilles_ItemDataBound(object sender, RepeaterItemEventArgs repeaterItemEventArgs)
+        protected void repeaterCampuses_ItemDataBound(object sender, RepeaterItemEventArgs repeaterItemEventArgs)
         {
-            Ville ville = repeaterItemEventArgs.Item.DataItem as Ville;
+            Campus campus = repeaterItemEventArgs.Item.DataItem as Campus;
 
-            if (ville != null)
+            if (campus != null)
             {
-                IEnumerable<Projet> projets = (from pv in _projetsVilles
-                                               where pv.Ville == ville
-                                               select pv).First().Projets;
+                IEnumerable<Project> projects = (from pv in _projectsCampuses
+                                               where pv.Campus == campus
+                                               select pv).First().Projects;
 
                 Repeater subrepeater = (repeaterItemEventArgs.Item.FindControl("repeaterProjects") as Repeater);
 
                 if (subrepeater != null)
                 {
-                    subrepeater.DataSource = projets;
+                    subrepeater.DataSource = projects;
                     subrepeater.DataBind();
                 }
             }

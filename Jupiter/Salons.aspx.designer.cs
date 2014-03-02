@@ -22,22 +22,22 @@ namespace EPSILab.SolarSystem.Jupiter {
         protected global::System.Web.UI.WebControls.Literal metaDescription;
         
         /// <summary>
-        /// panelSalon control.
+        /// panelShow control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel panelSalon;
+        protected global::System.Web.UI.WebControls.Panel panelShow;
         
         /// <summary>
-        /// imageSalon control.
+        /// imageShow control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imageSalon;
+        protected global::System.Web.UI.WebControls.Image imageShow;
         
         /// <summary>
         /// labelName control.
@@ -76,12 +76,12 @@ namespace EPSILab.SolarSystem.Jupiter {
         protected global::System.Web.UI.WebControls.Label labelDescription;
         
         /// <summary>
-        /// listviewSalons control.
+        /// listviewShows control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView listviewSalons;
+        protected global::System.Web.UI.WebControls.ListView listviewShows;
     }
 }

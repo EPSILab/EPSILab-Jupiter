@@ -43,26 +43,26 @@ namespace EPSILab.SolarSystem.Jupiter
                     panelNews.Visible = true;
 
                     // Generate meta tags
-                    Page.Title = string.Format("{0} - {1}", news.Titre, GlobalRessources.SiteName);
-                    metaAuthor.Text = string.Format("<meta name=\"author\" content=\"{0} {1}\" />", news.Membre.Prenom, news.Membre.Nom);
-                    metaDescription.Text = string.Format("<meta name=\"description\" content=\"{0}\" />", news.Texte_Court);
-                    metaKeywords.Text = string.Format("<meta name=\"keywords\" content=\"{0}\" />", news.Mots_Cles);
+                    Page.Title = string.Format("{0} - {1}", news.Title, GlobalRessources.SiteName);
+                    metaAuthor.Text = string.Format("<meta name=\"author\" content=\"{0} {1}\" />", news.Member.FirstName, news.Member.LastName);
+                    metaDescription.Text = string.Format("<meta name=\"description\" content=\"{0}\" />", news.ShortText);
+                    metaKeywords.Text = string.Format("<meta name=\"keywords\" content=\"{0}\" />", news.Keywords);
 
                     // Write all news informations
-                    imgNews.ImageUrl = news.Image;
-                    imgNews.AlternateText = news.Titre;
+                    imgNews.ImageUrl = news.ImageUrl;
+                    imgNews.AlternateText = news.Title;
 
-                    labelTitle.Text = news.Titre;
+                    labelTitle.Text = news.Title;
 
-                    linkAuthor.Text = string.Format("{0} {1}", news.Membre.Prenom, news.Membre.Nom);
-                    linkAuthor.NavigateUrl = string.Format("Membres-{0}-{1}.aspx", news.Membre.Code_Membre, news.Membre.URL);
+                    linkAuthor.Text = string.Format("{0} {1}", news.Member.FirstName, news.Member.LastName);
+                    linkAuthor.NavigateUrl = string.Format("Members-{0}-{1}.aspx", news.Member.Id, news.Member.Url);
                    
-                    labelDateTime.Text = news.Date_Heure.ToLongDateString();
+                    labelDateTime.Text = news.DateTime.ToLongDateString();
 
-                    labelTexteLong.Text = news.Texte_Long;
+                    labelTexteLong.Text = news.Text;
 
                     // Write the keywords
-                    repeaterKeywords.DataSource = news.Mots_Cles.Split(',');
+                    repeaterKeywords.DataSource = news.Keywords.Split(',');
                     repeaterKeywords.DataBind();
                 }
             }

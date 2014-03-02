@@ -6,7 +6,7 @@ namespace EPSILab.SolarSystem.Jupiter.Classes
     /// <summary>
     /// Class for displaying members (bureau and not) by campus using ASP.NET Repeater
     /// </summary>
-    public class MembresVille
+    public class CampusMembers
     {
         #region Constructor
 
@@ -16,10 +16,10 @@ namespace EPSILab.SolarSystem.Jupiter.Classes
         /// <param name="campus">Campus</param>
         /// <param name="membres">Members in the campus</param>
         /// <param name="alumnis">Alumnis</param>
-        public MembresVille(Ville campus, IEnumerable<Membre> membres, IEnumerable<Membre> alumnis)
+        public CampusMembers(Campus campus, IEnumerable<Member> membres, IEnumerable<Member> alumnis)
         {
             Campus = campus;
-            Membres = membres;
+            Members = membres;
             Alumnis = alumnis;
         }
 
@@ -30,17 +30,17 @@ namespace EPSILab.SolarSystem.Jupiter.Classes
         /// <summary>
         /// Campus
         /// </summary>
-        public Ville Campus { get; private set; }
+        public Campus Campus { get; private set; }
 
         /// <summary>
         /// Members of the bureau
         /// </summary>
-        public IEnumerable<Membre> Membres { get; private set; }
+        public IEnumerable<Member> Members { get; private set; }
 
         /// <summary>
         /// Alumnis
         /// </summary>
-        public IEnumerable<Membre> Alumnis { get; private set; }
+        public IEnumerable<Member> Alumnis { get; private set; }
 
         #endregion
     }

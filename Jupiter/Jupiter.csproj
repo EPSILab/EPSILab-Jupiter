@@ -69,36 +69,36 @@
     <Content Include="Conferences.aspx" />
     <Content Include="Evenements.aspx" />
     <Content Include="googlea5e2124347c9c941.html" />
-    <Content Include="Images\backButton.png" />
-    <Content Include="Images\GitHub.png" />
-    <Content Include="Images\Menu_Accueil.png" />
-    <Content Include="Images\Menu_Actualites.png" />
-    <Content Include="Images\Menu_Conferences.png" />
-    <Content Include="Images\Menu_Contact.png" />
-    <Content Include="Images\EPSI.png" />
-    <Content Include="Images\Menu_Evenements.png" />
+    <Content Include="Images\Pages\GitHub.png" />
+    <Content Include="Images\Menu\Home.png" />
+    <Content Include="Images\Menu\News.png" />
+    <Content Include="Images\Menu\Conferences.png" />
+    <Content Include="Images\Menu\Contact.png" />
+    <Content Include="Images\Home\EPSI.png" />
+    <Content Include="Images\Menu\Events.png" />
     <Content Include="Images\favicon.ico" />
-    <Content Include="Images\Menu_Liens.png" />
-    <Content Include="Images\Menu_Membres.png" />
-    <Content Include="Images\SocialLinkedIn.png" />
-    <Content Include="Images\Microsoft.png" />
-    <Content Include="Images\Menu_Projets.png" />
-    <Content Include="Images\RSS.png" />
-    <Content Include="Images\Rechercher.png" />
+    <Content Include="Images\Menu\Links.png" />
+    <Content Include="Images\Menu\Members.png" />
+    <Content Include="Images\Social\GitHub.png" />
+    <Content Include="Images\Social\LinkedIn.png" />
+    <Content Include="Images\Home\Microsoft.png" />
+    <Content Include="Images\Menu\Projects.png" />
+    <Content Include="Images\Pages\RSS.png" />
+    <Content Include="Images\Search.png" />
     <Content Include="Images\Logo.png" />
-    <Content Include="Images\Facebook.png" />
-    <Content Include="Images\SocialFacebook.png" />
-    <Content Include="Images\SocialTwitter.png" />
-    <Content Include="Images\SocialViadeo.png" />
-    <Content Include="Images\Twitter.png" />
+    <Content Include="Images\Pages\Facebook.png" />
+    <Content Include="Images\Social\Facebook.png" />
+    <Content Include="Images\Social\Twitter.png" />
+    <Content Include="Images\Social\Viadeo.png" />
+    <Content Include="Images\Pages\Twitter.png" />
     <Content Include="Contact.aspx" />
     <Content Include="Images\Background.jpg" />
-    <Content Include="Images\AppliWindowsPhone.png" />
-    <Content Include="Images\AppliWindowsStore.png" />
+    <Content Include="Images\Apps\WP_Large.png" />
+    <Content Include="Images\Apps\WS_Large.png" />
     <Content Include="Images\up-arrow.png" />
-    <Content Include="Images\VignetteWindowsStore.png" />
-    <Content Include="Images\VignetteWindowsPhone.png" />
-    <Content Include="Images\Website.png" />
+    <Content Include="Images\Apps\WS_Small.png" />
+    <Content Include="Images\Apps\WP_Small.png" />
+    <Content Include="Images\Social\Website.png" />
     <Content Include="Membres.aspx" />
     <Content Include="Projets.aspx" />
     <Content Include="Recherche.aspx" />
@@ -121,6 +121,24 @@
     <Content Include="Scripts\SiteMaster.js" />
     <Content Include="packages.config" />
     <None Include="Properties\PublishProfiles\FTP.pubxml" />
+    <Content Include="Service References\ReadersService\EPSILab.SolarSystem.Jupiter.ReadersService.Campus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReadersService\EPSILab.SolarSystem.Jupiter.ReadersService.Link.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReadersService\EPSILab.SolarSystem.Jupiter.ReadersService.Member.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReadersService\EPSILab.SolarSystem.Jupiter.ReadersService.Project.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReadersService\EPSILab.SolarSystem.Jupiter.ReadersService.Show.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReadersService\EPSILab.SolarSystem.Jupiter.ReadersService.Slide.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Service References\ReadersService\ReadersService.disco" />
     <None Include="Service References\ReadersService\configuration91.svcinfo" />
     <None Include="Service References\ReadersService\configuration.svcinfo" />
@@ -175,25 +193,7 @@
     <Content Include="Service References\ReadersService\SolarSystem.Jupiter.ReadersService.Conference.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\ReadersService\SolarSystem.Jupiter.ReadersService.Lien.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\ReadersService\SolarSystem.Jupiter.ReadersService.Membre.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Service References\ReadersService\SolarSystem.Jupiter.ReadersService.News.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\ReadersService\SolarSystem.Jupiter.ReadersService.Projet.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\ReadersService\SolarSystem.Jupiter.ReadersService.Publicite.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\ReadersService\SolarSystem.Jupiter.ReadersService.Salon.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\ReadersService\SolarSystem.Jupiter.ReadersService.Ville.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
   </ItemGroup>
@@ -212,9 +212,9 @@
     <Compile Include="APropos.aspx.designer.cs">
       <DependentUpon>APropos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Classes\ConferencesVille.cs" />
-    <Compile Include="Classes\MembresVille.cs" />
-    <Compile Include="Classes\ProjetsVille.cs" />
+    <Compile Include="Classes\CampusConferences.cs" />
+    <Compile Include="Classes\CampusMembers.cs" />
+    <Compile Include="Classes\CampusProjects.cs" />
     <Compile Include="Conferences.aspx.cs">
       <DependentUpon>Conferences.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -314,10 +314,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Images\Liens\" />
-    <Folder Include="Images\Membres\" />
+    <Folder Include="Images\Links\" />
+    <Folder Include="Images\Members\" />
     <Folder Include="Images\News\" />
-    <Folder Include="Images\TemporaryNews\" />
+    <Folder Include="Images\Slides\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site.Master" />
@@ -336,6 +336,7 @@
     <EmbeddedResource Include="Resources\ErrorRessources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ErrorRessources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\GlobalRessources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

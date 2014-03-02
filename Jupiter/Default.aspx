@@ -3,7 +3,7 @@
 
 <%-- Head content --%>
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
-    <meta name="description" content="Le laboratoire Microsoft dirigé par les étudiants de l'EPSI. Retrouvez nos actualités, nos projets, nos évènements et bien d'autres..." />
+    <meta name="description" content="Le laboratoire Microsoft dirigé par les étudiants de l'EPSI. Retrouvez nos actualités, nos projects, nos évènements et bien d'autres..." />
     <meta name="keywords" content="epsilab, laboratoire, microsoft, laboratoire, windows, office, visual studio, wpf, wcf, windows phone" />
     <link rel="stylesheet" type="text/css" href="Styles/Default.css" />
     <link rel="stylesheet" type="text/css" href="Styles/coin-slider-styles.css" />
@@ -24,10 +24,10 @@
                 <div id="temporaryNews">
             </HeaderTemplate>
             <ItemTemplate>
-                <a href="<%# Eval("URL") %>" target="_blank">
-                    <img src="<%# Eval("Image") %>" alt="<%# Eval("Nom") %>" title="<%# Eval("Nom") %>" />
+                <a href="<%# Eval("Url") %>" target="_blank">
+                    <img src="<%# Eval("ImageUrl") %>" alt="<%# Eval("Name") %>" title="<%# Eval("Name") %>" />
                     <span>
-                        <strong><%# Eval("Nom") %></strong><br />
+                        <strong><%# Eval("Name") %></strong><br />
                         <%# Eval("Presentation") %>
                     </span>
                 </a>
@@ -49,10 +49,10 @@
                     <div id="NewsInternCarousel">
             </HeaderTemplate>
             <ItemTemplate>
-                <a id="<% Response.Write("NumNews" + IdNews++); %>" class="lienNews" href="Actualites-<%# Eval("Code_News") %>-<%# Eval("Url") %>.aspx">
+                <a id="<% Response.Write("NumNews" + IdNews++); %>" class="lienNews" href="News-<%# Eval("Id") %>-<%# Eval("Url") %>.aspx">
                     <article class="news">
-                        <img src="<%# Eval("Image") %>" alt="<%# Eval("Titre") %>" title="<%# Eval("Titre") %>" />
-                        <h2><%# Eval("Titre") %></h2>
+                        <img src="<%# Eval("ImageUrl") %>" alt="<%# Eval("Title") %>" title="<%# Eval("Title") %>" />
+                        <h2><%# Eval("Title") %></h2>
                     </article>
                 </a>
             </ItemTemplate>
@@ -79,7 +79,7 @@
         </p>
         <p style="float: right; margin: 5px">
             <a href="http://www.microsoft.com/france" target="_blank">
-                <img id="imgMicrosoft" src="Images/Microsoft.png" alt="Microsoft" title="Le partenariat EPSI-Microsoft remonte à 2004" />
+                <img id="imgMicrosoft" src="Images/Home/Microsoft.png" alt="Microsoft" title="Le partenariat EPSI-Microsoft remonte à 2004" />
             </a>
         </p>
         <p>
@@ -94,7 +94,7 @@
         </p>
         <p style="float: left; margin: 5px">
             <a href="http://www.epsi.fr" target="_blank">
-                <img id="imgEPSI" src="Images/EPSI.png" alt="Logo de l'EPSI" />
+                <img id="imgEPSI" src="Images/Home/EPSI.png" alt="Logo de l'EPSI" />
             </a>
         </p>
         <p>
