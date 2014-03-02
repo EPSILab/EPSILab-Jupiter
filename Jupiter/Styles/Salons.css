@@ -48,13 +48,13 @@
     clear: both;
 }
 
-.paginationSalons {
+.paginationShows {
     margin-top: 10px;
     margin-right: auto;
     text-align: center;
 }
 
-    .paginationSalons a {
+    .paginationShows a {
         margin: 0 5px;
         text-decoration: none;
         display: inline-block;
@@ -68,15 +68,15 @@
         border: 3px solid white;
     }
 
-        .paginationSalons a.selected {
+        .paginationShows a.selected {
             background: #0664a9;
         }
 
-        .paginationSalons a span {
+        .paginationShows a span {
             display: none;
         }
 
-        .paginationSalons a.selected {
+        .paginationShows a.selected {
             cursor: default;
         }
 
@@ -95,7 +95,7 @@
         font-size: 14px;
     }
 
-    .paginationSalons a {
+    .paginationShows a {
         margin: 0 4px;
         width: 19px;
         height: 19px;
@@ -130,7 +130,7 @@
         font-size: 12px;
     }
 
-    .paginationSalons a {
+    .paginationShows a {
         margin: 0 3px;
         width: 18px;
         height: 18px;
