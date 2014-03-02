@@ -1,8 +1,8 @@
-﻿<%@ Page Title="Links - EPSILab, le Laboratoire Microsoft de l'EPSI" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Liens.aspx.cs" Inherits="EPSILab.SolarSystem.Jupiter.Liens" %>
+﻿<%@ Page Title="Liens - EPSILab, le Laboratoire Microsoft de l'EPSI" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Liens.aspx.cs" Inherits="EPSILab.SolarSystem.Jupiter.Liens" %>
 
 <%-- Head content --%>
 <asp:Content ID="HeaderContent" ContentPlaceHolderID="HeadContent" runat="server">
-    <meta name="Description" lang="fr" content="Links utiles et sites partenaires.">
+    <meta name="Description" lang="fr" content="Liens utiles et sites partenaires.">
     <script type="text/javascript" src="Scripts/Liens.js"></script>
     <link rel="stylesheet" type="text/css" href="Styles/Liens.css" />
 </asp:Content>
@@ -10,9 +10,9 @@
 <%-- Body content --%>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     
-    <a href="Liens.aspx">Links</a>
+    <a href="Liens.aspx">Liens</a>
 
-    <h1>Links utiles</h1>
+    <h1>Liens utiles</h1>
     <br />
 
     <asp:Repeater ID="repeaterLinks" runat="server">
