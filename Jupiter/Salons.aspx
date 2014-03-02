@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Shows - EPSILab, le laboratoire Microsoft de l'EPSI" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeBehind="Salons.aspx.cs" Inherits="EPSILab.SolarSystem.Jupiter.Salons" %>
+﻿sh<%@ Page Title="Salons - EPSILab, le laboratoire Microsoft de l'EPSI" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeBehind="Salons.aspx.cs" Inherits="EPSILab.SolarSystem.Jupiter.Salons" %>
 
 <%-- Head content --%>
 <asp:Content ID="HeaderContent" ContentPlaceHolderID="HeadContent" runat="server">
@@ -61,7 +61,7 @@
             <%-- Prevents display problems --%>
             <div class="clearfix"></div>
 
-            <div id="ShowsInternCarousel">
+            <div id="SalonsInternCarousel">
                 <asp:PlaceHolder runat="server" ID="phConferences" />
             </div>
 
