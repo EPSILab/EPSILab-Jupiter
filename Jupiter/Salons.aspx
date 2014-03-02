@@ -1,4 +1,4 @@
-﻿sh<%@ Page Title="Salons - EPSILab, le laboratoire Microsoft de l'EPSI" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeBehind="Salons.aspx.cs" Inherits="EPSILab.SolarSystem.Jupiter.Salons" %>
+﻿<%@ Page Title="Salons - EPSILab, le laboratoire Microsoft de l'EPSI" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeBehind="Salons.aspx.cs" Inherits="EPSILab.SolarSystem.Jupiter.Salons" %>
 
 <%-- Head content --%>
 <asp:Content ID="HeaderContent" ContentPlaceHolderID="HeadContent" runat="server">
@@ -56,12 +56,12 @@
             <h1>Les salons</h1>
 
             <%-- Pagination system --%>
-            <div class="paginationSalons" id="news_pag"></div>
+            <div class="paginationShows" id="news_pag"></div>
 
             <%-- Prevents display problems --%>
             <div class="clearfix"></div>
 
-            <div id="SalonsInternCarousel">
+            <div id="ShowsInternCarousel">
                 <asp:PlaceHolder runat="server" ID="phConferences" />
             </div>
 
@@ -69,7 +69,7 @@
             <div class="clearfix"></div>
 
             <%-- Pagination system --%>
-            <div class="paginationSalons" id="news_pag2"></div>
+            <div class="paginationShows" id="news_pag2"></div>
         </LayoutTemplate>
         <ItemTemplate>
             <article class="salon">
