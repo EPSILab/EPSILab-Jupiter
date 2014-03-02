@@ -5,7 +5,7 @@
     });
 
     $(window).resize(function () {
-        $("#NewsInternCarousel").trigger("updateSizes");
+        $("#SalonsInternCarousel").trigger("updateSizes");
 
         if (innerWidth < 400) {
             if (widthActual >= 400) {
@@ -32,15 +32,15 @@
 
     function setWidthConferences() {
         if (innerWidth < 400) {
-            $(".Show").css("width", (innerWidth - 60) + "px");
+            $(".salon").css("width", (innerWidth - 60) + "px");
         }
         else if (innerWidth < 600) {
-            $(".Show").css("width", (innerWidth - 80) + "px");
+            $(".salon").css("width", (innerWidth - 80) + "px");
         }
         else if (innerWidth < 1100) {
-            $(".Show").css("width", (innerWidth - 220) + "px");
+            $(".salon").css("width", (innerWidth - 220) + "px");
         } else {
-            $(".Show").css("width", "1000px");
+            $(".salon").css("width", "1000px");
         }
     }
 

@@ -1,8 +1,8 @@
-﻿<%@ Page Title="Projects - EPSILab, le laboratoire Microsoft de l'EPSI" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Projets.aspx.cs" Inherits="EPSILab.SolarSystem.Jupiter.Projets" %>
+﻿<%@ Page Title="Projets - EPSILab, le laboratoire Microsoft de l'EPSI" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Projets.aspx.cs" Inherits="EPSILab.SolarSystem.Jupiter.Projets" %>
 
 <%-- Head content --%>
 <asp:Content ID="HeaderContent" ContentPlaceHolderID="HeadContent" runat="server">
-    <meta name="Description" lang="fr" content="Découvrez nos projects en cours et ceux terminés.">
+    <meta name="Description" lang="fr" content="Découvrez nos projets en cours et ceux terminés.">
     <script type="text/javascript" src="Scripts/Projets.js"></script>
     <link rel="stylesheet" type="text/css" href="Styles/Projets.css" />
 </asp:Content>
