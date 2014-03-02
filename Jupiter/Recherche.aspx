@@ -31,10 +31,10 @@
             </HeaderTemplate>
             <ItemTemplate>
                 <li>
-                    <a class="title" href="Actualites-<%# Eval("Code_News") %>-<%# Eval("Url") %>.aspx">
-                        <%# Eval("Titre") %>
+                    <a class="title" href="News-<%# Eval("Id") %>-<%# Eval("Url") %>.aspx">
+                        <%# Eval("Title") %>
                     </a>
-                    (<span class="date"><%# Eval("Date_Heure", "{0:d à HH:mm}")%></span>)
+                    (<span class="date"><%# Eval("DateTime", "{0:d à HH:mm}")%></span>)
                 </li>
             </ItemTemplate>
             <FooterTemplate>
@@ -53,12 +53,12 @@
             </HeaderTemplate>
             <ItemTemplate>
                 <li>
-                    <a class="title" href="Conferences-<%# Eval("Code_Conference") %>-<%# Eval("Url") %>.aspx">
-                        <%# Eval("Nom") %>
+                    <a class="title" href="Conferences-<%# Eval("Id") %>-<%# Eval("Url") %>.aspx">
+                        <%# Eval("LastName") %>
                     </a>
-                    <span class="date">( du <%# Eval("Date_Heure_Debut", "{0:dd/MM/yyyy HH:mm}")%>
-                        au <%# Eval("Date_Heure_Fin", "{0:dd/MM/yyyy HH:mm}")%>
-                        - <%# Eval("Lieu")%>)
+                    <span class="date">( du <%# Eval("Start_DateTime", "{0:dd/MM/yyyy HH:mm}")%>
+                        au <%# Eval("End_DateTime", "{0:dd/MM/yyyy HH:mm}")%>
+                        - <%# Eval("Place")%>)
                     </span>
                 </li>
             </ItemTemplate>
@@ -70,7 +70,7 @@
         <%-- Shows results --%>
         <h2>
             <asp:Label runat="server" ID="labelShowsCount" Text="0" />
-            résultats parmi les salons
+            résultats parmi les Shows
         </h2>
         <asp:Repeater runat="server" ID="repeaterShows">
             <HeaderTemplate>
@@ -78,12 +78,12 @@
             </HeaderTemplate>
             <ItemTemplate>
                 <li>
-                    <a class="title" href="Salons-<%# Eval("Code_Salon") %>-<%# Eval("Url") %>.aspx">
-                        <%# Eval("Nom") %>
+                    <a class="title" href="Shows-<%# Eval("Id") %>-<%# Eval("Url") %>.aspx">
+                        <%# Eval("LastName") %>
                     </a>
-                    <span class="date">( du <%# Eval("Date_Heure_Debut", "{0:dd/MM/yyyy HH:mm}")%>
-                        au <%# Eval("Date_Heure_Fin", "{0:dd/MM/yyyy HH:mm}")%>
-                        - <%# Eval("Lieu")%>)
+                    <span class="date">( du <%# Eval("Start_DateTime", "{0:dd/MM/yyyy HH:mm}")%>
+                        au <%# Eval("End_DateTime", "{0:dd/MM/yyyy HH:mm}")%>
+                        - <%# Eval("Place")%>)
                     </span>
                 </li>
             </ItemTemplate>
@@ -103,8 +103,8 @@
             </HeaderTemplate>
             <ItemTemplate>
                 <li>
-                    <a class="title" href="Membres-<%# Eval("Code_Membre") %>-<%# Eval("Url") %>.aspx">
-                        <%# Eval("Prenom") %> <%# Eval("Nom") %>
+                    <a class="title" href="Members-<%# Eval("Id") %>-<%# Eval("Url") %>.aspx">
+                        <%# Eval("FirstName") %> <%# Eval("LastName") %>
                     </a>
                 </li>
             </ItemTemplate>

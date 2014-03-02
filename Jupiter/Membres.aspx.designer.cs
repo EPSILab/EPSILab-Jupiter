@@ -22,22 +22,22 @@ namespace EPSILab.SolarSystem.Jupiter {
         protected global::System.Web.UI.WebControls.Literal metaDescription;
         
         /// <summary>
-        /// panelMembre control.
+        /// panelMember control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel panelMembre;
+        protected global::System.Web.UI.WebControls.Panel panelMember;
         
         /// <summary>
-        /// imageMembre control.
+        /// imageMember control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imageMembre;
+        protected global::System.Web.UI.WebControls.Image imageMember;
         
         /// <summary>
         /// labelName control.
@@ -130,21 +130,30 @@ namespace EPSILab.SolarSystem.Jupiter {
         protected global::System.Web.UI.WebControls.HyperLink lnkViadeo;
         
         /// <summary>
-        /// panelMembres control.
+        /// lnkGitHub control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel panelMembres;
+        protected global::System.Web.UI.WebControls.HyperLink lnkGitHub;
         
         /// <summary>
-        /// repeaterVilles control.
+        /// panelMembers control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater repeaterVilles;
+        protected global::System.Web.UI.WebControls.Panel panelMembers;
+        
+        /// <summary>
+        /// repeaterCampuses control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater repeaterCampuses;
     }
 }

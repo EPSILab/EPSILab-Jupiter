@@ -45,47 +45,47 @@ $(window).resize(function () {
 
 
 function gestionNews(width, classNews) {
-    var nombreNews = $(classNews).length;
+    var LastNamebreNews = $(classNews).length;
     
     if (width <= 400) {
 
-        // On supprime le nombre d'éléments pour arriver à 5
-        while (nombreNews > 5) {
-            supprimerUneNews(nombreNews);
-            nombreNews--;
+        // On supprime le LastNamebre d'éléments pour arriver à 5
+        while (LastNamebreNews > 5) {
+            supprimerUneNews(LastNamebreNews);
+            LastNamebreNews--;
         }
 
-        setNombreNewsVisible(1);
+        setLastNamebreNewsVisible(1);
 
     }
     else if (width > 400 && width <= 600) {
 
-        // On ajoute le nombre d'éléments pour arriver à 16
-        while (nombreNews < 16) {
+        // On ajoute le LastNamebre d'éléments pour arriver à 16
+        while (LastNamebreNews < 16) {
             ajouterUneNews();
-            nombreNews++;
+            LastNamebreNews++;
         }
 
-        // On supprime le nombre d'éléments pour arriver à 16
-        while (nombreNews > 16) {
-            supprimerUneNews(nombreNews);
-            nombreNews--;
+        // On supprime le LastNamebre d'éléments pour arriver à 16
+        while (LastNamebreNews > 16) {
+            supprimerUneNews(LastNamebreNews);
+            LastNamebreNews--;
         }
 
-        setNombreNewsVisible(2);
+        setLastNamebreNewsVisible(2);
 
     } else {
 
-        // On rajoute le nombre d'éléments pour arriver à 20
-        while (nombreNews < 20) {
+        // On rajoute le LastNamebre d'éléments pour arriver à 20
+        while (LastNamebreNews < 20) {
             ajouterUneNews();
-            nombreNews++;
+            LastNamebreNews++;
         }
 
         if (width > 1100)
-            setNombreNewsVisible(5);
+            setLastNamebreNewsVisible(5);
         else
-            setNombreNewsVisible(3);
+            setLastNamebreNewsVisible(3);
     }
 }
 
@@ -100,6 +100,6 @@ function supprimerUneNews(numero) {
     $("#NewsInternCarousel").trigger("removeItem", news);
 }
 
-function setNombreNewsVisible(nombre) {
-    $("#NewsInternCarousel").trigger("configuration", ["items.visible", nombre]);
+function setLastNamebreNewsVisible(LastNamebre) {
+    $("#NewsInternCarousel").trigger("configuration", ["items.visible", LastNamebre]);
 }

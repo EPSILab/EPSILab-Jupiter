@@ -46,8 +46,8 @@ function setWidthNews() {
 }
 
 function genererCarousel() {
-    var nombreTotalItems = $("#NewsInternCarousel").children().length;
-    var nombreItemsPerPage = NbItemsPerPage(nombreTotalItems);
+    var LastNamebreTotalItems = $("#NewsInternCarousel").children().length;
+    var LastNamebreItemsPerPage = NbItemsPerPage(LastNamebreTotalItems);
 
     $("#NewsInternCarousel").carouFredSel({
         direction: "up",
@@ -56,7 +56,7 @@ function genererCarousel() {
         width: "variable",
         height: "variable",
         items: {
-            visible: nombreItemsPerPage
+            visible: LastNamebreItemsPerPage
         },
         auto: false,
         prev: {
@@ -86,16 +86,16 @@ function NbPages() {
     }
 }
 
-function NbItemsPerPage(nombreTotalItems) {
+function NbItemsPerPage(LastNamebreTotalItems) {
     if (innerWidth < 400) {
-        return Math.max(Math.ceil(nombreTotalItems / NbPages()), 6);
+        return Math.max(Math.ceil(LastNamebreTotalItems / NbPages()), 6);
     }
     else if (innerWidth < 600) {
-        return Math.max(Math.ceil(nombreTotalItems / NbPages()), 8);
+        return Math.max(Math.ceil(LastNamebreTotalItems / NbPages()), 8);
     }
     else if (innerWidth < 1100) {
-        return Math.max(Math.ceil(nombreTotalItems / NbPages()), 10);
+        return Math.max(Math.ceil(LastNamebreTotalItems / NbPages()), 10);
     } else {
-        return Math.max(Math.ceil(nombreTotalItems / NbPages()), 12);
+        return Math.max(Math.ceil(LastNamebreTotalItems / NbPages()), 12);
     }
 }

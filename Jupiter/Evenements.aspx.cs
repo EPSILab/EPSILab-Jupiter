@@ -15,7 +15,7 @@ namespace EPSILab.SolarSystem.Jupiter
         /// <summary>
         /// Webservice proxy for shows
         /// </summary>
-        private readonly ISalonReader _webserviceSalons = new SalonReaderClient();
+        private readonly IShowReader _webserviceShows = new ShowReaderClient();
 
         /// <summary>
         /// Webservice proxy for conferences
@@ -34,9 +34,9 @@ namespace EPSILab.SolarSystem.Jupiter
         protected void Page_Load(object sender, EventArgs e)
         {
             // Load shows from the webservice
-            IEnumerable<Salon> salons = _webserviceSalons.GetSalonsLimited(0, 6);
-            repeaterSalons.DataSource = salons;
-            repeaterSalons.DataBind();
+            IEnumerable<Show> shows = _webserviceShows.GetShowsLimited(0, 6);
+            repeaterShows.DataSource = shows;
+            repeaterShows.DataBind();
 
             // Load conferences from the webservice
             IEnumerable<Conference> conferences = _webserviceConferences.GetConferencesLimited(0, 8);

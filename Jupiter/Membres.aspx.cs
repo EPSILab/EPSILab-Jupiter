@@ -20,17 +20,17 @@ namespace EPSILab.SolarSystem.Jupiter
         /// <summary>
         /// Webservice proxy for members
         /// </summary>
-        private readonly IMembreReader _webserviceMembres = new MembreReaderClient();
+        private readonly IMemberReader _webserviceMembers = new MemberReaderClient();
 
         /// <summary>
         /// Webservice proxy for cities
         /// </summary>
-        private readonly IVilleReader _webserviceVilles = new VilleReaderClient();
+        private readonly ICampusReader _webserviceCampuses = new CampusReaderClient();
 
         /// <summary>
         /// Allows to show members for each city
         /// </summary>
-        private List<MembresVille> _membresByVilles;
+        private List<CampusMembers> _membresByCampuses;
 
         #endregion
 
@@ -43,77 +43,83 @@ namespace EPSILab.SolarSystem.Jupiter
         /// <param name="e">Event arguments</param>
         protected void Page_Load(object sender, EventArgs e)
         {
-            int codeMembre;
+            int codeMember;
 
             // Check if the member id is given in GET parameters. If yes, load the member's informations and if not, load the member list
-            if (int.TryParse(HttpContext.Current.Request["id"], out codeMembre))
+            if (int.TryParse(HttpContext.Current.Request["id"], out codeMember))
             {
-                Membre membre = _webserviceMembres.GetMembre(codeMembre);
+                Member membre = _webserviceMembers.GetMember(codeMember);
 
                 if (membre != null)
                 {
-                    panelMembres.Visible = false;
-                    panelMembre.Visible = true;
+                    panelMembers.Visible = false;
+                    panelMember.Visible = true;
 
                     // Write member's informations
-                    Page.Title = string.Format("{0} {1} - {2}", membre.Prenom, membre.Nom, GlobalRessources.SiteName);
-                    metaDescription.Text = string.Format("<meta name=\"description\" content=\"Fiche profil de {0} {1}, {2} d'EPSILab {3}.\" />", membre.Prenom, membre.Nom, membre.Statut, membre.Ville.Libelle);
+                    Page.Title = string.Format("{0} {1} - {2}", membre.FirstName, membre.LastName, GlobalRessources.SiteName);
+                    metaDescription.Text = string.Format("<meta name=\"description\" content=\"Fiche profil de {0} {1}, {2} d'EPSILab {3}.\" />", membre.FirstName, membre.LastName, membre.Status, membre.Campus.Place);
 
-                    imageMembre.ImageUrl = membre.Image;
-                    imageMembre.AlternateText = string.Format("Profil de {0} {1}", membre.Prenom, membre.Nom);
+                    imageMember.ImageUrl = membre.ImageUrl;
+                    imageMember.AlternateText = string.Format("Profil de {0} {1}", membre.FirstName, membre.LastName);
 
-                    labelName.Text = string.Format("{0} {1}", membre.Nom, membre.Prenom);
-                    labelStatus.Text = membre.Statut;
-                    labelEPSI.Text = string.Format("Promo {0}, EPSI {1}", membre.Classe.Annee_Promo_Sortante, membre.Ville.Libelle);
-                    labelCityFrom.Text = membre.Ville_origine;
+                    labelName.Text = string.Format("{0} {1}", membre.FirstName, membre.LastName);
+                    labelStatus.Text = membre.Status;
+                    labelEPSI.Text = string.Format("Promo {0}, EPSI {1}", membre.Promotion.GraduationYear, membre.Campus.Place);
+                    labelCityFrom.Text = membre.CityFrom;
                     labelPresentation.Text = membre.Presentation;
 
-                    if (!string.IsNullOrWhiteSpace(membre.Site_web))
+                    if (!string.IsNullOrWhiteSpace(membre.Website))
                     {
                         lnkWebsite.Visible = true;
-                        lnkWebsite.NavigateUrl = membre.Site_web;
+                        lnkWebsite.NavigateUrl = membre.Website;
                     }
 
-                    if (!string.IsNullOrWhiteSpace(membre.URL_Facebook))
+                    if (!string.IsNullOrWhiteSpace(membre.FacebookUrl))
                     {
                         lnkFacebook.Visible = true;
-                        lnkFacebook.NavigateUrl = membre.URL_Facebook;
+                        lnkFacebook.NavigateUrl = membre.FacebookUrl;
                     }
 
-                    if (!string.IsNullOrWhiteSpace(membre.URL_Twitter))
+                    if (!string.IsNullOrWhiteSpace(membre.TwitterUrl))
                     {
                         lnkTwitter.Visible = true;
-                        lnkTwitter.NavigateUrl = membre.URL_Twitter;
+                        lnkTwitter.NavigateUrl = membre.TwitterUrl;
                     }
 
-                    if (!string.IsNullOrWhiteSpace(membre.URL_Viadeo))
+                    if (!string.IsNullOrWhiteSpace(membre.ViadeoUrl))
                     {
                         lnkViadeo.Visible = true;
-                        lnkViadeo.NavigateUrl = membre.URL_Viadeo;
+                        lnkViadeo.NavigateUrl = membre.ViadeoUrl;
                     }
 
-                    if (!string.IsNullOrWhiteSpace(membre.URL_LinkedIn))
+                    if (!string.IsNullOrWhiteSpace(membre.LinkedInUrl))
                     {
                         lnkLinkedIn.Visible = true;
-                        lnkLinkedIn.NavigateUrl = membre.URL_LinkedIn;
+                        lnkLinkedIn.NavigateUrl = membre.LinkedInUrl;
+                    }
+
+                    if (!string.IsNullOrWhiteSpace(membre.GitHubUrl))
+                    {
+                        lnkGitHub.Visible = true;
+                        lnkGitHub.NavigateUrl = membre.GitHubUrl;
                     }
                 }
             }
             else
             {
-                panelMembres.Visible = true;
-                panelMembre.Visible = false;
+                panelMembers.Visible = true;
+                panelMember.Visible = false;
 
-                IList<Ville> villes = _webserviceVilles.GetVilles();
+                IList<Campus> campuses = _webserviceCampuses.GetCampuses();
 
-                _membresByVilles = villes.Select(ville => new MembresVille(ville,
-                                                                        _webserviceMembres.GetMembresByVille(ville),
-                                                                        _webserviceMembres.GetMembresAlumnis(ville))).ToList();
+                _membresByCampuses = campuses.Select(campus => new CampusMembers(campus,
+                                                                        _webserviceMembers.GetMembersByCampus(campus),
+                                                                        _webserviceMembers.GetMembersAlumnis(campus))).ToList();
                 
-                _membresByVilles.RemoveAll(m => !m.Membres.Any() && !m.Alumnis.Any());
+                _membresByCampuses.RemoveAll(m => !m.Members.Any() && !m.Alumnis.Any());
 
-                repeaterVilles.DataSource = _membresByVilles.Select(m => m.Campus);
-                repeaterVilles.DataBind();
+                repeaterCampuses.DataSource = _membresByCampuses.Select(m => m.Campus);
+                repeaterCampuses.DataBind();
             }
         }
 
@@ -123,35 +129,33 @@ namespace EPSILab.SolarSystem.Jupiter
         /// </summary>
         /// <param name="sender">Element which raised the event.</param>
         /// <param name="repeaterItemEventArgs">Event arguments</param>
-        protected void repeaterVilles_ItemDataBound(object sender, RepeaterItemEventArgs repeaterItemEventArgs)
+        protected void repeaterCampuses_ItemDataBound(object sender, RepeaterItemEventArgs repeaterItemEventArgs)
         {
-            Ville ville = repeaterItemEventArgs.Item.DataItem as Ville;
+            Campus campus = repeaterItemEventArgs.Item.DataItem as Campus;
 
-            if (ville != null)
+            if (campus != null)
             {
-                MembresVille membresVilles = (from mv in _membresByVilles
-                                              where mv.Campus.Code_Ville == ville.Code_Ville
+                CampusMembers membresCampuses = (from mv in _membresByCampuses
+                                              where mv.Campus.Id == campus.Id
                                               select mv).FirstOrDefault();
 
-                if (membresVilles != null)
+                if (membresCampuses != null)
                 {
                     Repeater subrepeaterBu = (Repeater)repeaterItemEventArgs.Item.FindControl("repeaterBureau");
 
-                    if (membresVilles.Membres.Any(m => m.Role.Code_Role == 2))
+                    if (membresCampuses.Members.Any(m => m.Role == Role.Bureau))
                     {
-                        subrepeaterBu.DataSource = membresVilles.Membres.Where(m => m.Role.Code_Role == 2);
+                        subrepeaterBu.DataSource = membresCampuses.Members.Where(m => m.Role == Role.Bureau);
                         subrepeaterBu.DataBind();
                     }
                     else
-                    {
                         subrepeaterBu.Visible = false;
-                    }
 
                     Repeater subrepeaterOthers = (Repeater)repeaterItemEventArgs.Item.FindControl("repeaterOthers");
 
-                    if (membresVilles.Membres.Any(m => m.Role.Code_Role == 1))
+                    if (membresCampuses.Members.Any(m => m.Role == Role.MemberActive))
                     {
-                        subrepeaterOthers.DataSource = membresVilles.Membres.Where(m => m.Role.Code_Role == 1);
+                        subrepeaterOthers.DataSource = membresCampuses.Members.Where(m => m.Role == Role.MemberActive);
                         subrepeaterOthers.DataBind();
                     }
                     else
@@ -161,9 +165,9 @@ namespace EPSILab.SolarSystem.Jupiter
 
                     Repeater subrepeaterAlumnis = (Repeater)repeaterItemEventArgs.Item.FindControl("repeaterAlumnis");
 
-                    if (membresVilles.Alumnis.Any())
+                    if (membresCampuses.Alumnis.Any())
                     {
-                        subrepeaterAlumnis.DataSource = membresVilles.Alumnis;
+                        subrepeaterAlumnis.DataSource = membresCampuses.Alumnis;
                         subrepeaterAlumnis.DataBind();
                     }
                     else

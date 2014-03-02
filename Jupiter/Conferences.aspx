@@ -76,20 +76,20 @@
         </LayoutTemplate>
         <ItemTemplate>
             <article class="conference">
-                <a class="lienConference" href="Conferences-<%# Eval("Code_Conference") %>-<%# Eval("Url") %>.aspx">
-                    <img class="imageConference" src="<%# Eval("Image") %>" alt="<%# Eval("Nom") %>" title="<%# Eval("Nom") %>" width="70" height="70" />
+                <a class="lienConference" href="Conferences-<%# Eval("Id") %>-<%# Eval("Url") %>.aspx">
+                    <img class="imageConference" src="<%# Eval("ImageUrl") %>" alt="<%# Eval("Name") %>" title="<%# Eval("Name") %>" width="70" height="70" />
 
                     <div class="nomConference">
-                        <%# Eval("Nom") %>
+                        <%# Eval("Name") %>
                     </div>
 
                     <div class="date">
-                        Le <%# Eval("Date_Heure_Debut", "{0:d}")%> de <%# Eval("Date_Heure_Debut", "{0:t}")%>
-                        à  <%# Eval("Date_Heure_Fin", "{0:t}")%>
+                        Le <%# Eval("Start_DateTime", "{0:d}")%> de <%# Eval("Start_DateTime", "{0:t}")%>
+                        à  <%# Eval("End_DateTime", "{0:t}")%>
                     </div>
 
                     <div class="date">
-                        <%# Eval("Lieu")%>, EPSI (<%# Eval("Ville.Libelle")%>)
+                        <%# Eval("Place")%>, EPSI (<%# Eval("Campus.Place")%>)
                     </div>
                 </a>
             </article>

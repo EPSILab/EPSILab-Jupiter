@@ -44,15 +44,15 @@ namespace EPSILab.SolarSystem.Jupiter
                     panelConference.Visible = true;
 
                     // Generate meta tags
-                    Page.Title = string.Format("{0} - {1}", conference.Nom, GlobalRessources.SiteName);
-                    metaDescription.Text = string.Format("<meta name=\"description\" content=\"Conférence organisée le {0:d} de {0:t} à {1:t}, à l'EPSI {2}", conference.Date_Heure_Debut, conference.Date_Heure_Fin, conference.Ville.Libelle);
+                    Page.Title = string.Format("{0} - {1}", conference.Name, GlobalRessources.SiteName);
+                    metaDescription.Text = string.Format("<meta name=\"description\" content=\"Conférence organisée le {0:d} de {0:t} à {1:t}, à l'EPSI {2}", conference.Start_DateTime, conference.End_DateTime, conference.Campus.Place);
 
                     // Write all conference's informations
-                    imgConference.ImageUrl = conference.Image;
-                    labelName.Text = conference.Nom;
-                    labelDateTime.Text = string.Format("le {0:D}, de {0:t} à {1:t}", conference.Date_Heure_Debut, conference.Date_Heure_Fin);
-                    labelPlace.Text = conference.Lieu;
-                    labelCampus.Text = string.Format("(EPSI {0})", conference.Ville.Libelle);
+                    imgConference.ImageUrl = conference.ImageUrl;
+                    labelName.Text = conference.Name;
+                    labelDateTime.Text = string.Format("le {0:D}, de {0:t} à {1:t}", conference.Start_DateTime, conference.End_DateTime);
+                    labelPlace.Text = conference.Place;
+                    labelCampus.Text = string.Format("(EPSI {0})", conference.Campus.Place);
                     labelDescription.Text = conference.Description;
                 }
             }

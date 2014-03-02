@@ -26,8 +26,8 @@ namespace EPSILab.SolarSystem.Jupiter
         {
             if (!IsPostBack)
             {
-                IVilleReader client = new VilleReaderClient();
-                listCampus.DataSource = client.GetVilles();
+                ICampusReader client = new CampusReaderClient();
+                listCampus.DataSource = client.GetCampuses();
                 listCampus.DataBind();
             }
         }
@@ -81,18 +81,18 @@ namespace EPSILab.SolarSystem.Jupiter
 
         private void SendEmail()
         {
-            IVilleReader client = new VilleReaderClient();
+            ICampusReader client = new CampusReaderClient();
 
-            ListItem selectedIdVille = listCampus.SelectedItem;
-            int idVille = int.Parse(selectedIdVille.Value);
-            Ville ville = client.GetVille(idVille);
+            ListItem selectedIdCampus = listCampus.SelectedItem;
+            int idCampus = int.Parse(selectedIdCampus.Value);
+            Campus campus = client.GetCampus(idCampus);
 
             using (MailMessage mail = new MailMessage())
             {
                 MailAddress sender = new MailAddress(txtEmail.Text);
                 mail.From = sender;
 
-                MailAddress reciever = new MailAddress(ville.Email);
+                MailAddress reciever = new MailAddress(campus.ContactEmail);
                 mail.To.Add(reciever);
 
                 mail.Subject = EmailRessources.Title;
