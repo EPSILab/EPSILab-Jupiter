@@ -49,7 +49,7 @@
                     <div id="NewsInternCarousel">
             </HeaderTemplate>
             <ItemTemplate>
-                <a id="<% Response.Write("NumNews" + IdNews++); %>" class="lienNews" href="News-<%# Eval("Id") %>-<%# Eval("Url") %>.aspx">
+                <a id="<% Response.Write("NumNews" + IdNews++); %>" class="lienNews" href="Actualites-<%# Eval("Id") %>-<%# Eval("Url") %>.aspx">
                     <article class="news">
                         <img src="<%# Eval("ImageUrl") %>" alt="<%# Eval("Title") %>" title="<%# Eval("Title") %>" />
                         <h2><%# Eval("Title") %></h2>
